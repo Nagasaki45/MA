@@ -1,8 +1,6 @@
-# ignore everything
-*
-
-# except:
-!.gitignore
-!*.tex
-!*.md
-!*.py
+*.aux
+*.fdb_latexmk
+*.log
+*.out
+*.gz
+*.pdf
