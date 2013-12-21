@@ -12,6 +12,7 @@ TO_REMOVE = [
     '.log',
     '.out',
     '.gz',
+    '.toc',
 ]
 
 
