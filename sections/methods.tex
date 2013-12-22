@@ -8,23 +8,21 @@
 
 % Deciding to go mobile, including all the information from the literature review about the growth of social use of mobile devices etc.
 
-\new{Recent studies state that today's mobile phone ``has become such an important aspect of a user's daily life that it has moved from being a mere 'technological object' to a key 'social object''' (Srivastava, 2005), and as such it has a significant importance in shaping today's society. As denoted in chapter 3.5 this research aims to follow social phenomena that use those abilities of mobile phone and therefore will be implemented for mobile.}
+\new{Recent studies state that today's mobile phone ``has become such an important aspect of a user's daily life that it has moved from being a mere 'technological object' to a key 'social object''', and as such it has a significant importance in shaping today's society (Srivastava, 2005). As denoted in chapter 3.5 this research aims to follow social phenomena that use those abilities of the modern mobile phone and therefore will be implemented for mobile.}
 
 The system will be developed on Android OS (\todo{ref}). Choosing Android OS as the platform for my research has two main advantages:
-
 \begin{enumerate}
-
 	\item The Android system is a growing mobile system which controls most of the market share today ("Mobile operating system").
-
-	\item By developing application for Android I have access to underlying Bluetooth properties such as received signal strength indicator (RSSI) essential for my implementation of the system \new{as lay out in the next section}.
-
+	\item By developing application for Android I have access to underlying Bluetooth properties such as received signal strength indicator (RSSI) essential for my implementation of the system \new{as laid out in the next section}.
 \end{enumerate}
 
 \subsubsection{Indoor positioning system}
 
-% Explain here why I've decided to implement my own indoor positioning system. For HCI it was a good idea to push it to the front, for BI music department I'm not so sure...
+% Explain why I've decided to implement my own indoor positioning system. For HCI it was a good idea to push it to the front, for BI music department I'm not so sure...
 
-Today, the usage of outdoor positioning systems \st{(mainly GPS)} is unquestioned \new{and achieved mainly by the GPS standard available in almost any modern phone}. \new{On the other hand, indoor positioning systems (IPS) are not yet standardized and therefor} \st{but the opportunity of indoor location awareness technology is} not \st{yet possible} \new{available} to the \st{end} \new{average} user.
+\new{In order to achieve the desired characteristic of the system as described in chapter 3.5 -- to be able to manipulate the music in each participant's headphones according to his or her relative distance from the balloon bundles -- an IPS was required.}
+
+Today, the usage of outdoor positioning systems \st{(mainly GPS)} is unquestioned \new{and achieved mainly by the General Positioning System (GPS) which is available in almost any modern phone. On the other hand, indoor positioning systems (IPS) are not yet standardized and therefor they are still} \st{but the opportunity of indoor location awareness technology is} not \st{yet possible} \new{available} to the \st{end} \new{average} user.\todo{refs needed for the whole paragraph}
 
 % Rewrite the next two paragraphs.
 
@@ -32,13 +30,24 @@ Today, the usage of outdoor positioning systems \st{(mainly GPS)} is unquestione
 
 % There are many difficulties in the establishment of indoor positioning system (Borenović and Nešković, 2010). One of the ways to enable IPS is through Bluetooth technology. As a low power consumption technology widely supported by mobile devices, Bluetooth has a potential to be used for indoor positioning (Pei et al. 2010).
 
-% Another option for indoor positioning system is to use relative positioning. Research has shown the advantages of ultrasonic relative IPS because to the fact that it doesn’t need infrastructure, unlike most of the above mentioned technologies (Hazas, 2005).
+% Another option for indoor positioning system is to use relative positioning. Research has shown the advantages of ultrasonic relative IPS because to the fact that it doesn't need infrastructure, unlike most of the above mentioned technologies (Hazas, 2005).
 
 % NEW TEXT:
 
-% Pseudo code of the BBRIP system
+Recent researches state that the two most favored IPS technologies are WiFi ``fingerprinting'' and real-time locating systems (RTLS) (\href{http://www.idtechex.com/research/articles/the-rise-of-mobile-phone-indoor-positioning-systems-00005684.asp}{\todo{finish ref}}). WiFi ``fingerprinting'' is the technique where the analysis of received signal strength indicators (RSSI) is done once for different points inside the building to generate an emission map. After processing such a map any WiFi enable device can compare RSSI with the map to reveal its positioning (\href{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=996891&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D996891}{\todo{finish ref}}). On the other hand, RTLS use access points to locate WiFi devices in their range and determine their positioning. Those two methods can enhance accuracy by applying inertial navigation using the device accelerometer, gyroscope and other available sensors.
+
+Although there are available techniques to implement IPS I've decided to develop one by my own. This is done due to two reasons:
+\begin{enumerate}
+	\item{The above techniques, as well as most of their alternatives, require infrastructure. As a system influenced by flash mobs I wanted to be able to use it anywhere without the effort involved in infrastructure deployment.}
+	\item{Tracking the positioning of the participants as well as the positioning of the balloon bundles has a lot of overhead when the only requirement is to be able to approximate the distance between each participant and the bundles.}
+\end{enumerate}
+
+% the BBRIP system
+
+The system I've developed -- the Bluetooth Based Relative Indoor Positioning (BBRIP) system -- is a distributed system that runs separately on each one of the participants phones. The system consist of some Bluetooth beacons, placed inside the balloon bundles, and an Android application. The application repeatedly searches for nearby Bluetooth beacons. Received signal strength indication (RSSI) is used as an estimation of the distance between the user and the beacon.\todo{do you think I need to add pseudo code?}
 
 \subsubsection{libpd}
+Advance audio processing is beyond the capabilities of the Android software development kit (SDK) and therefor, in order to apply sophisticated manipulation on the music in real time, a more powerful audio engine was required. In a personal computer environment the programming language Pure Data (Pd), originally written by Miller Puckette in the nineteen-nineties, is one of the leading open-source softwares for computer music. In this research I have decided to use ``libpd'', a thin layer on top of the Pd that turns it into an embeddable audio library, as an audio engine (\todo{ref Making Musical Apps page v (preface)}).
 
 \subsection{System evaluation}
 
