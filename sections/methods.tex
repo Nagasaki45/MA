@@ -38,8 +38,8 @@ Recent researches state that the two most favored IPS technologies are WiFi ``fi
 
 Although there are available techniques to implement IPS I've decided to develop one by my own. This is done due to two reasons:
 \begin{enumerate}
-	\item{The above techniques, as well as most of their alternatives, require infrastructure. As a system influenced by flash mobs I wanted to be able to use it anywhere without the effort involved in infrastructure deployment.}
-	\item{Tracking the positioning of the participants as well as the positioning of the balloon bundles has a lot of overhead when the only requirement is to be able to approximate the distance between each participant and the bundles.}
+	\item The above techniques, as well as most of their alternatives, require infrastructure. As a system influenced by flash mobs I wanted to be able to use it anywhere without the effort involved in infrastructure deployment.
+	\item Tracking the positioning of the participants as well as the positioning of the balloon bundles has a lot of overhead when the only requirement is to be able to approximate the distance between each participant and the bundles.
 \end{enumerate}
 
 % the BBRIP system
@@ -47,14 +47,45 @@ Although there are available techniques to implement IPS I've decided to develop
 The system I've developed -- the Bluetooth Based Relative Indoor Positioning (BBRIP) system -- is a distributed system that runs separately on each one of the participants phones. The system consist of some Bluetooth beacons, placed inside the balloon bundles, and an Android application. The application repeatedly searches for nearby Bluetooth beacons. Received signal strength indication (RSSI) is used as an estimation of the distance between the user and the beacon.\todo{do you think I need to add pseudo code?}
 
 \subsubsection{libpd}
+
 Advance audio processing is beyond the capabilities of the Android software development kit (SDK) and therefor, in order to apply sophisticated manipulation on the music in real time, a more powerful audio engine was required. In a personal computer environment the programming language Pure Data (Pd), originally written by Miller Puckette in the nineteen-nineties, is one of the leading open-source softwares for computer music. In this research I have decided to use ``libpd'', a thin layer on top of the Pd that turns it into an embeddable audio library, as an audio engine (\todo{ref Making Musical Apps page v (preface)}).
 
 \subsection{System evaluation}
 
 % The following, as described in the meeting summary.
+A controlled experiment will be conducted in order to asses the research question: \emph{\reserchquestion}
 
 \subsubsection{Participants}
 
-\subsubsection{Measures}
+Thirty undergraduate and graduate-level students from the Music Department of Bar-Ilan university will participate in the experiment. Their participation will rely on voluntarily will.\todo{anything else?}
+
+\subsubsection{Measurements}
+
+The above research question  will be fragmented into the following operational definitions:
+\begin{enumerate}
+	\item \label{measure:disperse} Assuming that participants are pre-partitioned, natively, as groups of friends, we can define the \definition{momentary center} of each group as the average positioning of its participants on the two dimensional plain of the dance floor. In addition, we can define the \definition{momentary disperse} of each group as the variance of its participants around the center. Using the above definitions interaction between participants will be evaluated by the disperse of the groups, when high disperse values indicate higher interactivity.
+	\item \label{measure:groups} Using the above definitions, we can define \definition{momentary group disperse} as the variance of the momentary centers themselves on the dance floor. With this regards low momentary group disperse values indicate higher interactivity.
+	\item \label{measure:audio} The audio volume inside the experiment room will be used as an indication for the amount of `speaking' between participants and therefor as a social interaction estimation.
+	\item \label{measure:surveys} Participants will fill three different surveys: musical background survey, based on the \href{sites.google.com/site/ecmbqzhao1/simple%20questionnaire.pdf}{ECMBQ basic version} (\todo{finish ref}), social interaction survey (\todo{write it!}) and system usability, based on the \href{http://en.wikipedia.org/wiki/System_usability_scale}{SUS} (\todo{ref}). Complete version of those surveys can be found in appendix XXX\todo{cross-ref}. From the three, the social interaction survey will be used to asses interaction between participants by estimating social cohesiveness within in-group and out-group of each participant (\todo{find ref}).
+	% I'm not sure that I want to add the bluetooth measurements here. It only assess the interaction with system components and not direct interaction between participants.
+\end{enumerate}
+
+\subsubsection{Apparatus}
+
+Whereas measurement number \ref{measure:surveys} are self explanatory a technical explanation of measurements \ref{measure:disperse}, \ref{measure:groups} and \ref{measure:audio} is required.
+In order to measure momentary disperse and group disperse as defined in measurements \ref{measure:disperse} and \ref{measure:groups} I will capture the experiment with video camera from above the dance floor. Tracking the positioning of each participant will be done half manually by using software aids to record the manual tracking the participants, each at a time, using the computer mouse. The results will be then processed using computational programming to conclude insights from the data.
+Audio volume will be captured by a microphone and analyzed with similar means afterwards.
 
 \subsubsection{Procedure}
+
+In order to conduct the experiment the participants will be randomly allocated into two groups, group $A$ and group $B$\@. Group $A$ will participant in the experiment in different week then group $B$, but in the same week day and same hour.
+
+For each group, participants first fill a musical background survey as described in measurement \ref{measure:surveys}, followed by three \definition{experiment blocks}, followed by a system usability survey as described in measurement \ref{measure:surveys}. Each experiment block will consist of 15 minutes in which participants listen to music in their headphones, using their Android device and pre-installed application, and interact with other participants in the `silent disco' party. Between before each block and after the last block each participant will fill a social interact survey.
+
+Each experiment block can be of one of the following types:
+\begin{description}
+	\item[Interactive] In which the music generated by the Android application behaves as described in chapter \ref{roadmap}.
+	\item[Control] In which the music generated by the Android application is pre-composed and based on the same musical materials as of the interactive system.
+\end{description}
+
+In the following experiment participants of group $A$ will hear the experiment blocks: Control, Interactive, Control. Whereas participants of group $B$ will hear the experiment blocks: Control, Control, Control.
