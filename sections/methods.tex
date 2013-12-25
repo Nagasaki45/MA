@@ -61,31 +61,42 @@ Thirty undergraduate and graduate-level students from the Music Department of Ba
 
 \subsubsection{Measurements}
 
-The above research question  will be fragmented into the following operational definitions:
+The above research question will be fragmented into the following operational definitions and measurements\footnote{Complete version of each of the following surveys can be found in the appendix.}:
 \begin{enumerate}
 	\item \label{measure:disperse} Assuming that participants are pre-partitioned, natively, as groups of friends, we can define the \definition{momentary center} of each group as the average positioning of its participants on the two dimensional plain of the dance floor. In addition, we can define the \definition{momentary disperse} of each group as the variance of its participants around the center. Using the above definitions interaction between participants will be evaluated by the disperse of the groups, when high disperse values indicate higher interactivity.
 	\item \label{measure:groups} Using the above definitions, we can define \definition{momentary group disperse} as the variance of the momentary centers themselves on the dance floor. With this regards low momentary group disperse values indicate higher interactivity.
 	\item \label{measure:audio} The audio volume inside the experiment room will be used as an indication for the amount of `speaking' between participants and therefor as a social interaction estimation.
-	\item \label{measure:surveys} Participants will fill three different surveys: musical background survey, based on the \href{sites.google.com/site/ecmbqzhao1/simple%20questionnaire.pdf}{ECMBQ basic version} (\todo{finish ref}), social interaction survey (\todo{write it!}) and system usability, based on the \href{http://en.wikipedia.org/wiki/System_usability_scale}{SUS} (\todo{ref}). Complete version of those surveys can be found in appendix XXX\todo{cross-ref}. From the three, the social interaction survey will be used to asses interaction between participants by estimating social cohesiveness within in-group and out-group of each participant (\todo{find ref}).
-	% I'm not sure that I want to add the bluetooth measurements here. It only assess the interaction with system components and not direct interaction between participants.
+	\item \label{measure:survey:social} Participants will fill social interaction survey (\todo{write it!}). The survey will be used to asses interaction between participants by estimating social cohesiveness within in-group and out-group of each participant (\todo{find ref}).
+\end{enumerate}
+In addition to measurements intended to assess the main research question. The following operational definitions and measurements will be used in order to assess the participant's interaction with the system components as well as general satisfaction from using the system.
+\begin{enumerate}[resume]
+	\item \label{measure:system} We will define \definition{momentary participant-system interaction} as the momentary distance of each participant from the closest Bluetooth beacon. Using the above definition high level of interaction of participant with the system will be indicated by low values of momentary participant-system interaction.
+	\item \label{measure:survey:usability} Participants will fill system usability survey, based on the \href{http://en.wikipedia.org/wiki/System_usability_scale}{SUS} (\todo{ref}).
+\end{enumerate}
+Lastly, the following measurement will be used in order to eliminate possible differences between research groups and to allow future research based on the retrieved data.
+\begin{enumerate}[resume]
+	\item \label{measure:survey:musical} Participants will fill musical background survey, based on the \href{sites.google.com/site/ecmbqzhao1/simple%20questionnaire.pdf}{ECMBQ basic version} (\todo{finish ref}).
 \end{enumerate}
 
 \subsubsection{Apparatus}
 
-Whereas measurement number \ref{measure:surveys} are self explanatory a technical explanation of measurements \ref{measure:disperse}, \ref{measure:groups} and \ref{measure:audio} is required.
-In order to measure momentary disperse and group disperse as defined in measurements \ref{measure:disperse} and \ref{measure:groups} I will capture the experiment with video camera from above the dance floor. Tracking the positioning of each participant will be done half manually by using software aids to record the manual tracking the participants, each at a time, using the computer mouse. The results will be then processed using computational programming to conclude insights from the data.
-Audio volume will be captured by a microphone and analyzed with similar means afterwards.
+Whereas the technical details of applying measurements \ref{measure:survey:social}, \ref{measure:survey:usability} and \ref{measure:survey:musical} are relatively simple and clear an explanation of measurements \ref{measure:disperse}, \ref{measure:groups}, \ref{measure:audio} and \ref{measure:system} is required.
+In order to measure momentary disperse and group disperse as defined in measurements \ref{measure:disperse} and \ref{measure:groups} I will capture the experiment with video camera from above the dance floor. Tracking the positioning of each participant will be done half manually by using software aids to record the manual tracking of participants, each at a time, using the computer mouse. The results will be then processed using computational programming to conclude insights from the data.
+Momentary participant-system interaction as described in measurement \ref{measure:system} will be calculated in the same way, by manually tracking each on of the system components in the video.
+Audio volume (measurement \ref{measure:audio}) will be captured by a microphone and analyzed with similar means afterwards.
 
 \subsubsection{Procedure}
 
-In order to conduct the experiment the participants will be randomly allocated into two groups, group $A$ and group $B$\@. Group $A$ will participant in the experiment in different week then group $B$, but in the same week day and same hour.
+Participants will be randomly allocated into two groups, group $A$ and group $B$\@. Each group will participate in the experiment in different week, but in the same day of the week and same hour.
 
-For each group, participants first fill a musical background survey as described in measurement \ref{measure:surveys}, followed by three \definition{experiment blocks}, followed by a system usability survey as described in measurement \ref{measure:surveys}. Each experiment block will consist of 15 minutes in which participants listen to music in their headphones, using their Android device and pre-installed application, and interact with other participants in the `silent disco' party. Between before each block and after the last block each participant will fill a social interact survey.
+For each group, participants will first fill a musical background survey as described in measurement \ref{measure:survey:musical}, followed by three \definition{experiment blocks}, followed by a system usability survey as described in measurement \ref{measure:survey:usability}. Each experiment block will consist of 15 minutes in which participants listen to music in their headphones, using their Android device and pre-installed application, and interact with other participants in the `silent disco' party. Meanwhile, during each experiment block, measurements \ref{measure:disperse}, \ref{measure:groups}, \ref{measure:audio} and \ref{measure:system} will be collected. Before each experiment block and after the last block each participant will fill the social interact survey (measurement \ref{measure:survey:social}).
 
 Each experiment block can be of one of the following types:
 \begin{description}
-	\item[Interactive] In which the music generated by the Android application behaves as described in chapter \ref{roadmap}.
-	\item[Control] In which the music generated by the Android application is pre-composed and based on the same musical materials as of the interactive system.
+	\item[Interactive:] In which the music generated by the Android application behaves as described in chapter \ref{roadmap}.
+	\item[Control:] In which the music generated by the Android application is pre-composed and based on the same musical materials as of the interactive system.
 \end{description}
 
-In the following experiment participants of group $A$ will hear the experiment blocks: Control, Interactive, Control. Whereas participants of group $B$ will hear the experiment blocks: Control, Control, Control.
+Participants of group $A$ will hear the experiment blocks: Control $\rightarrow$ Interactive $\rightarrow$ Control. Whereas participants of group $B$ will hear the experiment blocks: Control $\rightarrow$ Control $\rightarrow$ Control.
+
+A complete diagram of the procedure can be found in figure \todo{todo}.
