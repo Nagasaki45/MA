@@ -16,7 +16,7 @@ The system will be developed on Android OS (\todo{ref}). Choosing Android OS as 
 	\item By developing application for Android I have access to underlying Bluetooth properties such as received signal strength indicator (RSSI) essential for my implementation of the system \new{as laid out in the next section}.
 \end{enumerate}
 
-\subsubsection{Indoor positioning system}
+\subsubsection{Indoor positioning system}\label{methods:ips}
 
 % Explain why I've decided to implement my own indoor positioning system. For HCI it was a good idea to push it to the front, for BI music department I'm not so sure...
 
@@ -46,7 +46,7 @@ Although there are available techniques to implement IPS I've decided to develop
 
 The system I've developed -- the Bluetooth Based Relative Indoor Positioning (BBRIP) system -- is a distributed system that runs separately on each one of the participants phones. The system consist of some Bluetooth beacons, placed inside the balloon bundles, and an Android application. The application repeatedly searches for nearby Bluetooth beacons. Received signal strength indication (RSSI) is used as an estimation of the distance between the user and the beacon.\todo{do you think I need to add pseudo code?}
 
-\subsubsection{libpd}
+\subsubsection{libpd}\label{methods:libpd}
 
 Advance audio processing is beyond the capabilities of the Android software development kit (SDK) and therefor, in order to apply sophisticated manipulation on the music in real time, a more powerful audio engine was required. In a personal computer environment the programming language Pure Data (Pd), originally written by Miller Puckette in the nineteen-nineties, is one of the leading open-source softwares for computer music. In this research I have decided to use ``libpd'', a thin layer on top of the Pd that turns it into an embeddable audio library, as an audio engine (\todo{ref Making Musical Apps page v (preface)}).
 
