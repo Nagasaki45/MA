@@ -10,7 +10,7 @@ This chapter, as well as the next one, will be divided into two main sections, t
 
 Recent studies state that today's mobile phone ``has become such an important aspect of a user's daily life that it has moved from being a mere 'technological object' to a key 'social object''', and as such it has a significant importance in shaping today's society (Srivastava, 2005). As denoted in chapter \ref{roadmap} this research aims to follow social phenomena that use those abilities of the modern mobile phone and therefore will be implemented for mobile.
 
-The system will be developed on Android OS (\todo{ref}). Choosing Android OS as the platform for my research has two main advantages:
+The system will be developed on Android (``\citetitle{web:android}''). Choosing Android as the platform for my research has two main advantages:
 \begin{enumerate}
 	\item The Android system is a growing mobile system which controls most of the market share today ("Mobile operating system").
 	\item By developing application for Android I have access to underlying Bluetooth properties such as received signal strength indicator (RSSI) essential for my implementation of the system as laid out in the next section.
@@ -24,7 +24,7 @@ In order to achieve the desired characteristic of the system as described in cha
 
 Today, the usage of outdoor positioning systems is unquestioned and achieved mainly by the General Positioning System (GPS) which is available in almost any modern phone. On the other hand, indoor positioning systems (IPS) are not yet standardized and therefor they are still not available to the average user.\todo{refs needed for the whole paragraph}
 
-Recent researches state that the two most favored IPS technologies are WiFi ``fingerprinting'' and real-time locating systems (RTLS) (\href{http://www.idtechex.com/research/articles/the-rise-of-mobile-phone-indoor-positioning-systems-00005684.asp}{\todo{finish ref}}). WiFi ``fingerprinting'' is the technique where the analysis of received signal strength indicators (RSSI) is done once for different points inside the building to generate an emission map. After processing such a map any WiFi enable device can compare RSSI with the map to reveal its positioning (\href{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=996891&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D996891}{\todo{finish ref}}). On the other hand, RTLS use access points to locate WiFi devices in their range and determine their positioning. Those two methods can enhance accuracy by applying inertial navigation using the device accelerometer, gyroscope and other available sensors.
+Recent researches state that the two most favored IPS technologies are WiFi ``fingerprinting'' and real-time locating systems (RTLS) (\cite{web:harrop}). WiFi ``fingerprinting'' is the technique where the analysis of received signal strength indicators (RSSI) is done once for different points inside the building to generate an emission map. After processing such a map any WiFi enable device can compare RSSI with the map to reveal its positioning (\cite{chen}). On the other hand, RTLS use access points to locate WiFi devices in their range and determine their positioning. Those two methods can enhance accuracy by applying inertial navigation using the device accelerometer, gyroscope and other available sensors.
 
 Although there are available techniques to implement IPS I've decided to develop one by my own. This is done due to two reasons:
 \begin{enumerate}
@@ -38,7 +38,7 @@ The system I've developed -- the Bluetooth Based Relative Indoor Positioning (BB
 
 \subsubsection{libpd}\label{methods:libpd}
 
-Advance audio processing is beyond the capabilities of the Android software development kit (SDK) and therefor, in order to apply sophisticated manipulation on the music in real time, a more powerful audio engine was required. In a personal computer environment the programming language Pure Data (Pd), originally written by Miller Puckette in the nineteen-nineties, is one of the leading open-source softwares for computer music. In this research I have decided to use ``libpd'', a thin layer on top of the Pd that turns it into an embeddable audio library, as an audio engine (\todo{ref Making Musical Apps page v (preface)}).
+Advance audio processing is beyond the capabilities of the Android software development kit (SDK) and therefor, in order to apply sophisticated manipulation on the music in real time, a more powerful audio engine was required. In a personal computer environment the programming language Pure Data (Pd), originally written by Miller Puckette in the nineteen-nineties, is one of the leading open-source softwares for computer music (\cite{web:pd}). In this research I have decided to use ``libpd'', a thin layer on top of the Pd that turns it into an embeddable audio library, as an audio engine (\cite[page v]{brinkmann12}).
 
 \subsection{System evaluation}
 
@@ -61,11 +61,11 @@ The above research question will be fragmented into the following operational de
 In addition to measurements intended to assess the main research question. The following operational definitions and measurements will be used in order to assess the participant's interaction with the system components as well as general satisfaction from using the system.
 \begin{enumerate}[resume]
 	\item \label{measure:system} We will define \definition{momentary participant-system interaction} as the momentary distance of each participant from the closest Bluetooth beacon. Using the above definition high level of interaction of participant with the system will be indicated by low values of momentary participant-system interaction.
-	\item \label{measure:survey:usability} Participants will fill system usability survey, based on the \href{http://en.wikipedia.org/wiki/System_usability_scale}{SUS} (\todo{ref}).
+	\item \label{measure:survey:usability} Participants will fill system usability survey, based on the System Usability Scale (\cite{brooke96}).
 \end{enumerate}
 Lastly, the following measurement will be used in order to eliminate possible differences between research groups and to allow future research based on the retrieved data.
 \begin{enumerate}[resume]
-	\item \label{measure:survey:musical} Participants will fill musical background survey, based on the \href{sites.google.com/site/ecmbqzhao1/simple%20questionnaire.pdf}{ECMBQ basic version} (\todo{finish ref}).
+	\item \label{measure:survey:musical} Participants will fill musical background survey, based on the Emmanuel College Music Background Questionnaire, basic version (\cite{zhao12}).
 \end{enumerate}
 
 \subsubsection{Apparatus}
