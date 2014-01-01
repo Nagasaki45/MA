@@ -4,3 +4,6 @@
 *.out
 *.gz
 *.pdf
+*.b*
+!bibliography.bib
+*.xml

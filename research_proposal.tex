@@ -1,8 +1,12 @@
 \documentclass[a4paper,11pt]{article}
+\usepackage[style=mla,style=authoryear,backend=biber]{biblatex}
+\renewcommand*{\nameyeardelim}{\addcomma\space}  % add comma between author and year
 \usepackage{soul}
 \usepackage{hyperref}
 \usepackage{todonotes}
-\usepackage{enumitem} % to interrupt enumerations and resume
+\usepackage{enumitem}  % to interrupt enumerations and resume
+
+\addbibresource{bibliography.bib}
 
 \graphicspath{ {graphics/} }
 
@@ -22,6 +26,6 @@
 \input{sections/methods.tex}
 \input{sections/results.tex}
 \input{sections/appendix.tex}
-\input{sections/references.tex}
 
+\printbibliography[title={Bibliography}]
 \end{document}

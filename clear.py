@@ -13,6 +13,10 @@ TO_REMOVE = [
     '.out',
     '.gz',
     '.toc',
+    '.bbl',
+    '.blg',
+    '.bcf',
+    '.xml',
 ]
 
 
