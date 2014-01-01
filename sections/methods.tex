@@ -1,6 +1,6 @@
 \section{Research methods}
 
-\new{This chapter, as well as the next one, will be divided into two main sections, the first describing the system development and the second the system evaluation.}
+This chapter, as well as the next one, will be divided into two main sections, the first describing the system development and the second the system evaluation.
 
 \subsection{System development}
 
@@ -8,31 +8,21 @@
 
 % Deciding to go mobile, including all the information from the literature review about the growth of social use of mobile devices etc.
 
-\new{Recent studies state that today's mobile phone ``has become such an important aspect of a user's daily life that it has moved from being a mere 'technological object' to a key 'social object''', and as such it has a significant importance in shaping today's society (Srivastava, 2005). As denoted in chapter \ref{roadmap} this research aims to follow social phenomena that use those abilities of the modern mobile phone and therefore will be implemented for mobile.}
+Recent studies state that today's mobile phone ``has become such an important aspect of a user's daily life that it has moved from being a mere 'technological object' to a key 'social object''', and as such it has a significant importance in shaping today's society (Srivastava, 2005). As denoted in chapter \ref{roadmap} this research aims to follow social phenomena that use those abilities of the modern mobile phone and therefore will be implemented for mobile.
 
 The system will be developed on Android OS (\todo{ref}). Choosing Android OS as the platform for my research has two main advantages:
 \begin{enumerate}
 	\item The Android system is a growing mobile system which controls most of the market share today ("Mobile operating system").
-	\item By developing application for Android I have access to underlying Bluetooth properties such as received signal strength indicator (RSSI) essential for my implementation of the system \new{as laid out in the next section}.
+	\item By developing application for Android I have access to underlying Bluetooth properties such as received signal strength indicator (RSSI) essential for my implementation of the system as laid out in the next section.
 \end{enumerate}
 
 \subsubsection{Indoor positioning system}\label{methods:ips}
 
 % Explain why I've decided to implement my own indoor positioning system. For HCI it was a good idea to push it to the front, for BI music department I'm not so sure...
 
-\new{In order to achieve the desired characteristic of the system as described in chapter \ref{roadmap} -- to be able to manipulate the music in each participant's headphones according to his or her relative distance from the balloon bundles -- an IPS was required.}
+In order to achieve the desired characteristic of the system as described in chapter \ref{roadmap} -- to be able to manipulate the music in each participant's headphones according to his or her relative distance from the balloon bundles -- an IPS was required.
 
-Today, the usage of outdoor positioning systems \st{(mainly GPS)} is unquestioned \new{and achieved mainly by the General Positioning System (GPS) which is available in almost any modern phone. On the other hand, indoor positioning systems (IPS) are not yet standardized and therefor they are still} \st{but the opportunity of indoor location awareness technology is} not \st{yet possible} \new{available} to the \st{end} \new{average} user.\todo{refs needed for the whole paragraph}
-
-% Rewrite the next two paragraphs.
-
-% OLD TEXT:
-
-% There are many difficulties in the establishment of indoor positioning system (Borenović and Nešković, 2010). One of the ways to enable IPS is through Bluetooth technology. As a low power consumption technology widely supported by mobile devices, Bluetooth has a potential to be used for indoor positioning (Pei et al. 2010).
-
-% Another option for indoor positioning system is to use relative positioning. Research has shown the advantages of ultrasonic relative IPS because to the fact that it doesn't need infrastructure, unlike most of the above mentioned technologies (Hazas, 2005).
-
-% NEW TEXT:
+Today, the usage of outdoor positioning systems is unquestioned and achieved mainly by the General Positioning System (GPS) which is available in almost any modern phone. On the other hand, indoor positioning systems (IPS) are not yet standardized and therefor they are still not available to the average user.\todo{refs needed for the whole paragraph}
 
 Recent researches state that the two most favored IPS technologies are WiFi ``fingerprinting'' and real-time locating systems (RTLS) (\href{http://www.idtechex.com/research/articles/the-rise-of-mobile-phone-indoor-positioning-systems-00005684.asp}{\todo{finish ref}}). WiFi ``fingerprinting'' is the technique where the analysis of received signal strength indicators (RSSI) is done once for different points inside the building to generate an emission map. After processing such a map any WiFi enable device can compare RSSI with the map to reveal its positioning (\href{http://ieeexplore.ieee.org/xpl/login.jsp?tp=&arnumber=996891&url=http%3A%2F%2Fieeexplore.ieee.org%2Fxpls%2Fabs_all.jsp%3Farnumber%3D996891}{\todo{finish ref}}). On the other hand, RTLS use access points to locate WiFi devices in their range and determine their positioning. Those two methods can enhance accuracy by applying inertial navigation using the device accelerometer, gyroscope and other available sensors.
 
