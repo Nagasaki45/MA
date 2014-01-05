@@ -7,3 +7,5 @@
 *.b*
 !bibliography.bib
 *.xml
+graphics/*
+!graphics/*.svg
