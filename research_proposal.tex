@@ -20,12 +20,352 @@
 \begin{document}
 \maketitle
 
-\input{sections/introduction.tex}
-\input{sections/literature.tex}
-\input{sections/targets.tex}
-\input{sections/methods.tex}
-\input{sections/results.tex}
-\input{sections/appendix.tex}
+\section{Introduction and framework}
+
+% not too long introduction with emphasis on locating this specific research between the relevant fields
+
+In the past 60 years the development of new technology has fundamentally transformed music creation and consumption (\cite[\todo{what page?}]{winkler01}).
+One of the results of these transformations is IMSs (IMS), a concept that faciliting new ways of music creation and blurring the traditional distinction between instrument design, composition and performance. (\cite{drummond09}).
+In the recent years there are many attempts to provide IMS not only to the professional musicians but also directly accessible to the average user(\todo{ref}).
+
+Another key concept with high relevance to my work is Augmented Reality (AR).
+According to Azuma ``AR enhances a user's perception of and interaction with the real world'' (\cite*{azuma97}). This concept usually relates to the visual modality: ``AR systems integrate 3-D virtual objects into a 3-D real environment in real time'' (\cite{azuma97}). My work extend the definition of AR system from the visual to the auditory modality opening the door for more comprehensive experience of virtual environments.
+
+In this work I will combine the concept of IMS with AR creating a system for real time social interaction for average user, using concurrent mobile technology.
+
+\section{Literature review}
+
+\subsection{The origins of IMS}
+
+According to the Oxford Dictionary to ``interact'' is to ``act in such a way as to have an effect on each other'' (\cite{web:oxford}).
+In the field of IMS actions and affects may be implemented on a broad spectrum of novel techniques, ranging from interactive sound installations to collaborations with robotic performers (\cite{drummond09}).
+
+Since the beginning of the exploration in the field of IMS in the nineteen-sixties, different researchers and composers created systems that were designed to interact with performer in a live situation.
+First example of this kind of interactive system was Gordon Mumma's Hornpipe, where specially designed electronic system alters the sound of the audio input from the performer and creates an interactive loop between the player and the sound created by the electronics circuit (\cite[page 12]{winkler01}).
+
+Later, during the nineteen-seventies, musicians and researchers were able to create IMS programmatically using newly developed programming languages designed for musical applications, such as GROOVE or the MUSIC-N series (\cite{mathews70}; \cite{mathews69}).
+
+In the nineteen-eighties, a group of musical instruments manufacturers agreed on universal standard for sending and receiving musical information digitally, establishing the MIDI protocol (\cite{web:quinn}).
+The standardization of sending and receiving information combined with the emergence of personal computers enabled the creation of modern programing languages for musical applications.
+Max/MSP, which began its development by Miller Puckette in 1986, may be a good example (\cite[page 16]{winkler01}).
+As opposed to early programming languages as GROOVE or the MUSIC-N series, most of those personal computer based languages still exist today, keep progressing and new music oriented programing languages are developed on a regular basis (\cite{web:chuck}; \cite{web:usine}).
+
+In the same time, similar technological shifts also facilitated the usage of Digital Audio Workstations (DAW) as a common alternative to analog recording equipment in studios (\todo{find ref}). Later, with the arrival of the VST standard (\cite{web:steinberg}), computers became even more essential tool for music production.
+The arrival of those technologies to the stage could be identified with the emergence of live performance oriented DAWs as Ableton Live (\cite{web:live}) and software based DJ setups in late nineteen-nineties.
+
+Another key event in the history of IMS is the appearance of the Arduino platform in 2006.
+The Arduino is an easy to use hardware and software package, ``intended for artists, designers, hobbyists and anyone interested in creating interactive objects or environments'' (\cite{web:arduino}).
+Until its appearance the only way for a musician to interact with music creation software was through audio and MIDI.
+But from then a lot of new ways of controlling audio started to be possible, mostly by translating physical properties of the space into sound.
+
+\subsection{Interactive music systems for non-professional musicians}
+
+Today, IMS meets the non-professional musician in various scenarios: interactive video clips, mobile applications, interactive sound installations and social DJing.
+While these examples are typical they are only a small portion of novel ways where non professional can now participate in interactive music creation, interactive consumption of audiovisual content and musically enhanced social interactions.
+
+% interactive video clips: Interlude, Chris Milk and Aaron Koblin
+Interactive video clips expose some of the roles traditionally kept for the director to the viewers.
+As a relatively new phenomena video clips like those are rare but prominent.
+As examples one can find the works of Chris Milk and Aaron Koblin (\cite{web:milk1}; \cite{web:milk2}) and the startup Interlude which driven by equivalent concept (\cite{web:interlude}).
+
+% mobile applications: Smule and RjDj
+The increased computation power of the modern mobile phone led developers to develop new mobile applications for music creation for non-professional musicians.
+Those applications gives the average user the ability to create music by himself and without musical education.
+Good examples for this kind of applications are Smule's applications, with emphasis on AutoRap (\cite{web:autorap}).
+Similarly, RjDj uses the modern phones sensors to create ambient sonification that based on the users' interactions with the daily environment (\cite{web:rjdj})\label{rjdj}.
+
+% interactive sound installations: objects with sound, project ADA
+Sound installations are installations located in the three dimensional space that dialog with their surroundings through sound (``\citetitle{wiki:soundinstallation}'').
+Whereas in some interactive sound installations the main interaction is between the viewer and the installation itself (\cite{web:visnjic}\todo{more refs}) there are installations that aims to engage the participants to interact with one another (\cite{eng03}).
+One may say that the main goal of this kind of interaction is to facilitate social interaction\todo{find ref, maybe Omer Golan}.
+
+% social DJing: DistributedDJ, the BLOB and playmysong
+Furthermore, recent projects suggest a framework to share the role of the DJ in a bar or party between the participants (\cite{web:shaw}).
+Using those systems participants can choose the music by themselves and the ``playlist'' is created dynamically by their musical taste of the participants.
+Most of those project are implemented as mobile applications and some them even integrate social elements in their projects (\cite{web:playmysong}; \cite{web:lammers}).
+
+\subsection{Technology dependent social networking}
+
+% Silent disco and flash mobs. LBS are out because they are not really relevant!
+Silent disco and flash mobs, the conceptual roots of this research, are examples of modern type of social behavior that rely on the fast growth of social media. My proposal operates in the context of silent disco party and is inspired by flash mobs in the usage of new technologies to facilitate creative and artistic social interactions.
+
+Silent disco is the phenomenon of partying where the music is heard through headphones instead of loudspeakers.
+The origins of the phenomena are unclear, but it began to be an ordinary way of partying toward the beginning of 2000's (``\citetitle{wiki:silentdisco}'').
+The new phenomena already changed the possibilities of an ordinary party.
+One new possibility was having two DJs spin two completely different sets side by side at the same party where each participant has two channel wireless headphones, and can decide which DJ to listen to (\cite{web:headphonedisco}).
+Of course, this is not possible with a regular loudspeaker setup\todo{Add a note about silent disco where every participant come with his own music}.
+
+Flash mobs is the phenomena ``A group of people who assemble suddenly in a public place, perform an unusual and seemingly pointless act for a brief time, then quickly disperse, often for the purposes of entertainment, satire, and artistic expression. Flash mobs are organized via telecommunications, social media, or viral emails'' (``\citetitle{wiki:flashmob}'')\todo{rephrase, DON'T USE WIKI!}.
+With regards to the definition above, with emphasis on the way flash mobs are organized and executed, different researchers see the flash mobs as a significant event in the history of mobile communication (\cite{nicholson05}).
+On the other hand, a recent study by Brejzek suggests that a potential for artistic intent inherently exists in the flash mob phenomenon (\cite*{brejzek10}).
+
+\subsection{Social effects of music}
+
+% Based, as suggested by Avi, on ``The social psychology of music -- David Hargreaves''.
+% Consider also "The Do Re Mi’s of Everyday Life: The Structure and Personality Correlates of Music Preferences" by Rentfrow and Gosling.
+% and: Hargreaves, David J., Dorothy Miell, and Raymond AR MacDonald. "What are musical identities, and why are they important." Musical identities (2002): 1-20.
+
+\todo{the following is only a sketch, write it!}
+
+Some introduction.
+Music as a way for communication.
+
+Music social function.
+The influence on individual self identity and interpersonal relationships as described by Hargreaves and North.
+
+Classification of personality dimensions, self-views and cognitive abilities according to musical preferences as suggested by Rentfrow and Gosling.
+
+% Don't forget to add conclusions from those researches into the roadmap section.
+
+\subsection{Indoor positioning systems}
+
+The system I proposed will require the ability to locate the positioning of the users within an indoor environment.
+
+Today, the usage of outdoor positioning systems is unquestioned and achieved mainly by the General Positioning System (GPS) which is available in almost any modern phone.
+On the other hand, IPS has not yet standardized and therefor it is are still not available to the average user.\todo{refs needed for the whole paragraph}
+
+Recent researches state that the two most favored IPS technologies are WiFi ``fingerprinting'' and real-time locating systems (RTLS) (\cite{web:harrop}).
+WiFi ``fingerprinting'' is the technique where the analysis of received signal strength indicators (RSSI) is done once for different points inside the building to generate an emission map.
+After processing such a map any WiFi enable device can compare RSSI with the map to reveal its positioning (\cite{chen}).
+On the other hand, RTLS use access points to locate the WiFi devices in their range and determine their positioning positioning through triangulation (\cite{liu}).
+Those two methods can enhance accuracy by applying inertial navigation using the device accelerometer, gyroscope and other available sensors.\todo{check whether using \cite{liu} for the whole paragraph}
+
+\section{Research targets}
+
+The system developed in this research is inspired by the concepts of IMS and intended for the average user. In this research I will focus on the two following targets:
+\begin{enumerate}
+	\item To propose and implement an audio-only augmented reality system for social interaction.
+	Using the system, participants will be able to interact with one another as well as with system's components and affect the structure of the music in a virtual space.
+	\item To evaluate the social effects of the system usage in the context of a silent disco party mainly focusing thereby on the following research question: \emph{Does the system elaborate social interaction between participants in an interactive silent disco party?}
+\end{enumerate}
+
+\section{Research methods}
+
+% This chapter, as well as the next one, will be divided into two main sections, the first describing the system development and the second the system evaluation.
+
+\subsection{System development}
+
+In this section I will explain the rational for the choises of system implementation in the context of the above research targets.
+
+\subsubsection{Mobile and Android}
+
+% Deciding to go mobile, including all the information from the literature review about the growth of social use of mobile devices etc.
+
+Recent studies state that today's mobile phone ``has become such an important aspect of a user's daily life that it has moved from being a mere `technological object' to a key `social object{'}''\todo{rephraze, don't cite}, and as such it has a significant importance in shaping today's society (\cite{srivastava05}).
+This research is targeted for the general audiance and therefor will be implemented for mobile.
+
+The system will be developed for the Android operation system (``\citetitle{web:android}'').
+Choosing Android as the platform for my research has two main advantages:
+\begin{enumerate}
+	\item The Android system is a growing mobile system which controls most of the market share today (``\citetitle{wiki:mobile}''\todo{DON'T CITE WIKIPEDIA or ``see www.wikipedia.com/...'' in the footnote}).
+	\item By developing application for Android I have access to underlying Bluetooth properties such as received signal strength indicator (RSSI), which is essential for my implementation of the system as laid out in the next section.
+\end{enumerate}
+
+\subsubsection{Indoor positioning system}\label{methods:ips}
+
+% Explain why I've decided to implement my own indoor positioning system. For HCI it was a good idea to push it to the front, for BI music department I'm not so sure...
+
+Although there are available techniques to implement IPS I have decided to develop one by my own.
+This decision have been done due to two reasons:
+\begin{enumerate}
+	\item The above techniques, as well as most of their alternatives, require infrastructure.
+	As a system influenced by flash mobs I wanted to be able to use it anywhere without the effort involved in infrastructure deployment.
+	\item Tracking the positioning of the participants as well as the positioning of the balloon bundles has a lot of overhead when the only requirement is to be able to approximate the distance between each participant and the bundles.
+	\item As opposed to system where high accuracy is required, in the current reseach does not demend it.
+	Being able to estimate if a participant is `close' to a beacon or far from it is generaly satisfying.
+\end{enumerate}
+
+% the BBRIP system
+
+The system I've developed -- the Bluetooth Based Relative Indoor Positioning (BBRIP) system -- is a distributed system that runs separately on each one of the participants phones.
+The system consist of some Bluetooth beacons, placed inside the balloon bundles, and an Android application.
+The application repeatedly searches for nearby Bluetooth beacons.
+Received signal strength indication (RSSI) is used as an estimation of the distance between the user and the beacon.
+
+\subsubsection{libpd}\label{methods:libpd}
+
+Advance audio processing is beyond the capabilities of the Android application programming interface (API) and therefor, in order to apply sophisticate manipulations on the audio in real time, a more powerful audio engine was required.
+In a personal computer environment the programming language Pure Data (Pd), originally written by Miller Puckette in the nineteen-nineties, is one of the leading open-source softwares for computer music (\cite{web:pd}).
+In this research I have decided to use ``libpd'', a thin layer on top of Pd that turns it into an embeddable audio library, as an audio engine (\cite[page v]{brinkmann12}).
+
+\subsubsection{System description}\label{systemdescription}
+
+\todo{enhance and make this subsection simpler}
+
+From the participants point of view the system will consist of few balloon bundles, each one corresponds to a specific musical style.
+When the participants will stroll between the balloon bundles with their mobile devices and headphones their relative distances from the different bundles will affect the music in their headphones, creating virtual ``sound zones'' around each balloon bundle.
+The distance between each participant and sound zones may affect the music in several different ways.
+For example, when a participant get close to specific sound zone the music filtration may change according to the distance.
+For another sound zone the volume may be changed when getting close to it or walk away.
+Although the style of each sound zone will be well-definition, every sound zone will by able to be heard with any other sound zone, in synchronization and harmony.
+In addition, participants will be able to freely move the balloon bundles, thereby changing the structure of the music in the virtual space\footnote{A video demonstrating the system behavior from the participant point of view can be found at \href{http://youtu.be/2kJoeD2iWBA}{youtu.be/2kJoeD2iWBA}.}.
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{balloons}
+	\caption{Balloon bundles on the dance floor}
+\end{figure}
+
+\subsection{System evaluation}\label{methods:evaluation}
+
+% The following, as described in the meeting summary.
+A controlled experiment will be conducted in order to asses the research question: \emph{Does the system elaborate social interaction between participants in an interactive silent disco party?}
+
+\subsubsection{Participants}
+
+Thirty undergraduate and graduate-level students from the Music Department of Bar-Ilan university will participate in the experiment.
+Their participation will rely on voluntarily will.\todo{anything else?}
+
+\subsubsection{Measurements}
+
+The above research question will be fragmented into the following operational definitions and measurements\footnote{Complete version of each of the surveys below can be found in the appendix.}:
+\begin{enumerate}
+	\item \label{measure:disperse} Assuming that participants are pre-partitioned, natively, as groups of friends, we can define the \definition{momentary center} of each group as the average positioning of its participants on the two dimensional plain of the dance floor.
+	In addition, we can define the \definition{momentary disperse} of each group as the variance of its participant's positionings around the center.
+	Using the above definitions interaction between the members of one group with other participants will be evaluated by the disperse of the groups, when high disperse values indicate higher interactivity.
+	\item \label{measure:groups} Using the above definitions, we can define \definition{momentary group disperse} as the variance of the momentary centers themselves on the dance floor.
+	With this regards low momentary group disperse values indicate higher interactivity.
+	\item \label{measure:audio} The audio volume inside the experiment room will be used as an indication for the amount of `speaking' between participants and therefor as a social interaction estimation.
+	\item \label{measure:survey:social} Participants will fill social interaction survey\todo{write it!}.
+	The survey will be used to asses interaction between participants by estimating social cohesiveness within in-group and out-group of each participant (\todo{find ref}).
+\end{enumerate}
+In addition to measurements intended to assess the main research question.
+The following operational definitions and measurements will be used in order to assess interaction with and satisfaction from the system.
+\begin{enumerate}[resume]
+	\item \label{measure:system} We will define \definition{momentary participant-system interaction} as the momentary distance of each participant from the closest Bluetooth beacon.
+	Using the above definition high level of interaction of participant with the system will be indicated by low values of momentary participant-system interaction.
+	\item \label{measure:survey:usability} Participants will fill system satisfaction survey, based on the System Usability Scale (\cite{brooke96}).
+\end{enumerate}
+Lastly, the following measurement will be used in order to eliminate possible differences between research groups and to allow future research based on the retrieved data.
+\begin{enumerate}[resume]
+	\item \label{measure:survey:musical} Participants will fill musical background survey, based on the Emmanuel College Music Background Questionnaire, basic version (\cite{web:zhao12}).
+\end{enumerate}
+
+\subsubsection{Apparatus}
+
+In order to measure momentary disperse and group disperse as defined in measurements \ref{measure:disperse} and \ref{measure:groups} I will capture the experiment with video camera from above the dance floor.
+Tracking the positioning of the participants will be done half manually by using software aids to record the manual tracking of participants, each at a time, using the computer mouse.
+The results will be then processed using computational programming to conclude insights from the data.
+Tracking data required in order to compute momentary participant-system interaction, as described in measurement \ref{measure:system}, will be derived the same way, by manually tracking each on of the system components in the video.
+
+Audio volume (measurement \ref{measure:audio}) will be captured by a microphone and analyzed afterwards.
+
+\subsubsection{Procedure}
+
+Participants will be randomly allocated into two groups, group $A$ and group $B$\@.
+Each group will participate in the experiment in different week, but in the same day of the week and same hour.
+
+\begin{figure}[!hb]
+	\centering
+	\def\svgwidth{0.8\textwidth}
+  	\input{graphics/procedure.pdf_tex}
+	\caption{Experiment design}\label{fig:experiment}
+\end{figure}
+
+For each group, participants will first fill a musical background survey as described in measurement \ref{measure:survey:musical}, followed by three \definition{experiment blocks}, followed by a system usability survey as described in measurement \ref{measure:survey:usability} (see figure \ref{fig:experiment}.
+Each experiment block will consist of 15 minutes in which participants listen to music in their headphones, using their Android device and pre-installed application, and interact with other participants in the `silent disco' party.
+Meanwhile, during each experiment block, measurements \ref{measure:disperse}, \ref{measure:groups}, \ref{measure:audio} and \ref{measure:system} will be collected.
+Before each experiment block and after the last block each participant will fill the social interaction survey (measurement \ref{measure:survey:social}).
+
+Each experiment block can be of one of the following types:
+\begin{description}
+	\item[Interactive:] In which the music generated by the Android application behaves as described in chapter \ref{roadmap}.
+	\item[Control:] In which the music generated by the Android application is pre-composed and based on the same musical materials as of the interactive system.
+\end{description}
+
+Participants of group $A$ will hear the experiment blocks: Control $\rightarrow$ Interactive $\rightarrow$ Control. Whereas participants of group $B$ will hear the experiment blocks: Control $\rightarrow$ Control $\rightarrow$ Control.
+
+\section{Preliminary results}
+
+\subsection{System development}
+
+The system development could be described by two different processes, the development of the Bluetooth Based Relative Indoor Positioning (BBRIP) system and the Android application that wraps it and is responsible for the audio processing.
+
+\subsubsection{Implementation of the BBRIP system}
+
+The BBRIP system is my intent to develop an indoor positioning system that will satisfy the relatively simple requirements of the research as presented in chapter \ref{methods:ips}.
+As already noted, such a solution not yet exist.
+
+My implementation of the system is based on a specific element in the Bluetooth protocol -- the Received Signal Strength Indicator (RSSI) (``\citetitle{wiki:rssi}'').
+Each Bluetooth enabled device calculate RSSI values during Bluetooth discovery, when it finds a new device and before establishing connection.
+Thereby, the BBRIP system continuously search for Bluetooth devices.
+When a new device is found the RSSI value is extracted and send forward for processing.
+From the first discovery in the Bluetooth discovery cycle the system keeps checking if the time since the last discovery exceeded a pre-defined timeout and if so it terminate the discovery.
+This termination is important because naturally a device can only be discovered once in each Bluetooth discovery cycle and long period of time without new discoveries indicates that all of the nearby devices are already found.
+Lastly, when the system sees that there is no Bluetooth discovery running (because of termination or simply the end of the discovery cycle), it starts a new one immediately.
+
+Although the RSSI values extracted by the BBRIP system are not very precise as a distance estimation, I have found them sufficient enough in order to classify the distance between participants and beacons into useful ranges. In other words, RSSI values gives great indication if a participant is stands close to specific beacon (around 1 meter), in mediate range (2 to 3 meters) or in larger distance.
+
+\subsubsection{ScenePlayer Plus}
+
+The development of the Android application moved through different development stages.
+
+First, I have developed an application that didn't use ``libpd'' at all (see chapter \ref{methods:libpd}).
+In this early stage the only effect of getting close to, or far from a beacon was by changing the volume.
+In addition, the limited sophistication of the built in audio library made fading in and out from the sound zones very non-flexible.
+
+After finding the weakness of using the built in audio library of the Android API I have decided to implement the system using ``libpd''.
+Although this implementation worked fine, it made a very tight coupling between the system development in the Android environment and the audio processing development in Pd.
+Overall, this development phase was sufficiant enough but in order to allow other musicians and developers to use the system I have started to look for more open architecture, that will maintain loosely coupled connection between the Android application and the Pd patch that drove the audio.
+
+The last phase in the development of the system was to implement the BBRIP system into the open source Android application ``ScenePlayer'' (\cite{web:sceneplayer}), an Android port for the RjDj application mentioned in chapter \ref{rjdj}, and release it again as ``ScenePlayer Plus'' (\cite{web:sceneplayerplus}).
+The application exposes the Bluetooth RSSI values to the Pd patch as another sensor of the mobile device (e.g. accelerometer, compass and touchscreen).
+
+\subsection{System evaluation}
+
+The following describe a pilot experiment I have run, with different methods then those presented in chapter \ref{methods:evaluation}.
+
+\subsubsection{Pilot experiment design}
+
+\begin{figure}[!htb]
+	\centering
+	\def\svgwidth{0.95\columnwidth}
+  	\input{graphics/pilot_design.pdf_tex}
+	\caption{Pilot experiment design}\label{fig:pilot}
+\end{figure}
+
+Eighteen volunteers was invited to participate in an interactive silent disco party.
+Each participant installed the Android application on his or her phone and filled pre/post party surveys that included questions regarding their musical background and preferences as well as system evaluation feedback.
+The party consisted of four alternating interactive/control blocks of duration 5:40 minutes each (see figure \ref{fig:pilot}).
+The participants were randomly assigned to two groups: $A$ and $B$, comprising the interactive and control blocks respectively\footnote{Group $A$ (interactive first) consists of 8 participants (4 females and 4 males) with mean age of 36.7 (s.d=12.3); group $B$ (control first) consists of 10 participants (3 females and 7 males) with mean age of 29.6 (s.d=10.2). Participants had a diverse musical background with 4.7 mean years of musical training (s.d=5.2).}.
+They were generally informed that the experiment consists of interactive and control segments, however they were not informed about the exact schedule and timing of the blocks or the group assignments.
+Both groups started the experiment together.
+In the interactive blocks, the application generated music as described in chapter \ref{roadmap}, whereas in the control blocks the participants heard recorded non-interactive music created in advance using the musical material of the interactive system\footnote{The control block music composed by Noam Elron (\href{http://www.noamelron.com}{www.noamelron.com}).}.
+
+Interaction with the system's components was assessed by counting the number of Bluetooth device discoveries made by each participant's phone during both the interactive and the control blocks.
+In order to eliminate edge effects, we analyzed only the two middle blocks of the experiment.
+
+\subsubsection{Pilot experiment results}
+
+\begin{figure}[!htb]
+\minipage{0.49\textwidth}
+	\def\svgwidth{0.95\columnwidth}
+  	\input{graphics/changing_location_in_space.pdf_tex}
+	\caption{Changing location in space}\label{fig:location}
+\endminipage\hfill
+\minipage{0.49\textwidth}
+	\def\svgwidth{0.95\columnwidth}
+	\input{graphics/dancing_with_known_people.pdf_tex}
+	\caption{Dancing with known people}\label{fig:known}
+\endminipage\hfill
+\end{figure}
+
+In the post-party survey, participants self-reported significantly higher levels of movement (paired t-test, $t(15)=3.9$, $p<0.01$) using the system, compared with their behavior on other parties as reported in the pre-party survey.
+Figure \ref{fig:location} shows that there was a significant difference (unpaired t-test, $t(33)=6.2$, $p<0.01$) in the mean response to these questions (at a scale of 1-3).
+
+In order to objectively assess if participants moved more in space, we measured the counting of Bluetooth discoveries made by the application's BBRIP system.
+Our results show slightly higher counts (paired t-test, $t(16)=1.7$, $p=0.06$, n.s) during the interactive blocks of the party compared with the control blocks. This suggests that the interactive components of the system facilitate greater participant movement in space, thereby offering more frequent opportunities for social interactions.
+Indeed, in the post-party survey participants reported that they danced significantly less with people that they knew in advance, compared with their usual behavior (paired t-test, $t(14)=-2.5$, $p=0.01$).
+Figure \ref{fig:known} shows that there was also a significant difference in the mean response to these questions in the pre/post surveys.
+Overall, participants showed a slightly stronger tendency (paired t-test, $t(16)=1.46$ ,$p=0.08$, n.s) to participate in an interactive party in the post-party survey, compared with their answer to identical questions in the pre survey.
+
+Our preliminary results already demonstrate the potential for audio-only augmented reality to significantly enrich the experience of music consumption and its attendant social interaction.
+We also show that this can be validated in a controlled experiment using both direct reports of subject and indirect objective measurements.
+
+\todo{reasoning for future experiment}
+
+\section{Appendix}
+
+% Questionnaires: Standardized musical background survey, modified system usability scale (SUS), Interaction survey.
 
 \printbibliography[title={Bibliography}]
 \end{document}
