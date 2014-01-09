@@ -63,3 +63,6 @@ Messy bibliography
 - Wikipedia contributors. "Silent disco." Wikipedia, The Free Encyclopedia. Wikipedia, The Free Encyclopedia, 5 Sep. 2012. Web. 22 Dec. 2012.
 - Winkler, Todd. Composing interactive music: techniques and ideas using Max. MIT press, 2001.
 - Zickuhr, Kathryn, and Aaron Smith. "28% of American adults use mobile and social location-based services." Pew Internet & American Life Project 6 (2011).
+
+Similar Bluetooth IPS solutions
+http://www.washingtonpost.com/blogs/innovations/wp/2014/01/07/how-ibeacons-could-change-the-world-forever/#!
