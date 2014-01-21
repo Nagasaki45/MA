@@ -17,6 +17,7 @@ TO_REMOVE = [
     '.blg',
     '.bcf',
     '.xml',
+    '.tdo',
 ]
 
 
