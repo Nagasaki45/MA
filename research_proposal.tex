@@ -11,8 +11,10 @@
 
 \graphicspath{ {images/}{graphics/} }
 
-\newcommand{\new}[1]{\textcolor{blue}{#1}}
+% \newcommand{\new}[1]{\textcolor{blue}{#1}}
 \newcommand{\definition}[1]{\emph{#1}}
+\newcommand{\noriinline}[1]{\todo[author=Nori,inline,color=green]{#1}}
+\newcommand{\nori}[1]{\todo[author=Nori,color=green]{#1}}
 
 \title{Audio-Only Augmented Reality System for\\Social Interaction} 
 \author{Tom Gurion}
@@ -21,6 +23,8 @@
 \maketitle
 
 \listoftodos
+
+\todo[inline]{General question: should I keep general refs to companies, technologies, product etc. in the bibliography or should they present in the footnotes?}
 
 \section{Introduction and framework}
 
@@ -39,7 +43,11 @@ In this work I will combine the concept of IMS with AR creating a system for rea
 
 \section{Literature review}
 
+\noriinline{Here you need an introduction paragraph say that the origins of this research rely on interdisciplinary research: IMS,interactive, social, positioning systems}
+
 \subsection{The origins of IMS}
+
+\noriinline{Say that IMS merges development in several threads: early music software, standartization (MIDI), makers comunity (arduino,internet of things)...}
 
 According to the Oxford Dictionary to ``interact'' is to ``act in such a way as to have an effect on each other'' (\citeauthor{web:oxford}).
 In the field of IMS actions and affects may be implemented on a broad spectrum of novel techniques, ranging from interactive sound installations to collaborations with robotic performers (\cite{drummond09}).
@@ -49,10 +57,10 @@ First example of this kind of interactive system was Gordon Mummas' Hornpipe, wh
 
 Later, during the nineteen-seventies, musicians and researchers were able to create IMS programmatically using newly developed programming languages designed for musical applications, such as GROOVE or the MUSIC-N series (\cite{mathews70}; \cite{mathews69}).
 
-In the nineteen-eighties, a group of musical instruments manufacturers agreed on universal standard for sending and receiving musical information digitally, establishing the MIDI protocol (\cite{web:quinn}).
+\nori{On another direction:} In the nineteen-eighties, a group of musical instruments manufacturers agreed on universal standard for sending and receiving musical information digitally, establishing the MIDI protocol (\cite{web:quinn}).
 The standardization of sending and receiving information combined with the emergence of personal computers enabled the creation of modern programing languages for musical applications.
 Max/MSP, which began its development by Miller Puckette in 1986, may be a good example (\cite[p. 16]{winkler01}).
-As opposed to early programming languages as GROOVE or the MUSIC-N series, most of those personal computer based languages still exist today, keep progressing and new music oriented programing languages are developed on a regular basis (\citeauthor{web:chuck}; \citeauthor{web:usine}).
+As opposed to early programming languages as GROOVE or the MUSIC-N series, most of those personal computer based languages still exist today, keep progressing and new music oriented programing languages are developed on a regular basis (\citeauthor{web:chuck}; \citeauthor{web:usine}).\nori{Say few more words (for example ChunK developed by)...}
 
 Similar technological shifts also facilitated the usage of Digital Audio Workstations (DAW) as a common alternative to analog recording equipment in studios (\cite{leider:04}).
 Later, with the arrival of the VST standard (\citeauthor{web:steinberg}), computers became even more essential tool for music production.
@@ -62,6 +70,8 @@ Another key event in the history of IMS is the appearance of the Arduino platfor
 The Arduino is an easy to use hardware and software package intended for interactive objects or environments creation (\citeauthor{web:arduino}).
 The platform opened the door for musicians to use more then just audio and MIDI to communicate with music creation software in interactive environment, mostly by translating physical properties into sound.
 
+\noriinline{"Makers" culture - add a pargraph about the phenomena}
+
 \subsection{Interactive music systems for non-professional musicians}
 
 Today, IMS meets the non-professional musician in various scenarios: interactive video clips, mobile and album applications, interactive sound installations and social DJing.
@@ -70,13 +80,13 @@ While these examples are typical they are only a small portion of novel ways whe
 % interactive video clips: Interlude, Chris Milk and Aaron Koblin
 Interactive video clips expose some of the roles traditionally kept for the director to the viewers.
 As a relatively new phenomena video clips like those are rare but prominent.
-As examples one can find the works of Chris Milk and Aaron Koblin (\citeauthor{web:milk1}; \citeauthor{web:milk2}) and the startup Interlude which driven by equivalent concept (\citeauthor{web:interlude}).
+As examples one can find the works of Chris Milk and Aaron Koblin \nori{Describe one work at least}(\citeauthor{web:milk1}; \citeauthor{web:milk2}) and the startup Interlude which driven by equivalent concept (\citeauthor{web:interlude}).
 
 % mobile applications: Smule and RjDj
 The increased computation power of the modern mobile phone led developers to develop new mobile applications for music creation for non-professional musicians.
 Those applications gives the average user the ability to create music by himself and without any musical education.
 Good examples for this kind of applications are Smules' applications, with emphasis on AutoRap (\citeauthor{web:autorap}) and the mobile applications by Brian Eno and Peter Chilvers (\citeauthor{web:generativemusic}).
-Similarly, RjDj uses the phones' sensors to create ambient sonification based on the users' interactions with the daily environment (\cite{web:rjdj})\label{rjdj}.
+Similarly, RjDj uses the phones' sensors to create ambient sonification based on the users' interactions with the daily environment (\cite{web:rjdj})\label{rjdj}\nori{One more phrase what happens there (for someone that do not know these systems)}.
 
 % album applications
 Album applications are another new trend of artists releasing their music as interactive applications for mobile.
@@ -113,16 +123,20 @@ It provides musicians with the ability to share emotions and meanings without wo
 % Music social function.
 % The influence on individual self identity and interpersonal relationships as described by Hargreaves and North.
 Throughout the twentieth century the psychological functions of music in everyday life have been extensively studied, with an emphasis on their cognitive and emotional importance for the individual (\cite{hargreaves99}).
-A recent study by Hargreaves and North tries to extend those insights about music functionality to the social domain, explaining the social effects of music on the individual by means of self-identity, inter-personal relationships and mood (\cite*{hargreaves99}).
+A recent study by Hargreaves and North tries to extend those insights about music functionality to the social domain, explaining the social effects of music on the individual by means of self-identity, inter-personal relationships and mood (\cite*{hargreaves99})\nori{Cite only once - you allready cited one sentece ago}.
 
 % Classification of personality dimensions, self-views and cognitive abilities according to musical preferences as suggested by Rentfrow and Gosling.
 In todays world people think and identified themselves through music in such a way that cultural phenomena are often described by the musical style that accompanies them (e.g., the youth generation in the nineteen-sixties) (\cite{cook00}).
 Indeed, there is a high correlation between music preferences and a wide array of personality dimensions (e.g., conscientiousness and openness) as well as self-views (e.g., political orientation) (\cite{rentfrow03}).
 
+\noriinline{Some references more general about the cogntive and social asspects? sounds to me quite shallow}
+
 % in group and out group
 \todo[inline,color=red]{group cohesion, in-group \& out-group literature review}
 
 \subsection{Indoor positioning systems}
+
+\todo[inline]{does the following sentence add something at all?}
 
 The system I propose will require the ability to locate the positioning of the users within an indoor environment.
 
@@ -179,11 +193,13 @@ Received signal strength indication (RSSI) is used as an estimation of the dista
 
 \subsubsection{libpd}\label{methods:libpd}
 
-Advance audio processing is beyond the capabilities of the Android application programming interface (API) and therefor, in order to apply sophisticate manipulations on the audio in real time, a more powerful audio engine was required.
+Advance audio processing is beyond the capabilities of the Android application programming interface and therefor, in order to apply sophisticate manipulations on the audio in real time, a more powerful audio engine was required.
 In a personal computer environment the programming language Pure Data (Pd), originally written by Miller Puckette in the nineteen-nineties, is one of the leading open-source softwares for computer music (\citeauthor{web:pd}).
 In this research I have decided to use ``libpd'', a thin layer on top of Pd that turns it into an embeddable audio library, as an audio engine (\cite[p. v]{brinkmann12}).
 
 \subsubsection{System description}\label{systemdescription}
+
+\noriinline{Start with "figure xx shows the general architecture of the system" provide clear figures and follow and explain them in the text, this will be more concise and easy to write than abstract prose}
 
 \todo[inline]{write better system description, more slowly and clear}
 
@@ -214,7 +230,7 @@ Their participation will rely on voluntarily will.
 The above research question will be fragmented into the following operational definitions and measurements\footnote{Complete version of each of the surveys below can be found in the appendix.}:
 \begin{enumerate}
 	\item \label{measure:disperse} Assuming that participants are pre-partitioned, natively, as groups of friends, we can define the \definition{momentary center} of each group as the average positioning of its participants on the two dimensional plain of the dance floor.
-	In addition, we can define the \definition{momentary disperse} of each group as the variance of its participants' positionings around the center.
+	In addition, we can define the \definition{momentary disperse} of each group as the variance of its participants' positionings around the center\footnote{Two dimensional variance definition is presented in the appendix.}\todo{write 2d var}.
 	Using the above definitions interaction between the members of one group with other participants will be evaluated by the disperse of the groups, when high disperse values indicate higher interactivity.
 	\item \label{measure:groups} Using the above definitions, we can define \definition{momentary group disperse} as the variance of the momentary centers themselves on the dance floor.
 	With this regards low momentary group disperse values indicate higher interactivity.
@@ -308,7 +324,7 @@ First, I have developed an application that didn't use ``libpd'' at all (see cha
 In this early stage the only effect of getting close to, or far from a beacon was by changing the volume.
 In addition, the limited sophistication of the built in audio library made fading in and out from the sound zones very non-flexible.
 
-After finding the weakness of using the built in audio library of the Android API I have decided to implement the system using ``libpd''.
+After finding the weakness of using the built in audio library of the Android application programming interface I have decided to implement the system using ``libpd''.
 Although this implementation worked fine, it made a very tight coupling between the system development in the Android environment and the audio processing development in Pd.
 Overall, this development phase was sufficiant enough but in order to allow other musicians and developers to use the system I have started to look for more open architecture, that will maintain loosely coupled connection between the Android application and the Pd patch that drove the audio.
 
@@ -366,9 +382,11 @@ Overall, participants showed a slightly stronger tendency (paired t-test, $t(16)
 Our preliminary results already demonstrate the potential for audio-only augmented reality to significantly enrich the experience of music consumption and its attendant social interaction.
 We also show that this can be validated in a controlled experiment using both direct reports of subject and indirect objective measurements.
 
-\todo[inline,color=red]{reasoning for future experiment}
+\noriinline{Some general ending paragraph}
 
 \section{Appendix}
+
+\noriinline{Yeh, all the details of the planned experiment should be there}
 
 % Questionnaires: Standardized musical background survey, modified system usability scale (SUS), Interaction survey.
 \todo[inline]{collect and write surveys in the appendix}
