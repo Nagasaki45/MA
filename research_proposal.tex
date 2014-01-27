@@ -200,36 +200,48 @@ In this research I have decided to use ``libpd'', a thin layer on top of Pd that
 
 \subsubsection{System description}\label{systemdescription}
 
+% \noriinline{Start with "figure xx shows the general architecture of the system" provide clear figures and follow and explain them in the text, this will be more concise and easy to write than abstract prose}
+
+% \todo[inline]{write better system description, more slowly and clear}
+
 \begin{figure}[!htb]
 	\centering
 	\def\svgwidth{0.9\textwidth}
 	\input{graphics/system_architecture.pdf_tex}
-	\caption{System architecture, Android application and Bluetooth beacons}\label{fig:sys:architecture}
+	\caption{System architecture}\label{fig:sys:architecture}
 \end{figure}
+
+Figure \ref{fig:sys:architecture} shows a schematic diagram of the system, which consist of an Android application and specially designed Bluetooth ($BB1 - BB4$).
+The BBRIP system is used to estimate the distance between the user and nearby Bluetooth beacon.
+This estimation is then sent to a Pd patch through libpd, which plays an audio loop corresponding to the nearby beacon by one of the sound zone players $SZP1$ -- $SZP4$.
+Every audio loop is identified by a distinct musical style which can be rhythmically and harmonically synchronized with other loops in almost endless combinations.
+
+\begin{figure}[!htb]
+	\includegraphics[width=\linewidth]{balloons}
+	\caption{Balloon bundles on the dance floor}\label{fig:balloons}
+\end{figure}
+
+From the participants point of view the dance floor will consist of few balloon bundles, each one marked up with a name of specific musical style (e.g.\ rock, jazz, Indian music as shown in figure \ref{fig:balloons}).
+A corresponding Bluetooth beacon will be installed inside each one of those bundles.
+After downloading and installing the Android application, strolling between the balloon bundles will affect the music in ones headphones according to the relative distance from the bundles, creating a virtual ``sound zone'' around each one of them.
+In addition, the distance from the center of each sound zones may affect the music in several different ways; for example by controlling volume, filter and granularity of the sound zone.
+Lastly, participants can freely move the balloon bundles, thereby changing the structure of the music in the virtual space making it socially interactive.
+
+Figure \ref{fig:sys:participant_view} shows an overhead view of a possible scenario of participants using the system in a party\footnote{A video demonstration of similar scenario can be found at \href{http://youtu.be/2kJoeD2iWBA}{youtu.be/2kJoeD2iWBA}.}.
 
 \begin{figure}[!htb]
 	\centering
 	\def\svgwidth{0.9\textwidth}
 	\input{graphics/system_participant_view.pdf_tex}
-	\caption{The system from the participant point of view}\label{fig:sys:participant_view}
+	\caption{Here you can see two participants, $A$ and $B$, dancing around three Bluetooth beacons, corresponding to the rock, jazz and Indian music sound zones. Participant $A$ hear rock music and participant $B$ hear a mix between the jazz and the Indian music sound zones, which are rhythmically and harmonically synchronized with each other.}\label{fig:sys:participant_view}
 \end{figure}
 
-\noriinline{Start with "figure xx shows the general architecture of the system" provide clear figures and follow and explain them in the text, this will be more concise and easy to write than abstract prose}
+% Figure 1 shows a schematic diagram of our system, which consists of a mobile application developed for Android OS [13] and six specially designed Bluetooth beacons [14]. Participants can freely move the beacons that are installed on physical objects, thereby changing the structure of the music in the virtual space. The Android application repeatedly searches for nearby Bluetooth beacons (see figure 1, BB 1 -BB 6 ).
+% Received signal strength indication (RSSI) is used as an estimation of the distance between the user and the beacon. This is then sent to a Pure Data (Pd) patch [15] through the libpd API [16]. The Pd patch plays an audio loop corresponding to the nearby beacon. Every audio loop, played by the sound zone players SZP 1 -SZP 6 , is identified by a distinct musical style, and uses the RSSI value differently; for example by controlling volume, filter and granularity of the sound zone. In addition, the different sound zones are modules which can be rhythmically and harmonically synchronized with each other in almost endless combinations.
 
-\todo[inline]{write better system description, more slowly and clear}
-
-From the participants point of view the system will consist of few balloon bundles, each one corresponds to a specific musical style.
-When the participants will stroll between the balloon bundles with their mobile devices and headphones their relative distances from the different bundles will affect the music in their headphones, creating virtual ``sound zones'' around each balloon bundle.
-The distance between each participant and sound zones may affect the music in several different ways.
-For example, when a participant get close to specific sound zone the music filtration may change according to the distance.
-For another sound zone the volume may be changed when getting close to it or walk away.
-Although the style of each sound zone will be well-definition, every sound zone will by able to be heard with any other sound zone, in synchronization and harmony.
-In addition, participants will be able to freely move the balloon bundles, thereby changing the structure of the music in the virtual space\footnote{A video demonstrating the system behavior from the participant point of view can be found at \href{http://youtu.be/2kJoeD2iWBA}{youtu.be/2kJoeD2iWBA}.}.
-
-\begin{figure}[!htb]
-	\includegraphics[width=\linewidth]{balloons}
-	\caption{Balloon bundles on the dance floor}
-\end{figure}
+% For another sound zone the volume may be changed when getting close to it or walk away.
+% Although the style of each sound zone will be well-definition, every sound zone will by able to be heard with any other sound zone, in synchronization and harmony.
+% In addition, participants will be able to freely move the balloon bundles, thereby changing the structure of the music in the virtual space\footnote{A video demonstrating the system behavior from the participant point of view can be found at \href{http://youtu.be/2kJoeD2iWBA}{youtu.be/2kJoeD2iWBA}.}.
 
 \subsection{System evaluation}\label{methods:evaluation}
 
