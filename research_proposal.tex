@@ -12,7 +12,6 @@
 
 \graphicspath{ {images/}{graphics/} }
 
-% \newcommand{\new}[1]{\textcolor{blue}{#1}}
 \newcommand{\definition}[1]{\emph{#1}}
 \newcommand{\noriinline}[1]{\todo[author=Nori,inline,color=green]{#1}}
 \newcommand{\nori}[1]{\todo[author=Nori,color=green]{#1}}
@@ -44,14 +43,12 @@ In this work I will combine the concept of IMS with AR creating a system for rea
 
 \section{Literature review}
 
-% \noriinline{Here you need an introduction paragraph say that the origins of this research rely on interdisciplinary research: IMS,interactive, social, positioning systems}
-
 The current work is based on interdisciplinary research in several different fields.
 The following sections will present those fields with emphasis on the projects, technologies and researches that serves as important roots for both my system development as well as the attendant system evaluation.
 
 \subsection{The origins of IMS}
 
-\noriinline{Say that IMS merges development in several threads: early music software, standartization (MIDI), makers comunity (arduino,internet of things)...}
+\noriinline{Say that IMS merges development in several threads: early music software, standardization (MIDI), makers community (Arduino, Internet of things)...}
 
 According to the Oxford Dictionary to ``interact'' is to ``act in such a way as to have an effect on each other'' (\citeauthor{web:oxford}).
 In the field of IMS actions and affects may be implemented on a broad spectrum of novel techniques, ranging from interactive sound installations to collaborations with robotic performers (\cite{drummond09}).
@@ -76,7 +73,7 @@ Another key event in the history of IMS is the appearance of the Arduino platfor
 The Arduino is an easy to use hardware and software package intended for interactive objects or environments creation (\citeauthor{web:arduino}).
 The platform opened the door for musicians to use more then just audio and MIDI to communicate with music creation software in interactive environment, mostly by translating physical properties into sound.
 
-\noriinline{"Makers" culture - add a pargraph about the phenomena}
+\noriinline{``Makers'' culture - add a paragraph about the phenomena}
 
 \subsection{Interactive music systems for non-professional musicians}
 
@@ -135,10 +132,7 @@ A recent study by Hargreaves and North tries to extend those insights about musi
 In todays world people think and identified themselves through music in such a way that cultural phenomena are often described by the musical style that accompanies them (e.g., the youth generation in the nineteen-sixties) (\cite{cook00}).
 Indeed, there is a high correlation between music preferences and a wide array of personality dimensions (e.g., conscientiousness and openness) as well as self-views (e.g., political orientation) (\cite{rentfrow03}).
 
-\noriinline{Some references more general about the cogntive and social asspects? sounds to me quite shallow}
-
-% in group and out group
-\todo[inline,color=red]{group cohesion, in-group \& out-group literature review}
+\noriinline{Some references more general about the cognitive and social aspects. Includes group cohesion, in-group \& out-group. Currently it sounds to me quite shallow}
 
 \subsection{Indoor positioning systems}
 
@@ -205,10 +199,6 @@ In this research I have decided to use ``libpd'', a thin layer on top of Pd that
 
 \subsubsection{System description}\label{systemdescription}
 
-% \noriinline{Start with "figure xx shows the general architecture of the system" provide clear figures and follow and explain them in the text, this will be more concise and easy to write than abstract prose}
-
-% \todo[inline]{write better system description, more slowly and clear}
-
 \begin{figure}[!htb]
 	\centering
 	\def\svgwidth{0.9\textwidth}
@@ -255,13 +245,13 @@ Their participation will rely on voluntarily will.
 The above research question will be fragmented into the following operational definitions and measurements\footnote{Complete version of each of the surveys below can be found in the appendix.}:
 \begin{enumerate}
 	\item \label{measure:disperse} Assuming that participants are pre-partitioned, natively, as groups of friends, we can define the \definition{momentary center} of each group as the average positioning of its participants on the two dimensional plain of the dance floor.
-	In addition, we can define the \definition{momentary disperse} of each group as the variance of its participants' positionings around the center\footnote{Two dimensional variance definition is presented in the appendix.}\todo{write 2d var}.
+	In addition, we can define the \definition{momentary disperse} of each group as the variance of its participants' positionings around the center\footnote{Two dimensional variance definition is presented in the appendix.}.
 	Using the above definitions interaction between the members of one group with other participants will be evaluated by the disperse of the groups, when high disperse values indicate higher interactivity.
 	\item \label{measure:groups} Using the above definitions, we can define \definition{momentary group disperse} as the variance of the momentary centers themselves on the dance floor.
 	With this regards low momentary group disperse values indicate higher interactivity.
 	\item \label{measure:audio} The audio volume inside the experiment room will be used as an indication for the amount of `speaking' between participants and therefor as a social interaction estimation.
-	\item \label{measure:survey:social} Participants will fill social interaction survey\todo[color=red]{write interaction survey!}.
-	The survey will be used to asses interaction between participants by estimating social cohesiveness within in-group and out-group of each participant (\todo[color=red]{find group cohesion ref}).
+	\item \label{measure:survey:social} Participants will fill social interaction survey.
+	The survey will be used to asses interaction between participants by estimating social cohesiveness within in-group and out-group of each participant.
 \end{enumerate}
 In addition to measurements intended to assess the main research question.
 The following operational definitions and measurements will be used in order to assess interaction with and satisfaction from the system.
@@ -411,10 +401,10 @@ We also show that this can be validated in a controlled experiment using both di
 
 \section{Appendix}
 
-\noriinline{Yeh, all the details of the planned experiment should be there}
-
 % Questionnaires: Standardized musical background survey, modified system usability scale (SUS), Interaction survey.
 \todo[inline]{collect and write surveys in the appendix}
+\todo[inline,color=red]{write interaction survey!}
+\todo[inline]{write 2d variance}
 
 \sloppy  % fixing line breaks in bibliography
 \printbibliography[title={Bibliography}]
