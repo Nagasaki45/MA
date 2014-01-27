@@ -5,6 +5,7 @@
 \usepackage{hyperref}
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{calc}  % importent in order to import inkspace images
+\usepackage[labelfont=bf]{caption}  % set caption label to bold
 \usepackage{enumitem}  % to interrupt enumerations and resume
 
 \addbibresource{bibliography.bib}
@@ -199,6 +200,20 @@ In this research I have decided to use ``libpd'', a thin layer on top of Pd that
 
 \subsubsection{System description}\label{systemdescription}
 
+\begin{figure}[!htb]
+	\centering
+	\def\svgwidth{0.9\textwidth}
+	\input{graphics/system_architecture.pdf_tex}
+	\caption{System architecture, Android application and Bluetooth beacons}\label{fig:sys:architecture}
+\end{figure}
+
+\begin{figure}[!htb]
+	\centering
+	\def\svgwidth{0.9\textwidth}
+	\input{graphics/system_participant_view.pdf_tex}
+	\caption{The system from the participant point of view}\label{fig:sys:participant_view}
+\end{figure}
+
 \noriinline{Start with "figure xx shows the general architecture of the system" provide clear figures and follow and explain them in the text, this will be more concise and easy to write than abstract prose}
 
 \todo[inline]{write better system description, more slowly and clear}
@@ -211,7 +226,7 @@ For another sound zone the volume may be changed when getting close to it or wal
 Although the style of each sound zone will be well-definition, every sound zone will by able to be heard with any other sound zone, in synchronization and harmony.
 In addition, participants will be able to freely move the balloon bundles, thereby changing the structure of the music in the virtual space\footnote{A video demonstrating the system behavior from the participant point of view can be found at \href{http://youtu.be/2kJoeD2iWBA}{youtu.be/2kJoeD2iWBA}.}.
 
-\begin{figure}[h]
+\begin{figure}[!htb]
 	\includegraphics[width=\linewidth]{balloons}
 	\caption{Balloon bundles on the dance floor}
 \end{figure}
@@ -265,7 +280,7 @@ Audio volume (measurement \ref{measure:audio}) will be captured by a microphone 
 Participants will be randomly allocated into two groups, group $A$ and group $B$\@.
 Each group will participate in the experiment in different week, but in the same day of the week and same hour.
 
-\begin{figure}[!hb]
+\begin{figure}[!htb]
 	\centering
 	\def\svgwidth{0.8\textwidth}
   	\input{graphics/procedure.pdf_tex}
