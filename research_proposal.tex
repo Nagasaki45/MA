@@ -7,6 +7,7 @@
 \usepackage{calc}  % importent in order to import inkspace images
 \usepackage[labelfont=bf]{caption}  % set caption label to bold
 \usepackage{enumitem}  % to interrupt enumerations and resume
+\usepackage{amsmath}
 \usepackage{tabularx}  % alternative tabular package for the surveys
 \newcolumntype{Y}{>{\centering\arraybackslash}X}  % for centered columns
 \usepackage[toc,page]{appendix}
@@ -407,7 +408,19 @@ More generally, my research explores the potential for using modern technologies
 \begin{appendices}
 
 \todo[inline,color=red]{write interaction survey!}
-\todo[inline]{write 2d variance}
+
+\section{Two dimensional variance}
+
+Usually, the variance of a discrete random variable $X$ is computed as:
+\begin{equation*}
+	Var(X) = \sum_{i=1}^n \frac{(x_i - \mu)^2}{n}
+\end{equation*}
+Where $\mu$ is the variable mean value.
+
+The variance of a two dimensional discrete random variable $X$ will be defined using the euclidean distance between two points on the two dimensional plane as:
+\begin{equation*}
+	Var(X) = \sum_{i=1}^n \frac{dist(x_i, \mu)^2}{n}
+\end{equation*}
 
 \section[Musical background survey]{Musical background survey\\
 	{\normalsize based on the Emmanuel College Music Background Questionnaire, basic version}}
