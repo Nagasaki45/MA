@@ -7,6 +7,9 @@
 \usepackage{calc}  % importent in order to import inkspace images
 \usepackage[labelfont=bf]{caption}  % set caption label to bold
 \usepackage{enumitem}  % to interrupt enumerations and resume
+\usepackage{tabularx}  % alternative tabular package for the surveys
+\newcolumntype{Y}{>{\centering\arraybackslash}X}  % for centered columns
+\usepackage[toc,page]{appendix}
 
 \addbibresource{bibliography.bib}
 
@@ -15,6 +18,7 @@
 \newcommand{\definition}[1]{\emph{#1}}
 \newcommand{\noriinline}[1]{\todo[author=Nori,inline,color=green]{#1}}
 \newcommand{\nori}[1]{\todo[author=Nori,color=green]{#1}}
+\newcommand{\myunderline}{\rule{2in}{.5pt}}
 
 \title{Audio-Only Augmented Reality System for\\Social Interaction} 
 \author{Tom Gurion}
@@ -400,12 +404,165 @@ We also show that this can be validated in a controlled experiment using both di
 
 More generally, my research explores the potential for using modern technologies to create IMS for non-professional musicians, where the user' social interaction is the main influence over actually heard music.
 
-\section{Appendix}
+\begin{appendices}
 
-% Questionnaires: Standardized musical background survey, modified system usability scale (SUS), Interaction survey.
-\todo[inline]{collect and write surveys in the appendix}
 \todo[inline,color=red]{write interaction survey!}
 \todo[inline]{write 2d variance}
+
+\section[Musical background survey]{Musical background survey\\
+	{\normalsize based on the Emmanuel College Music Background Questionnaire, basic version}}
+
+Please first provide your basic information.
+
+\begin{enumerate}
+	\item Name: \myunderline
+	\item Gender: Male / Female
+	\item Age: \myunderline
+	\item E-mail: \myunderline
+\end{enumerate}
+Please answer the following questions to the best of your knowledge.
+\begin{enumerate}[resume]
+
+	\item Please rate your overall interest in Music according to the following scale
+
+	\begin{tabular}{c c c c c}
+		Not interested & & Neutral & & Very interested \\
+		1 & 2 & 3 & 4 & 5 \\
+	\end{tabular}
+
+	\item Please rate your overall Music ability according to the following scale
+
+	\begin{tabular}{c c c c c}
+		Poor & & Average & & Excellent \\
+		1 & 2 & 3 & 4 & 5 \\
+	\end{tabular}
+
+	\item How many hours per week do you spend listening to music?
+
+	\myunderline
+
+	\item What genre(s) do you listen to most? (check all that apply)
+
+	\begin{tabular}{l l}
+		{[{ \ }]} & Classical \\
+		{[{ \ }]} & Country \\
+		{[{ \ }]} & Jazz \\
+		{[{ \ }]} & Rock \\
+		{[{ \ }]} & Pop \\
+		{[{ \ }]} & Non-western \\
+		{[{ \ }]} & Other: (please specify) \myunderline \\
+	\end{tabular}
+
+	\item Most of the time, when you listen to music, you are
+
+	\begin{tabular}{l l}
+		( \ ) & not focused on the music, attending to a different task \\
+		( \ ) & passively listening \\
+		( \ ) & highly aware of musical nuances such as key changes, harmonies, etc. \\
+		( \ ) & actively engaged (sing along, tap the beat, etc.) \\
+	\end{tabular}
+
+	\item About how many hours of musical activity do you engage in each week currently? (e.g. practice, performance)
+
+	\myunderline
+
+	\item \label{appendix:music:ensamble}Have you ever participated in a musical ensemble?
+
+	\begin{tabular}{l l}
+		( \ ) No \\
+		( \ ) Yes, instrumental ensemble \\
+		( \ ) Yes, vocal ensemble \\
+		( \ ) Yes, both instrumental and vocal \\
+	\end{tabular}
+
+	\item If you answered YES to question \ref{appendix:music:ensamble}, please indicate how many years you have participated in the music ensemble
+
+	\myunderline \ years
+
+	\item Please list any instrument(s) that you play (including voice) and the years you play each of them, beginning with your primary instrument:
+
+	\begin{tabular}{c c}
+		Instrument &  Years playing \\
+		\myunderline & \myunderline \\
+		\myunderline & \myunderline \\
+		\myunderline & \myunderline \\
+		\myunderline & \myunderline \\
+	\end{tabular}
+	
+	\item \label{appendix:music:before_break}Have you ever had any formal training in music? (If you are a self-taught musician, please also answer YES)
+
+	\begin{tabular}{l l}
+		( \ ) & YES, I had a formal training in music \\
+		( \ ) & YES, I consider myself a self-taught musician \\
+		( \ ) & NO \\
+	\end{tabular}
+
+\end{enumerate}
+Please continue this form if you answered YES to question \ref{appendix:music:before_break}, otherwise please go directly to question \ref{appendix:music:after_break}.
+\begin{enumerate}[resume]
+
+	\item What type(s) of music training have you had? (check all that apply)
+
+	\begin{tabular}{l l}
+		{[{ \ }]} & private/small group lessons in instrument and/or voice \\
+		{[{ \ }]} & institutional training \\
+		{[{ \ }]} & University degree in music - list degree: \\
+		{[{ \ }]} & self-taught \\
+		{[{ \ }]} & other (please specify): \myunderline \\
+	\end{tabular}
+
+ 	\item At what age did you begin to study music?
+
+ 	\myunderline
+
+ 	\item How long did your formal music training last?
+
+ 	\myunderline \ years
+ 	\item How long has it been since you last participated in formal music lessons?
+
+	\begin{tabular}{l l}
+		( \ ) & Currently have one \\
+		( \ ) & Or \myunderline \ years \\
+	\end{tabular}
+
+	\item \label{appendix:music:after_break}If there is anything else that you feel is interesting or important about your musical background, please comment below:
+
+	\rule{4.5in}{.5pt} \\
+	\rule{4.5in}{.5pt} \\
+	\rule{4.5in}{.5pt} \\
+	\rule{4.5in}{.5pt}.
+
+\end{enumerate}
+
+\section[System satisfaction survey]{System satisfaction survey\\
+	{\normalsize based on the System Usability Scale}}
+
+\begin{tabularx}{\textwidth}{p{2in} | Y Y Y Y Y }
+	& Strongly disagree & & & & Strongly agree \\
+	\hline
+	I think that I would like to use this system frequently & 1 & 2 & 3 & 4 & 5 \\
+	\hline
+	I found the system unnecessarily complex & 1 & 2 & 3 & 4 & 5 \\
+	\hline
+	I thought the system was easy to use & 1 & 2 & 3 & 4 & 5 \\
+	\hline
+	I think that I would need the support of a technical person to be able to use this system & 1 & 2 & 3 & 4 & 5 \\
+	\hline
+	I found the various functions in this system were well integrated & 1 & 2 & 3 & 4 & 5 \\
+	\hline
+	I thought there was too much inconsistency in this system & 1 & 2 & 3 & 4 & 5 \\
+	\hline
+	I would imagine that most people would learn to use this system very quickly & 1 & 2 & 3 & 4 & 5 \\
+	\hline
+	I found the system very cumbersome to use & 1 & 2 & 3 & 4 & 5 \\
+	\hline
+	I felt very confident using the system & 1 & 2 & 3 & 4 & 5 \\
+	\hline
+	I needed to learn a lot of things before I could get going with this system & 1 & 2 & 3 & 4 & 5 \\
+	\hline
+\end{tabularx}
+
+\end{appendices}
 
 \sloppy  % fixing line breaks in bibliography
 \printbibliography[title={Bibliography}]
