@@ -135,8 +135,8 @@ Throughout the twentieth century the psychological functions of music in everyda
 A recent study by Hargreaves and North tries to extend those insights about music functionality to the social domain, explaining the social effects of music on the individual by means of self-identity, inter-personal relationships and mood.
 
 % Classification of personality dimensions, self-views and cognitive abilities according to musical preferences as suggested by Rentfrow and Gosling.
-In todays world people think and identified themselves through music in such a way that cultural phenomena are often described by the musical style that accompanies them (e.g., the youth generation in the nineteen-sixties) (\cite{cook00}).
-Indeed, there is a high correlation between music preferences and a wide array of personality dimensions (e.g., conscientiousness and openness) as well as self-views (e.g., political orientation) (\cite{rentfrow03}).
+In todays world people think and identified themselves through music in such a way that cultural phenomena are often described by the musical style that accompanies them (e.g.\ the youth generation in the nineteen-sixties) (\cite{cook00}).
+Indeed, there is a high correlation between music preferences and a wide array of personality dimensions (e.g.\ conscientiousness and openness) as well as self-views (e.g.\ political orientation) (\cite{rentfrow03}).
 
 % introduction to music as an evolutionary adaptation
 % use Huron 2001
@@ -220,8 +220,6 @@ In this research I have decided to use ``libpd'', a thin layer on top of Pd that
 
 \subsubsection{System description}\label{systemdescription}
 
-\noriinline{Describe the system in present time. `will' $\rightarrow$ `is'}
-
 \begin{figure}[!htb]
 	\centering
 	\def\svgwidth{0.9\textwidth}
@@ -239,9 +237,9 @@ Every audio loop is identified by a distinct musical style which can be rhythmic
 	\caption{Balloon bundles on the dance floor}\label{fig:balloons}
 \end{figure}
 
-From the participants point of view the dance floor will consist of few balloon bundles, each one marked up with a name of specific musical style (e.g.\ rock, jazz, Indian music as shown in figure \ref{fig:balloons}).
-A corresponding Bluetooth beacon will be installed inside each one of those bundles.
-After downloading and installing the Android application, strolling between the balloon bundles will affect the music in ones headphones according to the relative distance from the bundles, creating a virtual ``sound zone'' around each one of them.
+From the participants point of view the dance floor consists of few balloon bundles, each one marked up with a name of specific musical style (e.g.\ rock, jazz, Indian music as shown in figure \ref{fig:balloons}).
+A corresponding Bluetooth beacon is installed inside each one of those bundles.
+After downloading and installing the Android application, strolling between the balloon bundles affects the music in ones headphones according to the relative distance from the bundles, creating a virtual ``sound zone'' around each one of them.
 In addition, the distance from the center of each sound zones may affect the music in several different ways; for example by controlling volume, filter and granularity of the sound zone.
 Lastly, participants can freely move the balloon bundles, thereby changing the structure of the music in the virtual space making it socially interactive.
 
@@ -268,9 +266,15 @@ Their participation will rely on voluntarily will.
 The above research question will be fragmented into the following operational definitions and measurements\footnote{Complete version of each of the surveys below can be found in the appendix.}:
 \begin{enumerate}
 	\item \label{measure:disperse} Assuming that participants are pre-partitioned, natively, as groups of friends, we can define the \definition{momentary center} of each group as the average positioning of its participants on the two dimensional plain of the dance floor.
-	In addition, we can define the \definition{momentary disperse} of each group as the variance of its participants' positionings around the center\footnote{Two dimensional variance definition is presented in the appendix.}.
+	In addition, we can define the \definition{momentary disperse} of each group as
+
+	\begin{equation*}
+		\sum_{i=1}^n \frac{\sqrt{(x_i - \mu_x)^2 + (y_i - \mu_y)^2}}{n}
+	\end{equation*}
+
+	where $(x_i, y_i)$ are the positioning of the group members on the dance floor and $(\mu_x, \mu_y)$ is their \definition{momentary center}.
 	Using the above definitions interaction between the members of one group with other participants will be evaluated by the disperse of the groups, when high disperse values indicate higher interactivity.
-	\item \label{measure:groups} Using the above definitions, we can define \definition{momentary group disperse} as the variance of the momentary centers themselves on the dance floor.
+	\item \label{measure:groups} Using the above definitions, we can define \definition{momentary group disperse} as the disperse of the momentary centers themselves on the dance floor.
 	With this regards low momentary group disperse values indicate higher interactivity.
 	\item \label{measure:audio} The audio volume inside the experiment room will be used as an indication for the amount of `speaking' between participants and therefor as a social interaction estimation.
 	\item \label{measure:survey:social} Participants will fill social interaction survey.
@@ -367,7 +371,7 @@ Although this implementation worked fine, it made a very tight coupling between 
 Overall, this development phase was sufficiant enough but in order to allow other musicians and developers to use the system I have started to look for more open architecture, that will maintain loosely coupled connection between the Android application and the Pd patch that drove the audio.
 
 The last phase in the development of the system was to implement the BBRIP system into the open source Android application ``ScenePlayer'' (\cite{web:sceneplayer}), an Android port for the RjDj application mentioned in chapter \ref{rjdj}, and release it again as ``ScenePlayer Plus'' (\cite{web:sceneplayerplus}).
-The application exposes the Bluetooth RSSI values to the Pd patch as another sensor of the mobile device (e.g. accelerometer, compass and touchscreen).
+The application exposes the Bluetooth RSSI values to the Pd patch as another sensor of the mobile device (e.g.\ accelerometer, compass and touchscreen).
 
 \subsection{System evaluation}
 
@@ -426,21 +430,6 @@ More generally, my research explores the potential for using modern technologies
 
 \todo[inline,color=red]{write interaction survey!}
 
-\section{Two dimensional variance}
-
-\noriinline{Remove variance from the appendix. Add it to the main text different name because it is not really `variance', maybe `disperse value'}
-
-Usually, the variance of a discrete random variable $X$ is computed as:
-\begin{equation*}
-	Var(X) = \sum_{i=1}^n \frac{(x_i - \mu)^2}{n}
-\end{equation*}
-Where $\mu$ is the variable mean value.
-
-The variance of a two dimensional discrete random variable $X$ will be defined using the euclidean distance between two points on the two dimensional plane as:
-\begin{equation*}
-	Var(X) = \sum_{i=1}^n \frac{dist(x_i, \mu)^2}{n}
-\end{equation*}
-
 \section[Musical background survey]{Musical background survey\\
 	{\normalsize based on the Emmanuel College Music Background Questionnaire, basic version}}
 
@@ -494,7 +483,7 @@ Please answer the following questions to the best of your knowledge.
 		( \ ) & actively engaged (sing along, tap the beat, etc.) \\
 	\end{tabular}
 
-	\item About how many hours of musical activity do you engage in each week currently? (e.g. practice, performance)
+	\item About how many hours of musical activity do you engage in each week currently? (e.g.\ practice, performance)
 
 	\myunderline
 
