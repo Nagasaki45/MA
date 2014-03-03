@@ -27,23 +27,24 @@
 \begin{document}
 \maketitle
 
-\listoftodos
+% \listoftodos
 
-\section{Introduction and framework}
+\section{Introduction}
 
 In the past 60 years the development of new technology has fundamentally transformed music creation and consumption (\cite{hargreaves99}).
 One of the results of these transformations is interactive music systems (IMS), a concept that facilitating new ways of music creation and blurring the traditional distinction between instrument design, composition and performance (\cite{drummond09}).
 In the recent years there are many attempts to provide IMS not only to the professional musicians but also directly accessible to the average user (\cite{stimulant13}).
 
+This research follows this trend by exploring new possibilities for interactive music consumption.
+In this work I will propose an audio-only augmented reality system for social interaction.
 
-\todo[inline]{add social context}
+I designed and built an Android application that measures the relative position of the device from freely movable Bluetooth beacons.
+Based on this information, an algorithm dynamically changes the music that the users hear in their earphones.
 
-Another concept with high relevance to my work is Augmented Reality (AR).
-According to Azuma ``AR enhances a users' perception of and interaction with the real world''.
-This concept usually relates to the visual modality: ``AR systems integrate 3-D virtual objects into a 3-D real environment in real time'' (\cite{azuma97}).
-My work extend the definition of AR system from the visual to the auditory modality opening the door for more comprehensive experience of virtual environments.
+The interactive component of the system has already been assessed in a pilot experiment.
+My preliminary results suggest that the system facilitated higher levels of user movement in space and enhanced social interactions, thereby displaying the potential of using audio-only augmented reality in future mobile applications.
 
-In this research I will combine the concept of IMS with AR creating a system for real-time social interaction for the average user, using current mobile technology.
+Lastly, a more comprehensive experiment is suggested to revile more insights about the social interaction of using the proposed system in the context of a silent disco party.
 
 \section{Literature review}
 
@@ -166,6 +167,12 @@ On the other hand, IPS has not been standardized yet and therefor it is still no
 Recent researches state that WiFi is a favored technology among IPS for mobile devices.
 WiFi based systems can also enhance accuracy by applying inertial navigation using additional sensors of the device such as accelerometer, gyroscope, compass etc. (\cite{web:harrop}).
 Note however that those solutions depend on the deployment of WiFi infrastructure in every indoor environment where positioning information in desired.
+
+\subsection{Augmented reality}
+
+According to Azuma ``AR enhances a users' perception of and interaction with the real world''.
+This concept usually relates to the visual modality: ``AR systems integrate 3-D virtual objects into a 3-D real environment in real time'' (\cite{azuma97}).
+My work extend the definition of AR system from the visual to the auditory modality opening the door for more comprehensive experience of virtual environments.
 
 \section{Research targets}
 
@@ -430,8 +437,6 @@ We also show that this can be validated in a controlled experiment using both di
 More generally, my research explores the potential for using modern technologies to create IMS for non-professional musicians, where the user' social interaction is the main influence over actually heard music.
 
 \begin{appendices}
-
-\todo[inline,color=red]{write interaction survey!}
 
 \section[Musical background survey]{Musical background survey\\
 	{\normalsize based on the Emmanuel College Music Background Questionnaire, basic version}}
