@@ -29,8 +29,6 @@
 
 \listoftodos
 
-\noriinline{Refs to sites should be standardized}
-
 \section{Introduction}
 
 In the past 60 years the development of new technology has fundamentally transformed music creation and consumption (\cite{hargreaves99}).
@@ -58,7 +56,7 @@ The following sections will review those domains with emphasis on the projects, 
 According to the Oxford Dictionary to ``interact'' is to ``act in such a way as to have an effect on each other''.
 In the field of IMS actions and affects may be implemented on a broad spectrum of novel techniques, ranging from interactive sound installations to collaborations with robotic performers (\cite{drummond09}).
 
-Traditionally, IMS merge development in several different threads such as music oriented softwares and programming languages (e.g.\ MUSIC-N and Max/MSP), standardization of technologies (e.g.\ MIDI and VST) and the recent emergence of ``makers culture'' (\todo{ref}), to facilitate new ways of music creation.
+Traditionally, IMS merge development in several different threads such as music oriented softwares and programming languages (e.g.\ MUSIC-N and Max/MSP), standardization of technologies (e.g.\ MIDI and VST) and the recent emergence of ``makers culture'' (\cite{kuznetsov2010rise}), to facilitate new ways of music creation.
 
 Since the beginning of the exploration in the field of IMS in the nineteen-sixties, different researchers and composers created systems that were designed to interact with performer in a live situation.
 First example of this kind of interactive system was Gordon Mummas' Hornpipe, a specially designed electronic system that alters the audio input from the performer and creates an interactive loop between the player and the sound created by the electronics circuit (\cite[p. 12]{winkler01}).
@@ -69,15 +67,15 @@ As a pioneering technology for digital sound synthesis those programming languag
 On another direction: in the nineteen-eighties a group of musical instruments manufacturers agreed on universal standard for sending and receiving musical information digitally, establishing the MIDI protocol (\cite{web:quinn}).
 The standardization of sending and receiving information combined with the emergence of personal computers facilitated the creation of modern programing languages for musical applications.
 Max/MSP, which began its development by Miller Puckette in 1986, may be a good example (\cite[p. 16]{winkler01}).
-As opposed to early programming languages as GROOVE or the MUSIC-N series, most of those personal computer based languages still exist today and keep progressing (\todo{ref last max/msp version}).
-Moreover, new music oriented programing languages continue to be developed, presenting features like ``on-the-fly'' programming (\citeauthor{web:chuck}), web capabilities (\todo{web audio api}) or modular, multi-touch environment for live performance (\citeauthor{web:usine}).
+As opposed to early programming languages as GROOVE or the MUSIC-N series, most of those personal computer based languages still exist today and keep progressing\footnote{Max 6: \href{http://cycling74.com/products/max/}{cycling74.com/products/max/}.}.
+Moreover, new music oriented programing languages continue to be developed, presenting features like ``on-the-fly'' programming\footnote{ChucK: \href{http://chuck.cs.princeton.edu/}{chuck.cs.princeton.edu/}.}, web capabilities\footnote{The Web audio API: \href{http://www.w3.org/TR/webaudio/}{www.w3.org/TR/webaudio/}.} or modular, multi-touch environment for live performance\footnote{Usine Hollyhock: \href{http://www.sensomusic.org/usine/}{www.sensomusic.org/usine/}.}.
 
 Similar technological shifts also facilitated the usage of Digital Audio Workstations (DAW) as a common alternative to analog recording equipment in studios (\cite{leider:04}).
-With the arrival of the VST as the common standard for signal processing plug-ins for DAW (\citeauthor{web:steinberg}), computers became even more essential tool for music production.
-This developments were concurrent to the emergence of live performance oriented DAW as Ableton Live (\citeauthor{web:live}) and software based DJ setups at the late nineteen-nineties.
+With the arrival of the VST as the common standard for signal processing plug-ins for DAW\footnote{Steinberg technologies: \href{http://www.steinberg.net/en/company/technologies.html}{www.steinberg.net/en/company/technologies.html}.}, computers became even more essential tool for music production.
+This developments were concurrent to the emergence of live performance oriented DAW as Ableton Live\footnote{Ableton Live: \href{http://www.ableton.com/en/live/}{www.ableton.com/live/}.} and software based DJ setups at the late nineteen-nineties.
 
 Another key event in the history of IMS is the appearance of the Arduino platform in 2006.
-The Arduino is an easy to use hardware and software package intended for interactive objects or environments creation (\citeauthor{web:arduino}).
+The Arduino is an easy to use hardware and software package intended for interactive objects or environments creation\footnote{Arduino: \href{http://arduino.cc/}{arduino.cc/}.}.
 The platform opened the door for musicians to use more then just audio and MIDI to communicate with music creation software in interactive environment, mostly by translating physical properties into sound.
 
 More generally, one could see the Arduino as an important part of the new ``makers'' movements, a technology-based extension of the ``do it yourself'' culture.
@@ -91,13 +89,13 @@ While these examples are typical they are only a small portion of novel ways whe
 % interactive video clips: Interlude, Chris Milk and Aaron Koblin
 Interactive video clips expose some of the roles traditionally kept for the director to the viewers.
 As a relatively new phenomena video clips like these become more and more prominent.
-A notable example are the works by Chris Milk and Aaron Koblin, in which the video clip is run on a dedicated web page and response to the users by tracking their mouse, keyboard strokes or other inputs, can serve as great examples (\citeauthor{web:milk1}; \citeauthor{web:milk2}; \todo{add beck360 ref}).
-Similar approach can also be found in the interactive video clips by the startup Interlude (\citeauthor{web:interlude}).
+A notable example are the works by Chris Milk and Aaron Koblin, in which the video clip is run on a dedicated web page and response to the users by tracking their mouse, keyboard strokes or other inputs\footnote{Milk and Koblin's projects: \href{http://www.thewildernessdowntown.com/}{www.thewildernessdowntown.com/}; \href{http://www.ro.me/}{www.ro.me/}.}.
+Similar approach can also be found in the interactive video clips by the startup Interlude\footnote{Interlude: \href{http://interlude.fm/}{interlude.fm/}.}, Becks' recent project ``Hello again''\footnote{Becks' ``Hello again'': \href{http://www.hello-again.com/beck360/}{www.hello-again.com/beck360/}.} and various additional sources.
 
 % mobile applications: Smule and RjDj
 Another factor that contributed to the development in the field of mobile applications for music creation is the continues increase in computational power of those devices.
-For example, AutoRap turns speech into rap by slicing the syllables and map them according to different beat styles (\citeauthor{web:autorap}).
-Another examples are the applications by Brian Eno and Peter Chilvers which enable users to compose music using only visual element on the device screen (\citeauthor{web:generativemusic}).
+For example, AutoRap turns speech into rap by slicing the syllables and map them according to different beat styles\footnote{Smules' AutoRap: \href{https://play.google.com/store/apps/details?id=com.smule.autorap}{https://play.google.com/store/apps/details?id=com.smule.autorap}.}.
+Another examples are the applications by Brian Eno and Peter Chilvers which enable users to compose music using only visual element on the device screen\footnote{Generative music: \href{http://www.generativemusic.com/}{www.generativemusic.com/}.}.
 Finally, RjDj uses the phones' sensors to create ambient sonification based on the users' interactions with the daily environment (\cite{web:rjdj})\label{rjdj}.
 
 % album applications
@@ -110,7 +108,7 @@ In some interactive sound installations the main interaction is between the view
 
 % social DJing: DistributedDJ, the BLOB and playmysong
 Recent projects suggest a framework of sharing the role of the DJ in a bar or party between the participants so they can choose the music by themselves and the playlist is generated dynamically by their musical taste (\cite{web:shaw}).
-Most of those project are implemented as mobile applications and some of them even integrate social elements (\citeauthor{web:playmysong}; \cite{web:lammers}).
+Most of those project are implemented as mobile applications and some of them even integrate social elements\footnote{Playmysong: \href{http://www.playmysong.com/}{www.playmysong.com/}; The BLOB \href{http://vimeo.com/7338120}{vimeo.com/7338120}.}.
 
 \subsection{Technology dependent social networking}
 
@@ -118,7 +116,7 @@ Silent disco and flash mobs, the conceptual roots of this research, are examples
 My proposal operates in the context of silent disco party and is inspired by flash mobs in the usage of new technologies to facilitate creative and artistic social interactions.
 
 Silent disco is the phenomenon of partying where the music is heard through headphones instead of loudspeakers.
-The new phenomena already changed the possibilities of an ordinary party, for example: having two DJs spin two completely different sets side by side at the same party where each participant has two channel wireless headphones, and can decide which DJ to listen to (\citeauthor{web:headphonedisco}) or having no DJ at all and letting each participant to choose what music to hear, individually, through his or her mobile device and headphones.
+The new phenomena already changed the possibilities of an ordinary party, for example: having two DJs spin two completely different sets side by side at the same party where each participant has two channel wireless headphones, and can decide which DJ to listen to\footnote{Headphone Disco: \href{http://headphonedisco.com/show.php}{headphonedisco.com/show.php}.} or having no DJ at all and letting each participant to choose what music to hear, individually, through his or her mobile device and headphones.
 
 Flash mobs is a public gathering of people organized through social media to perform a short act jointly.
 The unique aspects of this relatively new phenomena have led researchers to suggest that flash mobs emergence is a significant event in the history of mobile communication (\cite{nicholson05}) and that it inherently reflects an artistic intent (\cite{brejzek10}).
@@ -200,7 +198,7 @@ In this section I will explain the rational for the choices of system implementa
 Todays' mobile phone has transformed from being a communication tool into a key `social object' in everyday life, and as such it has a significant importance in shaping todays' society (\cite{srivastava05}).
 The applications of this research are targeted for the general audience and therefor the entire research will be implemented for mobile.
 
-The system will be developed for the Android operation system (\citeauthor{web:android}).
+The system will be developed for the Android operation system\footnote{Android OS: \href{http://www.android.com/}{www.android.com/}.}.
 Choosing Android as the platform for my research has two main advantages:
 \begin{enumerate}
 	\item The Android system is a growing mobile system which dominates most of the market share today (\cite{web:idc}).
@@ -229,7 +227,7 @@ Received signal strength indication (RSSI) is used as an estimation of the dista
 \subsubsection{libpd}\label{methods:libpd}
 
 Advance audio processing is beyond the capabilities of the Android application programming interface and therefor, in order to apply sophisticate manipulations on the audio in real time, a more powerful audio engine was required.
-In a personal computer environment the programming language Pure Data (Pd), originally written by Miller Puckette in the nineteen-nineties, is one of the leading open-source softwares for computer music (\citeauthor{web:pd}).
+In a personal computer environment the programming language Pure Data (Pd), originally written by Miller Puckette in the nineteen-nineties, is one of the leading open-source softwares for computer music\footnote{Pd: \href{http://puredata.info/}{puredata.info/}.}.
 In this research I have decided to use ``libpd'', a thin layer on top of Pd that turns it into an embeddable audio library, as an audio engine (\cite[p. v]{brinkmann12}).
 
 \subsubsection{System description}\label{systemdescription}
@@ -264,7 +262,7 @@ Figure \ref{fig:sys:participant_view} shows an overhead view of a possible scena
 	\centering
 	\def\svgwidth{0.9\textwidth}
 	\input{graphics/system_participant_view.pdf_tex}
-	\caption{The figure shows schematically tow participants, $A$ and $B$, dancing around three Bluetooth beacons, corresponding to the rock, jazz and Indian music sound zones. Participant $A$ hear rock music and participant $B$ hear a mix between the jazz and the Indian music sound zones, which are rhythmically and harmonically synchronized with each other. A video demonstration of similar scenario can be found at \href{http://youtu.be/2kJoeD2iWBA}{youtu.be/2kJoeD2iWBA}.}\label{fig:sys:participant_view}
+	\caption{The figure shows schematically two participants, $A$ and $B$, dancing around three Bluetooth beacons, corresponding to the rock, jazz and Indian music sound zones. Participant $A$ hear rock music and participant $B$ hear a mix between the jazz and the Indian music sound zones, which are rhythmically and harmonically synchronized with each other. A video demonstration of similar scenario can be found at \href{http://youtu.be/2kJoeD2iWBA}{youtu.be/2kJoeD2iWBA}.}\label{fig:sys:participant_view}
 \end{figure}
 
 \subsection{Implementation}
@@ -306,7 +304,7 @@ After finding the weakness of using the built in audio library of the Android ap
 Although this implementation worked fine, it made a very tight coupling between the system development in the Android environment and the audio processing development in Pd.
 Overall, this development phase was sufficiant enough but in order to allow other musicians and developers to use the system I have started to look for more open architecture, that will maintain loosely coupled connection between the Android application and the Pd patch that drove the audio.
 
-The last phase in the development of the system was to implement the BBRIP system into the open source Android application ``ScenePlayer'' (\cite{web:sceneplayer}), an Android port for the RjDj application mentioned in chapter \ref{rjdj}, and release it again as ``ScenePlayer Plus'' (\cite{web:sceneplayerplus}).
+The last phase in the development of the system was to implement the BBRIP system into the open source Android application ``ScenePlayer''\footnote{ScenePlayer: \href{http://play.google.com/store/apps/details?id=org.puredata.android.scenes}{play.google.com/store/apps/details?id=org.puredata.android.scenes}.}, an Android port for the RjDj application mentioned in chapter \ref{rjdj}, and release it again as ``ScenePlayer Plus''\footnote{ScenePlayer Plus: \href{http://play.google.com/store/apps/details?id=com.nagasaki45.sceneplayerplus}{play.google.com/store/apps/details?id=com.nagasaki45.sceneplayerplus}.}.
 The application exposes the Bluetooth RSSI values to the Pd patch as another sensor of the mobile device (e.g.\ accelerometer, compass and touchscreen).
 
 \section{System evaluation}
@@ -371,7 +369,7 @@ More generally, my research explores the potential for using modern technologies
 
 \todo[inline]{Reasoning for doing another experiment. What insights are necessary that doesn't found in the pilot.}
 
-\subsection{Future experiment}\label{methods:evaluation}
+\subsection{Future experiment design}\label{methods:evaluation}
 
 \noriinline{change this intro after section refactoring}
 
