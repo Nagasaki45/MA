@@ -220,6 +220,7 @@ Although there are available techniques to implement IPS I have decided to devel
 	\item Tracking the positioning of the participants is only required in the context of their relative position to some other mobile tokens in the system, therefore we do not need to track the absolute position of each participant in space (the world coordinate of their position).
 	\item As opposed to system where high accuracy is required, the current research needs only limited accuracy.
 	Being able to estimate if a participant is relatively close to another mobile token or far from it is generally satisfying.
+	\item Although Bluetooth LE based solutions satisfy the above requirements only the most recent mobile devices support it.
 \end{enumerate}
 
 The system I have developed --- the Bluetooth Based Relative Indoor Positioning (BBRIP) system --- consists of some Bluetooth beacons, placed inside the balloon bundles, and an Android application.
@@ -275,7 +276,6 @@ The implementation of the system could be described by two different processes: 
 \subsubsection{The BBRIP system}
 
 The BBRIP system is my intent to develop an indoor positioning system that will satisfy the relatively simple requirements of the research as presented in chapter \ref{methods:ips}.
-As already noted, such a solution not yet exist.
 
 My implementation of the system is based on a specific element in the Bluetooth protocol -- the Received Signal Strength Indicator (RSSI) ({\cite{bray12}).
 Each Bluetooth enabled device calculate RSSI values during Bluetooth discovery, when it finds a new device and before establishing connection.
