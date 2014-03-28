@@ -192,11 +192,9 @@ The system developed in this research is inspired by the concepts of IMS and int
 
 \section{System development}
 
-\subsection{Rational}
+In this section I will explain the rational for the choices of system development in the context of the above research targets and will describe the details of system implementation.
 
-In this section I will explain the rational for the choices of system implementation in the context of the above research targets.
-
-\subsubsection{Mobile and Android}
+\subsection{Mobile and Android}
 
 Todays' mobile phone has transformed from being a communication tool into a key `social object' in everyday life, and as such it has a significant importance in shaping todays' society (\cite{srivastava05}).
 The applications of this research are targeted for the general audience and therefor the entire research will be implemented for mobile.
@@ -208,7 +206,7 @@ Choosing Android as the platform for my research has two main advantages:
 	\item By developing application for Android I have access to underlying Bluetooth properties such as received signal strength indicator (RSSI), which is essential for my implementation of the system as laid out in the next section.
 \end{enumerate}
 
-\subsubsection{Indoor positioning system}\label{methods:ips}
+\subsection{Indoor positioning system}\label{methods:ips}
 
 Although there are available techniques to implement IPS I have decided to develop a novel method from the following reasons:
 
@@ -226,13 +224,13 @@ It is build around distributed architecture and therefor runs separately, as an 
 The application repeatedly searches for nearby Bluetooth beacons.
 Received signal strength indication (RSSI) is used as an estimation of the distance between the user and the beacon.
 
-\subsubsection{libpd}\label{methods:libpd}
+\subsection{libpd}\label{methods:libpd}
 
 Advance audio processing is beyond the capabilities of the Android application programming interface and therefor, in order to apply sophisticate manipulations on the audio in real time, a more powerful audio engine was required.
 In a personal computer environment the programming language Pure Data (Pd), originally written by Miller Puckette in the nineteen-nineties, is one of the leading open-source softwares for computer music\footnote{Pd: \href{http://puredata.info/}{puredata.info/}.}.
 In this research I have decided to use ``libpd'', a thin layer on top of Pd that turns it into an embeddable audio library, as an audio engine (\cite[p. v]{brinkmann12}).
 
-\subsubsection{System description}\label{systemdescription}
+\subsection{System description}\label{systemdescription}
 
 \begin{figure}[!htb]
 	\centering
@@ -267,13 +265,11 @@ Figure \ref{fig:sys:participant_view} shows an overhead view of a possible scena
 	\caption{The figure shows schematically two participants, $A$ and $B$, dancing around three Bluetooth beacons, corresponding to the rock, jazz and Indian music sound zones. Participant $A$ hear rock music and participant $B$ hear a mix between the jazz and the Indian music sound zones, which are rhythmically and harmonically synchronized with each other. A video demonstration of similar scenario can be found at \href{http://youtu.be/2kJoeD2iWBA}{youtu.be/2kJoeD2iWBA}.}\label{fig:sys:participant_view}
 \end{figure}
 
-\subsection{Implementation}
+\subsection{The BBRIP system}
 
-The implementation of the system could be described by two different processes: the development of the BBRIP system and the Android application that wraps it and is responsible for the audio processing.
+The implementation of the system could be described by two different processes: the development of the BBRIP system (described in this section) and the Android application that wraps it and is responsible for the audio processing (see section \ref{sceneplayer_plus}).
 
-\subsubsection{The BBRIP system}
-
-The BBRIP system is my intent to develop an indoor positioning system that will satisfy the relatively simple requirements of the research as presented in chapter \ref{methods:ips}.
+The BBRIP system is my intent to develop an indoor positioning system that will satisfy the relatively simple requirements of the research as presented in section \ref{methods:ips}.
 
 My implementation of the system is based on a specific element in the Bluetooth protocol -- the Received Signal Strength Indicator (RSSI) ({\cite{bray12}).
 Each Bluetooth enabled device calculate RSSI values during Bluetooth discovery, when it finds a new device and before establishing connection.
@@ -293,11 +289,11 @@ Lastly, when the system sees that there is no Bluetooth discovery running (becau
 
 Although the RSSI values extracted by the BBRIP system are not very precise as a distance estimation, I have found them sufficient enough in order to classify the distance between participants and beacons into useful ranges. In other words, RSSI values gives great indication if a participant is stands close to specific beacon (around 1 meter), in mediate range (2 to 3 meters) or in larger distance.
 
-\subsubsection{ScenePlayer Plus}
+\subsection{ScenePlayer Plus}\label{sceneplayer_plus}
 
 The development of the Android application moved through different development stages.
 
-First, I have developed an application that didn't use ``libpd'' at all (see chapter \ref{methods:libpd}).
+First, I have developed an application that didn't use ``libpd'' at all (see section \ref{methods:libpd}).
 In this early stage the only effect of getting close to, or far from a beacon was by changing the volume.
 In addition, the limited sophistication of the built in audio library made fading in and out from the sound zones very non-flexible.
 
@@ -305,7 +301,7 @@ After finding the weakness of using the built in audio library of the Android ap
 Although this implementation worked fine, it made a very tight coupling between the system development in the Android environment and the audio processing development in Pd.
 Overall, this development phase was sufficient enough but in order to allow other musicians and developers to use the system I have started to look for more open architecture, that will maintain loosely coupled connection between the Android application and the Pd patch that drove the audio.
 
-The last phase in the development of the system was to implement the BBRIP system into the open source Android application ``ScenePlayer''\footnote{ScenePlayer: \href{http://play.google.com/store/apps/details?id=org.puredata.android.scenes}{play.google.com/store/apps/details?id=org.puredata.android.scenes}.}, an Android port for the RjDj application mentioned in chapter \ref{rjdj}, and release it again as ``ScenePlayer Plus''\footnote{ScenePlayer Plus: \href{http://play.google.com/store/apps/details?id=com.nagasaki45.sceneplayerplus}{play.google.com/store/apps/details?id=com.nagasaki45.sceneplayerplus}.}.
+The last phase in the development of the system was to implement the BBRIP system into the open source Android application ``ScenePlayer''\footnote{ScenePlayer: \href{http://play.google.com/store/apps/details?id=org.puredata.android.scenes}{play.google.com/store/apps/details?id=org.puredata.android.scenes}.}, an Android port for the RjDj application mentioned in section \ref{rjdj}, and release it again as ``ScenePlayer Plus''\footnote{ScenePlayer Plus: \href{http://play.google.com/store/apps/details?id=com.nagasaki45.sceneplayerplus}{play.google.com/store/apps/details?id=com.nagasaki45.sceneplayerplus}.}.
 The application exposes the Bluetooth RSSI values to the Pd patch as another sensor of the mobile device (e.g.\ accelerometer, compass and touchscreen).
 
 \section{System evaluation}
@@ -334,7 +330,7 @@ The party consisted of four alternating interactive/control blocks of duration 5
 The participants were randomly assigned to two groups: $A$ and $B$, comprising the interactive and control blocks respectively\footnote{Group $A$ (interactive first) consists of 8 participants (4 females and 4 males) with mean age of 36.7 (s.d=12.3); group $B$ (control first) consists of 10 participants (3 females and 7 males) with mean age of 29.6 (s.d=10.2). Participants had a diverse musical background with 4.7 mean years of musical training (s.d=5.2).}.
 They were generally informed that the experiment consists of interactive and control segments, however they were not informed about the exact schedule and timing of the blocks or the group assignments.
 Both groups started the experiment together.
-In the interactive blocks, the application generated music as described in chapter \ref{systemdescription}, whereas in the control blocks the participants heard recorded non-interactive music created in advance using the musical material of the interactive system\footnote{The control block music composed by Noam Elron (\href{http://www.noamelron.com}{www.noamelron.com}).}.
+In the interactive blocks, the application generated music as described in section \ref{systemdescription}, whereas in the control blocks the participants heard recorded non-interactive music created in advance using the musical material of the interactive system\footnote{The control block music composed by Noam Elron (\href{http://www.noamelron.com}{www.noamelron.com}).}.
 
 Interaction with the systems' components was assessed by counting the number of Bluetooth device discoveries made by each participants' phone during both the interactive and the control blocks.
 In order to eliminate edge effects, we analyzed only the two middle blocks of the experiment.
@@ -390,8 +386,8 @@ Their participation will rely on voluntarily will.
 
 The above research question will be fragmented into the following operational definitions and measurements\footnote{Complete version of each of the surveys below can be found in the appendix.}:
 \begin{enumerate}
-	\item \label{measure:partitioning} Participants will be asked to divide into groups of friends. The derived partitioning of the participants will be written for later use in the following measurements analysis.
-	\item \label{measure:disperse} Using the above partitioning to groups of friends we can define the \definition{momentary center} of each group as the average positioning of its participants on the two dimensional plain of the dance floor.
+	\item \label{measure:partitioning} Participants will report their familiarity with other participants using a survey based on the experimental ordinal number.
+	\item \label{measure:disperse} Using the above partitioning to groups of friends we can define the \definition{momentary center} of each group as the average positioning of its participants on the two dimensional plain of the dance floor (measured by video tracking as explained in section \ref{aparatus}).
 	In addition, we can define the \definition{momentary disperse} of each group as
 
 	\begin{equation*}
@@ -402,8 +398,7 @@ The above research question will be fragmented into the following operational de
 	Using the above definitions interaction between the members of one group with other participants will be evaluated by the disperse of the groups, when high disperse values indicate higher interactivity.
 	\item \label{measure:groups} Using the above definitions, we can define \definition{momentary group disperse} as the disperse of the momentary centers themselves on the dance floor.
 	With this regards low momentary group disperse values indicate higher interactivity.
-	\item \label{measure:audio} The audio volume inside the experiment room will be used as an indication for the amount of `speaking' between participants and therefor as a measure of their engagement.
-	\noriinline{but also could be saying that they do not really "into" the experiment because they talk instead of dance... can you elaborate or alternatively say that you do not commit to any of this interpretation but you want to use it as a measure of their social state and therefore predict that speaking "rate" would be}
+	\item \label{measure:audio} The audio volume inside the experiment room will be used as and objective measure of the social state of the group indicating (e.g indicating the ``speaking'' level between participants).
 	\item \label{measure:survey:social} Participants will fill social interaction survey.
 	The survey will be used to asses interaction between participants by estimating social cohesiveness within in-group and out-group of each participant.
 \end{enumerate}
@@ -419,7 +414,7 @@ Lastly, the following measurement will be used in order to eliminate possible di
 	\item \label{measure:survey:musical} Participants will fill musical background survey, based on the Emmanuel College Music Background Questionnaire, basic version (\cite{web:zhao12}).
 \end{enumerate}
 
-\subsubsection{Apparatus}
+\subsubsection{Apparatus}\label{aparatus}
 
 In order to measure momentary disperse and group disperse as defined in measurements \ref{measure:disperse} and \ref{measure:groups} I will capture the experiment with video camera from above the dance floor.
 Tracking the positioning of the participants will be done half manually by using software aids to record the manual tracking of participants, each at a time, using the computer mouse.
@@ -448,7 +443,7 @@ Before each experiment block and after the last block each participant will fill
 
 Each experiment block can be of one of the following types:
 \begin{description}
-	\item[Interactive:] In which the music generated by the Android application behaves as described in chapter \ref{systemdescription}.
+	\item[Interactive:] In which the music generated by the Android application behaves as described in section \ref{systemdescription}.
 	\item[Control:] In which the music generated by the Android application is pre-composed and based on the same musical materials as of the interactive system.
 \end{description}
 
