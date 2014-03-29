@@ -8,5 +8,6 @@
 !bibliography.bib
 *.xml
 *.tdo
+*.toc
 graphics/*
 !graphics/*.svg
