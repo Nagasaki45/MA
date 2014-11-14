@@ -10,25 +10,11 @@
 
 ### Source compilation
 
-In order to compile the LaTeX be sure that the SVGs are already compiled
-using Inkscape.
+The ``manage.py`` script is your friend for simple compilation of the source.
 
-```bash
-cd graphics
-inkscape -D -z --file=<FILENAME>.svg --export-pdf=<FILENAME>.pdf --export-latex  # for every SVG file
-```
+Options are: clear, graphics, plots, pdf & all.
 
-Then you are ready to compile the document itself.
+Each of those can be used to build different areas of the final pdf.
 
-```bash
-pdflatex research_proposal.tex
-biber research_proposal.bcf
-pdflatex research_proposal.tex
-pdflatex research_proposal.tex
-```
-
-In order to clear the directory from unnecessary TeX files run:
-
-```bash
-python clear.py
-```
+Currently, all of the plots reside in external git repo and copied by demand.
+This repo can be found [here](https://github.com/Nagasaki45/MA-experiment-analysis).
