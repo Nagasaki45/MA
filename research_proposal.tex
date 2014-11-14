@@ -566,9 +566,10 @@ These observations are also evident in our statistical analysis. We’ve count t
 
 I have used the mean-shift algorithm, as implemented by the software package Scikit-learn (\todo{scikit ref}), to cluster participants into groups based on their positioning in space. For each frame in the video the algorithm created varied number of participants clusters. These clusters have been used to get the following per participant scores:
 
-Algorithm score, that is the distance of the participant from his cluster centroid. Hence lower scores indicates higher in-cluster interaction.
-
-Social score, that is the mean of the social familiarity of the participant (as reported by him/her in the familiarity survey) with any other participant in the same cluster.
+\begin{description}
+    \item[Algorithm score:] That is the distance of the participant from his cluster centroid. Hence lower scores indicates higher in-cluster interaction.
+    \item[Social score:] That is the mean of the social familiarity of the participant (as reported by him/her in the familiarity survey) with any other participant in the same cluster.
+\end{description}
 
 The final algorithm / social score for each participant is his / her average score over the frame of the whole session.
 
