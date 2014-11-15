@@ -516,7 +516,7 @@ To conclude, subject did not appear to explicitly interact more with subject tha
 
 In experiment 1, participants were recruited using the internet and therefore had varied prior familiarity with each other. This created a strong grouping into social clusters that was also apparent in their positioning in space as indicated by our video tracking analysis (see figure \ref{plot:pilot-familiarity_correlation_maps}). Based on this encouraging results we specifically asked subject to fill a social familiarity survey at the beginning of the experiment. Each subject had to rank its class pears on a scale of 1 to 5 according to social familiarity (see methods). Note that the second experiment group is much more homogeneous since unlike experiment 1 all participants have prior familiarity, since they all study together.
 
-Figure \ref{plot:familiarity-clustering_maps} first row shows pre-clustered social matrices, where the familiarity each participant on the y axis with participants on the x axis is indicated by color. We applied K-Means and mean-shift clustering algorithms (\todo{kmeans and mean-shift refs}) as implemented by the software package Scikit-learn (\todo{scikit ref}) on these matrices to find out that in this group we did not find clustered social structures. This is indicated by cross cluster similarity outside the main diagonal of the clustered matrices as depicted in the last two rows of figure \ref{plot:familiarity-clustering_maps}.
+Figure \ref{plot:familiarity-clustering_maps} first row shows pre-clustered social matrices, where the familiarity each participant on the y axis with participants on the x axis is indicated by color. We applied K-means\footnote{K-means: \href{http://scikit-learn.org/stable/modules/clustering.html\#k-means}{scikit-learn.org/stable/modules/clustering.html\#k-means}}.} and mean-shift\footnote{Mean-shift: \href{http://scikit-learn.org/stable/modules/clustering.html\#mean-shift}{scikit-learn.org/stable/modules/clustering.html\#mean-shift}.} clustering algorithms as implemented by the software package Scikit-learn (\cite{scikit-learn}) on these matrices to find out that in this group we did not find clustered social structures. This is indicated by cross cluster similarity outside the main diagonal of the clustered matrices as depicted in the last two rows of figure \ref{plot:familiarity-clustering_maps}.
 
 \subsubsection{Video analysis: Movement}
 
@@ -544,7 +544,7 @@ We analyzed the mean speed of each participant during each session. We hypothesi
     \caption{A correlated movement of two participants holding one of the beacons. As we can clearly see this participants move coordinated through a time epoche of 9 seconds.}\label{plot:annotations-correlated_movement_example}
 \end{figure}
 
-Animated renditions of the experiment can be viewed in my site (\todo{footnote to my animations blogpost}). Figure \ref{plot:annotations-clustering_example} show a screenshot of one point in time extracted from session 2, for each group. These results show that participants of the interactive group tend to cluster around the interactive components of the system in small groups.
+Animated renditions of the participants movement can be viewed in my site\footnote{Animated movement of participants: \href{http://tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}{tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}.}. Figure \ref{plot:annotations-clustering_example} show a screenshot of one point in time extracted from session 2, for each group. These results show that participants of the interactive group tend to cluster around the interactive components of the system in small groups.
 
 Additional phenomena found in the in video animations is correlate movement of participant as can be seen in the list of consequence screenshots in figure \ref{plot:annotations-correlated_movement_example}.
 
@@ -564,7 +564,7 @@ These observations are also evident in our statistical analysis. We’ve count t
     \caption{blah blah blah}\label{plot:analyze-clustering_scores}
 \end{figure}
 
-I have used the mean-shift algorithm, as implemented by the software package Scikit-learn (\todo{scikit ref}), to cluster participants into groups based on their positioning in space. For each frame in the video the algorithm created varied number of participants clusters. These clusters have been used to get the following per participant scores:
+I have used the mean-shift algorithm, as implemented by the software package Scikit-learn (\cite{scikit-learn}), to cluster participants into groups based on their positioning in space. For each frame in the video the algorithm created varied number of participants clusters. These clusters have been used to get the following per participant scores:
 
 \begin{description}
     \item[Algorithm score:] That is the distance of the participant from his cluster centroid. Hence lower scores indicates higher in-cluster interaction.
