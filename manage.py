@@ -17,7 +17,7 @@ def call_git_clean():
 
 
 def call_pdflatex():
-    cmd_string = 'pdflatex research_proposal.tex'
+    cmd_string = 'pdflatex --interaction=nonstopmode research_proposal.tex'
     process = subprocess.Popen(cmd_string.split(), stdout=subprocess.PIPE,
                                stderr=subprocess.PIPE)
     try:
