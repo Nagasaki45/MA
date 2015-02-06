@@ -30,6 +30,8 @@
 \listoftodos
 \tableofcontents
 
+\todo[inline]{General TODO: replace "we" with "I"}
+
 \section{Introduction}
 
 Over the past sixty years the development of new technologies has fundamentally transformed music creation and consumption (\cite{hargreaves99}).
@@ -40,6 +42,8 @@ This research, in which I propose an audio-only augmented reality system for soc
 
 I designed and built an Android application that measures the relative position of the device from freely movable Bluetooth beacons.
 Based on this information, an algorithm dynamically changes the music that the users hear in their headphones.
+
+\todo[inline]{Describe both experiments}
 
 I have already assesed the interactive component of the system in a pilot experiment.
 My preliminary results suggest that the system facilitates higher levels of user movement in space as well as enhanced social interactions, thereby displaying the potential of using audio-only augmented reality in future mobile applications.
@@ -59,14 +63,15 @@ In the field of IMS, actions and effects may be achieved by using a broad spectr
 Traditionally, IMS merges developments in several different threads (such as music-oriented programming languages as the MUSIC-N series and Max/MSP (\cite{mathews69}; \cite[p. 16]{winkler01}), standardization of technologies like MIDI (\cite{web:quinn}) and virtual studio technology (VST)\footnote{Steinberg technologies: \href{http://www.steinberg.net/en/company/technologies.html}{www.steinberg.net/en/company/technologies.html}.} and the recent emergence of the ``makers culture'' (\cite{kuznetsov2010rise})), to facilitate new ways of music creation.
 
 Since early exploration in the field of IMS in the nineteen-sixties, different researchers and composers created systems that were designed to interact with performer in a live situation.
-Perhaps the first example of this kind of interactive system was Gordon Mummas' Hornpipe, a specially designed electronic system that alters the audio input from the performer, creating an interactive loop between the player and the sound emitted by the electronics circuit (\cite[p. 12]{winkler01}).
+Perhaps the first example of this kind of interactive system was Gordon Mumma's Hornpipe, a specially designed electronic system that alters the audio input from the performer, creating an interactive loop between the player and the sound emitted by the electronics circuit (\cite[p. 12]{winkler01}).
 
 During the nineteen-seventies, musicians and researchers started to use newly developed programming languages designed for musical applications, such as GROOVE or the MUSIC-N series (\cite{mathews70}; \cite{mathews69}).
 As pioneering technologies for digital sound synthesis, these programming languages gained wide acceptance in the music research community.
 
 In parallel, during the nineteen-eighties a group of musical instruments manufacturers agreed on a universal standard for digitally sending and receiving musical information, establishing the MIDI protocol (\cite{web:quinn}).
 This standardization, combined with the emergence of personal computers, facilitated the creation of modern programing languages for musical applications.
-As opposed to early programming languages as GROOVE or the MUSIC-N series, most of the personal-computer-based languages still exist today and have kept progressing. A prominent example is Max/MSP, which was first developed by Miller Puckette in 1986 (\cite[p. 16]{winkler01})\footnote{Max 6, the recent version of Max/MSP: \href{http://cycling74.com/products/max/}{cycling74.com/products/max/}.}.
+As opposed to early programming languages as GROOVE or the MUSIC-N series, most of the personal-computer-based languages still exist today and have kept progressing.
+A prominent example is Max/MSP, which was first developed by Miller Puckette in 1986 (\cite[p. 16]{winkler01})\footnote{Max 6, the recent version of Max/MSP: \href{http://cycling74.com/products/max/}{cycling74.com/products/max/}.}.
 Moreover, new music-oriented programing languages continue to be developed today, presenting features like ``on-the-fly'' programming\footnote{ChucK: \href{http://chuck.cs.princeton.edu/}{chuck.cs.princeton.edu/}.}, web capabilities\footnote{The Web audio API: \href{http://www.w3.org/TR/webaudio/}{www.w3.org/TR/webaudio/}.} or modular, multi-touch environment for live performance\footnote{Usine Hollyhock: \href{http://www.sensomusic.org/usine/}{www.sensomusic.org/usine/}.}.
 
 Similar technological shifts also facilitated the usage of digital audio workstations (DAW) as a common alternative to analog recording equipment in studios (\cite{leider:04}).
@@ -115,11 +120,14 @@ Silent disco and flash mobs, the conceptual roots of this project, are examples 
 My proposal operates within the context of a silent disco party, and is inspired by flash mobs in its usage of new technologies to facilitate creative and artistic social interactions.
 
 Silent disco is the phenomenon of partying where the music is heard through headphones instead of loudspeakers.
-This new phenomena changes the possibilities of an ordinary party. One example is to have two DJs spin  completely different sets side by side at the same party, allowing each participant, who has two-channel wireless headphones, to decide which DJ to listen to\footnote{Headphone Disco: \href{http://headphonedisco.com/show.php}{headphonedisco.com/show.php}.}.
+This new phenomena changes the possibilities of an ordinary party.
+One example is to have two DJs spin  completely different sets side by side at the same party, allowing each participant, who has two-channel wireless headphones, to decide which DJ to listen to\footnote{Headphone Disco: \href{http://headphonedisco.com/show.php}{headphonedisco.com/show.php}.}.
 Another option is to have no DJ at all, letting each participant to choose what music to hear individually, through his or her mobile device and headphones.
 
 Flash mobs are the public gathering of people organized through social media to jointly perform a short act.
 The unique aspects of this relatively new phenomena have led researchers to suggest that the emergence of flash mobs is a significant event in the history of mobile communication (\cite{nicholson05}) and that it inherently reflects an artistic intent (\cite{brejzek10}).
+
+\todo[inline]{Rewrite. It's unclear what the bottom line is and what is the relation of this info to the study}
 
 \subsection{Social effects of music}
 
@@ -171,7 +179,8 @@ Note however that those solutions depend on the deployment of WiFi infrastructur
 A relatively new technology in the world of IPS, the Bluetooth low energy (LE)\footnote{Bluetooth LE: \href{http://www.bluetooth.com/Pages/low-energy-tech-info.aspx}{www.bluetooth.com/Pages/low-energy-tech-info.aspx}}, has already gained success with the adaption of the technology by Apple with their iBeacon IPS (\cite{web:danova}).
 Estimote\footnote{Estimote: \href{http://estimote.com/}{estimote.com/}.}, one of the biggest iBeacon manufacturers, has recently reported that more then 10,000 developers are using their products (\cite{web:thompson}).
 
-Apple are not the only company to adopt Bluetooth LE as an IPS. StickNFind use the technology similarly\footnote{StickNFind: \href{https://www.sticknfind.com}{www.sticknfind.com}.}; Android has introduced built-in support for Bluetooth LE\footnote{Android Bluetooth LE: \href{http://developer.android.com/guide/topics/connectivity/bluetooth-le.html}{developer.android.com/guide/topics/connectivity/bluetooth-le.html}.} and there is even an Arduino shield (standard board extension) for it\footnote{Arduino Bluetooth LE shield: \href{http://redbearlab.com/bleshield/}{redbearlab.com/bleshield/}.}.
+Apple are not the only company to adopt Bluetooth LE as an IPS.
+StickNFind use the technology similarly\footnote{StickNFind: \href{https://www.sticknfind.com}{www.sticknfind.com}.}; Android has introduced built-in support for Bluetooth LE\footnote{Android Bluetooth LE: \href{http://developer.android.com/guide/topics/connectivity/bluetooth-le.html}{developer.android.com/guide/topics/connectivity/bluetooth-le.html}.} and there is even an Arduino shield (standard board extension) for it\footnote{Arduino Bluetooth LE shield: \href{http://redbearlab.com/bleshield/}{redbearlab.com/bleshield/}.}.
 
 \subsection{Augmented reality}
 
@@ -184,7 +193,10 @@ My work extends the definition of an AR system from the visual to the auditory m
 
 \section{Research targets}
 
-The system developed in this research is inspired by the concept of IMS and intended for the average user. I focus on the following two targets:
+\todo[inline]{Describe and explain the two implied hypotheses from Experiment I section}
+
+The system developed in this research is inspired by the concept of IMS and intended for the average user.
+I focus on the following two targets:
 \begin{enumerate}
 	\item To propose and implement an audio-only augmented reality system for social interaction.
 	Using the system, participants will be able to interact with one another as well as with system's components and affect the structure of the music in a virtual space.
@@ -220,7 +232,7 @@ Although there are available techniques to implement IPS, I decided to develop a
 	\item Although Bluetooth LE based solutions satisfy the above requirements, only the most recent mobile devices support them.
 \end{enumerate}
 
-The system I  developed --- the Bluetooth Based Relative Indoor Positioning (BBRIP) system --- consists of a number of Bluetooth beacons placed inside bundles of balloons, and an Android application.
+The indoor positioning system I developed --- the Bluetooth Based Relative Indoor Positioning (BBRIP) system --- consists of a number of Bluetooth beacons placed inside bundles of balloons, and an Android application.
 It is built around distributed architecture and therefore runs separately as an Android application, on each one of the participants' phones.
 The application repeatedly searches for nearby Bluetooth beacons.
 The RSSI value is used as an estimation of the distance between the user and the beacon.
@@ -247,7 +259,7 @@ Every audio loop is identified by a distinct musical style which can be rhythmic
 
 \begin{figure}[!htb]
 	\includegraphics[width=\linewidth]{balloons}
-	\caption{Balloon bundles on the dance floor (pilot experiment)}\label{fig:balloons}
+        \caption{Balloon bundles on the dance floor (experiment 1)}\label{fig:balloons}
 \end{figure}
 
 Figure \ref{fig:balloons} shows the system's elements on the dance floor.
@@ -284,11 +296,13 @@ Each Bluetooth enabled device calculate RSSI values during Bluetooth discovery, 
 
 As shown in figure \ref{fig:bbrip}, the BBRIP system continuously searches for Bluetooth devices.
 When a new device is found, the RSSI value is extracted and sent forward for processing.
-From the first discovery in the Bluetooth discovery cycle, the system keeps checking if the time since the last discovery exceedes a pre-defined timeout. If so, it terminates the discovery.
+From the first discovery in the Bluetooth discovery cycle, the system keeps checking if the time since the last discovery exceedes a pre-defined timeout.
+If so, it terminates the discovery.
 This termination is important, because naturally a device can only be discovered once in each Bluetooth discovery cycle, and long periods of time without new discoveries indicates that all of the nearby devices are already found.
 Lastly, when the system sees that there is no Bluetooth discovery running (because of termination or simply the end of the discovery cycle), it starts a new one immediately.
 
-Although the RSSI values extracted by the BBRIP system are not very precise as a distance estimation, I have found them sufficient in order to classify the distance between participants and beacons into useful ranges. In other words, RSSI values gives great indication if a participant stands close to specific beacon (around 1 meter), in an intermediate range (2 to 3 meters), or in a greater distance.
+Although the RSSI values extracted by the BBRIP system are not very precise as a distance estimation, I have found them sufficient in order to classify the distance between participants and beacons into useful ranges.
+In other words, RSSI values gives great indication if a participant stands close to specific beacon (around 1 meter), in an intermediate range (2 to 3 meters), or in a greater distance.
 
 \subsection{ScenePlayer Plus}\label{sceneplayer_plus}
 
@@ -310,11 +324,12 @@ The application exposes the Bluetooth RSSI values to the Pd patch as another sen
 In order to evaluate the social effects of the system's usage I decided to conduct controlled experiments.
 For the sake of evaluating the system in its most natural designation, the context of the experiments was selected to be a silent disco party.
 The experiments' main goal is to answer the research question: \emph{does the system enhance social interaction between participants in an interactive silent disco party?}
-In addition, an implied hypothesis is that participating in a party using the system strengthens the social relationships between participants even beyond the scope of the party.
 
-Assessing the social interaction between participants was done using two main methods: self-reported information that the participants entered in surveys before, during, and after each experiment, and with objective measurements such as participants positioning tracking and their interaction with system components. 
+In addition, two implied hypotheses are that participating in a party using the system (a) strengthens the social relationships between participants even beyond the scope of the party and (b) changes the ratio between in-group cohesion and ones openness to out-group social interactions.
 
-The following sections present the pilot experiment that has been done, the motivation for an experiment of a larger scope, and a detailed explanation of the experimental design.
+Assessing the social interaction between participants was done using two main methods: by self-reported information that the participants entered in surveys before, during, and after each experiment, and with objective measurements such as participants positioning tracking and their interaction with system components.
+
+The following sections present the first experiment that has been conducted, presenting detailed explanation of the experimental design and its results.
 
 \subsection{Methods}
 
@@ -330,7 +345,7 @@ Each participant installed the Android application on his or her phone and fille
 The party consisted of four alternating interactive/control blocks of duration 5:40 minutes each (see figure \ref{fig:pilot}).
 The participants were randomly assigned to two groups: $A$ and $B$, comprising the interactive and control blocks respectively\footnote{Group $A$ (interactive first) consisted of 8 participants (4 females and 4 males) with mean age of 36.7 (s.d=12.3); group $B$ (control first) consisted of 10 participants (3 females and 7 males) with mean age of 29.6 (s.d=10.2). Participants had a diverse musical background with 4.7 mean years of musical training (s.d=5.2).}.
 They were informed that the experiment consists of interactive and control segments, however, they were not informed about the exact schedule and timing of the blocks or the group assignments.
-Both groups started the experiment together.
+Both groups started the experiment together, and on the same dancing floor.
 In the interactive blocks, the application generated music as described in section \ref{systemdescription}, whereas in the control blocks the participants heard recorded non-interactive music created in advance using the musical material of the interactive system\footnote{The control block music composed by Noam Elron (\href{http://www.noamelron.com}{www.noamelron.com}).}.
 
 Interaction with the system's components was assessed by counting the number of Bluetooth device discoveries made by each participant's phone during both the interactive and the control blocks.
@@ -355,13 +370,14 @@ In the post-party survey, participants self-reported significantly higher levels
 Figure \ref{fig:location} shows that there was a significant difference (unpaired t-test, $t(33)=6.2$, $p<0.01$) in the mean response to these questions (at a scale of 1-3).
 
 In order to objectively assess if participants moved more in space, we measured the counting of Bluetooth discoveries made by the applications' BBRIP system.
-The results show slightly higher counts (paired t-test, $t(16)=1.7$, $p=0.06$, n.s) during the interactive blocks of the party compared with the control blocks. This suggests that the interactive components of the system facilitated greater participant movement in space, thereby offering more frequent opportunities for social interactions.
+The results show slightly higher counts (paired t-test, $t(16)=1.7$, $p=0.06$, n.s) during the interactive blocks of the party compared with the control blocks.
+This suggests that the interactive components of the system facilitated greater participant movement in space, thereby offering more frequent opportunities for social interactions.
 Indeed, in the post-party survey participants reported that they danced significantly less with people that they knew in advance, compared with their usual behavior (paired t-test, $t(14)=-2.5$, $p=0.01$).
 Figure \ref{fig:known} shows that there was also a significant difference in the mean response to these questions in the pre/post surveys.
 Overall, participants showed a slightly stronger tendency (paired t-test, $t(16)=1.46$ ,$p=0.08$, n.s) to participate in an interactive party in the post-party survey, compared with their answer to identical questions in the pre survey.
 
 The preliminary results already demonstrate the potential for audio-only augmented reality to significantly enrich the experience of music consumption and its attendant social interaction.
-This can be validated in a controlled experiment using both direct reports of subject and indirect objective measurements.
+These results also show that the research targets in question can be validated in a controlled experiment using both direct reports of subject and indirect objective measurements.
 
 \subsubsection{Video analysis}
 
@@ -371,14 +387,16 @@ This can be validated in a controlled experiment using both direct reports of su
     \caption{Maps of social familiarity (on the left) and correlated movement on the dance floor (on the right)}\label{plot:pilot-familiarity_correlation_maps}
 \end{figure}
 
-The whole experiment was captured with video from above the dance floor. Later, this video was used to track the positioning of the participants and to generate positioning tables.
+The whole experiment was captured with video from above the dance floor.
+Later, this video was used to track the positioning of the participants and to generate positioning tables.
 
 Analyzing this data, we didn't find significant difference between the position and movement patterns in the interactive and control blocks.
 However position was indicative to the social relations between participants.
-We asked participants for their social relationships to other participants and compared the resulted map with a map of positioning correlation between every two participants\footnote{This data was measured along the Y axis only, which was much more indicative then the X axis due to the fact that the length of the dance floor (the Y axis) was 10 meters when the width of it was only 2.5 meters.}.
-We used Monte Carlo reshuffling to check how similar those two maps are and we found the matrices are unusually similar (p < 0.001).
+We asked participants for their social relationships to other participants and compared the resulted map with a map of positioning correlation between every two participants, over the entire course of the experiment\footnote{This data was measured along the Y axis only, which was much more indicative then the X axis due to the fact that the length of the dance floor (the Y axis) was 10 meters when the width of it was only 2.5 meters.}.
+I defined the matrix similarity metric as the component-by-component squared distance and used bootstrapping resampling (\cite{good2006permutation}) to check how similar are those maps.
+As expected, I found that the matrices are unusually similar (p \textless{} 0.001).
 
-To conclude, these results demonstrate how close social connection between participants can also be found in video analysis data.
+To conclude, the result above demonstrate how close social relationship between participants can also be found in video analysis data.
 This encouraging results drove much of the methods to analyze the social behavior in experiment 2.
 
 \section{Experiment II}
@@ -387,7 +405,7 @@ This encouraging results drove much of the methods to analyze the social behavio
 
 \subsection{Filling the gap}
 
-Although the pilot experiment results already support the hypothesis that the system usage enhances the social interaction between participants, it does not shed a light on the following points:
+Although experiment 1 results already support the hypothesis that the system usage enhances the social interaction between participants, it does not shed a light on the following points:
 
 \begin{itemize}
 	\item It does not distinguish between participants that knew one another in advance.
@@ -395,17 +413,21 @@ Although the pilot experiment results already support the hypothesis that the sy
 \end{itemize}
 
 The following experiment design is intended to clear up those points.
-First, by assuming that participants in a party are pre-partitioned into groups of friends, and thereby a major effort will be made to gain better understanding of the behavior of those groups as a whole and the behavior of each participant as a member of a group.
+First, by assuming that participants in a party are pre-partitioned into groups of friends.
+Thereby, a major effort will be made to gain better understanding of the behavior of those groups as a whole and the behavior of each participant as a member of a group.
 Second, by using a control group that will not experience the interactive part of the system at all, and will be socially compared to the experiment group before and after the experiment.
 
 \subsection{Methods}\label{methods:evaluation}
 
 \subsubsection{Participants}
 
-Thirty undergraduate and graduate-level students from the Music Department of Bar-Ilan university will participate in the experiment.
-Their participation will rely on voluntary will.
+An homogenius class of twenty-three 11th grade pupils participated in the experiment.
+The high-school was supportive and open the possibility to run the experiment with the pupils, using its facilities.
+An ethics certificate describing a highlighted procedure of the experiment was signed by a parent for each of the pupils who was under 18 age old.
 
 \subsubsection{Measurements}
+
+\todo[inline]{Rewrite. Need to decide which parts to keep and report as "failures" and which parts to ignore in indvance}
 
 The above research question will be fragmented into the following operational definitions and measurements\footnote{Complete version of each of the surveys below can be found in the appendix.}:
 \begin{enumerate}
@@ -421,7 +443,7 @@ The above research question will be fragmented into the following operational de
 	Using the above definitions interaction between the members of one group with other participants will be evaluated by the disperse of the groups, when high disperse values indicate higher interactivity.
 	\item \label{measure:groups} Using the above definitions, we can define \definition{momentary group disperse} as the dispersal of momentary centers themselves on the dance floor.
 	In this regard, low momentary group dispersal values indicate higher interactivity.
-	\item \label{measure:audio} The audio volume inside the experiment room will be used as an objective measure of the social state of the group (e.g indicating the ``speaking'' level between participants).
+	\item \label{measure:audio} The audio volume inside the experiment room will be used as an objective measure of the social state of the group (e.g\ indicating the ``speaking'' level between participants).
 	\item \label{measure:survey:social} Participants will fill out a social interaction survey.
 	The survey will be used to asses interaction between participants by estimating social cohesiveness within in-group and out-group of each participant.
 \end{enumerate}
@@ -438,6 +460,8 @@ Lastly, the following measurement will be used in order to eliminate possible di
 
 \subsubsection{Apparatus}\label{aparatus}
 
+\todo[inline]{Again, rewrite, based on last subsection}
+
 In order to measure momentary dispersal and group dispersal as defined in measurements \ref{measure:disperse} and \ref{measure:groups} I will capture the experiment with a video camera from above the dance floor.
 Tracking the positioning of the participants will be done semi-manually using software aids to record the manual tracking of participants, one at a time, using the computer mouse.
 The results will be then processed using computational programming to conclude insights from the data.
@@ -448,8 +472,8 @@ Audio volume (measurement \ref{measure:audio}) will be captured by a microphone 
 
 \subsubsection{Procedure}
 
-Participants will be randomly allocated into two groups, group $A$ and group $B$\@.
-Each group will participate in the experiment in different week, but on the same day of the week and same hour.
+Participants was randomly assigned to two groups, group $A$ and group $B$\@\footnote{Group $A$ consisted of 11 participants (5 females and 6 males) with mean age of 18.7 (s.d=5.41); group $B$ consisted of 12 participants (3 females and 7 males) with mean age of 17.2 (s.d=0.42). Participants had a diverse musical background with 4.17 mean years of musical training (s.d=2.53).}.
+Each group participated in the experiment in different week, but on the same day of the week and same hour.
 
 \begin{figure}[!htb]
 	\centering
@@ -458,11 +482,14 @@ Each group will participate in the experiment in different week, but on the same
 	\caption{Experiment design}\label{fig:experiment}
 \end{figure}
 
-Participants will first fill a musical background survey (measurement \ref{measure:survey:musical}) and a participants familiarity survey (measurement \ref{measure:partitioning}), followed by three \definition{experiment blocks}, followed by a system usability survey (measurement \ref{measure:survey:usability}) as shown in figure \ref{fig:experiment}.
-After filling out the system usability survey the participants will experience another experiment block\footnote{The existence of the last experiment block is there in order to allow the control group to experience the interactive component of the system, eliminating possible frustration and feeling of discrimination between the groups.}.
-In each experiment block the participants will listen to music in their headphones, using their Android device and pre-installed application, and will interact with other participants and system components in the `silent disco' party.
-Meanwhile, during each experiment block, measurements \ref{measure:disperse}, \ref{measure:groups}, \ref{measure:audio} and \ref{measure:system} will be collected.
-Before each experiment block and after the last block each participant will fill the social interaction survey (measurement \ref{measure:survey:social}).
+First, participants fill a musical background survey (measurement \ref{measure:survey:musical}) and a participants familiarity survey (measurement \ref{measure:partitioning}), followed by three \definition{experiment blocks}, followed by a system usability survey (measurement \ref{measure:survey:usability}) as shown in figure \ref{fig:experiment}.
+After filling out the system usability survey the participants experience another experiment block\footnote{The existence of the last experiment block is there in order to allow the control group to experience the interactive component of the system, eliminating possible frustration and feeling of discrimination between the groups.}.
+In each experiment block the participants listen to music in their headphones, using their Android device and pre-installed application, and interact with other participants and system components in the `silent disco' party.
+
+\todo[inline]{Again, rewrite after better measurements subsection}
+
+Meanwhile, during each experiment block, measurements \ref{measure:disperse}, \ref{measure:groups}, \ref{measure:audio} and \ref{measure:system} are collected.
+Before each experiment block and after the last block each participant fill the social interaction survey (measurement \ref{measure:survey:social}).
 
 Each experiment block could be of one of the following types:
 \begin{description}
@@ -470,12 +497,13 @@ Each experiment block could be of one of the following types:
 	\item[Control:] In which the music generated by the Android application is pre-composed and based on the same musical materials as of the interactive system.
 \end{description}
 
-Participants of group $A$ will hear the experiment blocks: Control $\rightarrow$ Control $\rightarrow$ Control $\rightarrow$ Interactive. Whereas participants of group $B$ will hear the experiment blocks: Control $\rightarrow$ Interactive $\rightarrow$ Control $\rightarrow$ Interactive.
+Participants of group $A$ heard the experiment blocks: Control $\rightarrow$ Control $\rightarrow$ Control $\rightarrow$ Interactive.
+Whereas participants of group $B$ heard the experiment blocks: Control $\rightarrow$ Interactive $\rightarrow$ Control $\rightarrow$ Interactive.
 
-The procedure described above presents several advantages in assessing the main research question:
-First, the comparison between the effects of interactive and control blocks could be done as a between-group evaluation in relation to the second experiment block of each group.
+The procedure described above presents several advantages in assessing the main research question compared to experiment 1 design and variants of A / B designs:
+First, the comparison between the effects of interactive and control blocks can be done as a between-group evaluation in relation to the second experiment block of each group.
 Second, comparison between interactive and control blocks effects could also assessed as a withing-group evaluation between the first and the second, as well as the second and third blocks of group $A$, using group $B$ as a reference.
-Lastly, effects on the social interaction beyond the scope of the interactive blocks will be assessed as a within-group evaluation between the first and the third blocks of group $A$, using group $B$ as a reference.
+Lastly, effects on the social interaction beyond the scope of the interactive blocks can be assessed as a within-group evaluation between the first and the third blocks of group $A$, using group $B$ as a reference.
 
 \subsection{Results}
 
@@ -493,9 +521,15 @@ Lastly, effects on the social interaction beyond the scope of the interactive bl
     \caption{System satisfaction questionnaire results. Bars indicates the mean response of single questions (questions are listed to the right).}\label{plot:usability-per_question_statistics}
 \end{figure}
 
-We used a system satisfaction survey at the end of the experimental session for each of the groups in order to evaluate the engagement of the participants with the system. The survey was based on the standard system usability scale (SUS) survey (\cite{brooke96}) with minor modifications. The SUS survey contain 10 question, 5 of them positive (a larger number indicates larger satisfaction) and 5 of them negative (a larger number indicates smaller satisfaction). We used a score which combines positive and negative questions as suggested by Brook (\cite*{brooke96}). We found that overall system satisfaction score is larger in the interactive group (interactive: 67.3 (3); control: 45.2 (6.9); unpaired t-test, t(21) = 2.81, p \textless{} 0.01).
+We used a system satisfaction survey at the end of the experimental session for each of the groups in order to evaluate the engagement of the participants with the system.
+The survey was based on the standard system usability scale (SUS) survey (\cite{brooke96}) with minor modifications.
+The SUS survey contain 10 question, 5 of them positive (a larger number indicates larger satisfaction) and 5 of them negative (a larger number indicates smaller satisfaction).
+We used a score which combines positive and negative questions as suggested by Brook (\cite*{brooke96}).
+We found that overall system satisfaction score is larger in the interactive group (interactive: 67.3 (3); control: 45.2 (6.9); unpaired t-test, t(21) = 2.81, p \textless{} 0.01).
 
-This effect was not limited to a single question. In fact, four of the ten questions showed significantly higher satisfaction response in the interactive group as indicated by a separated one-tailed t-test (p \textless{} 0.05). All questions but two showed some tendency (p \textless{} 0.1), and the remaining two questions (extended learning in question 10 and technician aid in question 4) are expected to be less relevant to this system. These results are summarized in figure \ref{plot:usability-per_question_statistics}.
+This effect was not limited to a single question.
+In fact, four of the ten questions showed significantly higher satisfaction response in the interactive group as indicated by a separated one-tailed t-test (p \textless{} 0.05). All questions but two showed some tendency (p \textless{} 0.1), and the remaining two questions (extended learning in question 10 and technician aid in question 4) are expected to be less relevant to this system.
+These results are summarized in figure \ref{plot:usability-per_question_statistics}.
 These results consistently show that subject that used the interactive component of the system were more satisfied than the control group that had similar physical conditions.
 
 \subsubsection{Social interaction surveys}
@@ -506,13 +540,21 @@ These results consistently show that subject that used the interactive component
     \caption{Mean participants response to social interaction statements; statement 1: ``In the last experiment block I interacted with close friends only''; statement 2: ``In the last experiment block I interacted with participants with them I have no social connection''}\label{plot:interaction_surveys-question_2}
 \end{figure}
 
-One of my main hypotheses was that the system will increase social interaction outside the native groups. Namely, subjects that usually interact less with each other will tend to interact more. To assess this hypothesis I have used social interaction survey between each of the experiment sessions.
+One of my main hypotheses was that the system will increase social interaction outside the native groups.
+Namely, subjects that usually interact less with each other will tend to interact more.
+To assess this hypothesis I have used social interaction survey between each of the experiment sessions.
 
-Surprisingly, the results of the this survey showed a different trend. The left side of figure \ref{plot:interaction_surveys-question_2} shows the mean response (on a scale of 1 to 5) to the statement ``In the last experiment block I interacted with close friends only''. There was no significant main effects and group by session interactions as indicated by 2-way repeated measure ANOVA (group: F(1, 21)=0.094 p=0.762; session: F(2, 42)=0.835 p=0.441; interaction: F(2, 42)=0.548 p=0.582).
+Surprisingly, the results of the this survey showed a different trend.
+The left side of figure \ref{plot:interaction_surveys-question_2} shows the mean response (on a scale of 1 to 5) to the statement ``In the last experiment block I interacted with close friends only''.
+There was no significant main effects and group by session interactions as indicated by 2-way repeated measure ANOVA (group: F(1, 21)=0.094 p=0.762; session: F(2, 42)=0.835 p=0.441; interaction: F(2, 42)=0.548 p=0.582).
 
-Similar results were obtained for the second question in survey, which was ``In the last experiment block I interacted with participants with them I have no social connection''  (group: F(1, 21)=2.062 p=0.166; session: F(2, 42)=1.730 p=0.190; interaction: F(2, 42)=1.730 p=0.190). Note however a small trend which indicates higher tendency to interact outside the native group in the control group, as indicated by a session main effect and significant interaction of group by session in a repeated measure 2 way ANOVA test between session one and two only (session: F(1, 21)=4.495 p=0.046; interaction: F(1, 21)=4.495 p=0.046). Even though that the overall results did not reach significance this indicates an opposite trend to the results in experiment 1. In experiment 1 subject reported that they used to interact more with subject that they are less familiar with, though in this experiment we had no way to dissociate between using the system interactively and non-interactively.
+Similar results were obtained for the second question in survey, which was ``In the last experiment block I interacted with participants with them I have no social connection''  (group: F(1, 21)=2.062 p=0.166; session: F(2, 42)=1.730 p=0.190; interaction: F(2, 42)=1.730 p=0.190).
+Note however a small trend which indicates higher tendency to interact outside the native group in the control group, as indicated by a session main effect and significant interaction of group by session in a repeated measure 2 way ANOVA test between session one and two only (session: F(1, 21)=4.495 p=0.046; interaction: F(1, 21)=4.495 p=0.046).
+Even though that the overall results did not reach significance this indicates an opposite trend to the results in experiment 1.
+In experiment 1 subject reported that they used to interact more with subject that they are less familiar with, though in this experiment we had no way to dissociate between using the system interactively and non-interactively.
 
-To conclude, subject did not appear to explicitly interact more with subject that are outside their native group, and we can even identify an opposite trend. As we will shortly see this observation is further supported by the implicit measures.
+To conclude, subject did not appear to explicitly interact more with subject that are outside their native group, and we can even identify an opposite trend.
+As we will shortly see this observation is further supported by the implicit measures.
 
 \subsubsection{Social structure}
 
@@ -522,9 +564,15 @@ To conclude, subject did not appear to explicitly interact more with subject tha
     \caption{Maps of social familiarity between participants where darker colors means low familiarity and lighter colors means high familiarity. The maps on the left are for the control group and on the right for the interactive group. From top to bottom, maps represent the original maps, socially clustered maps using K-means algorithm and socially clustered maps using mean-shift algorithm}\label{plot:familiarity-clustering_maps}
 \end{figure}
 
-In experiment 1, participants were recruited using the internet and therefore had varied prior familiarity with each other. This created a strong grouping into social clusters that was also apparent in their positioning in space as indicated by our video tracking analysis (see figure \ref{plot:pilot-familiarity_correlation_maps}). Based on this encouraging results we specifically asked subject to fill a social familiarity survey at the beginning of the experiment. Each subject had to rank its class pears on a scale of 1 to 5 according to social familiarity (see methods). Note that the second experiment group is much more homogeneous since unlike experiment 1 all participants have prior familiarity, since they all study together.
+In experiment 1, participants were recruited using the internet and therefore had varied prior familiarity with each other.
+This created a strong grouping into social clusters that was also apparent in their positioning in space as indicated by our video tracking analysis (see figure \ref{plot:pilot-familiarity_correlation_maps}).
+Based on this encouraging results we specifically asked subject to fill a social familiarity survey at the beginning of the experiment.
+Each subject had to rank its class pears on a scale of 1 to 5 according to social familiarity (see methods).
+Note that the second experiment group is much more homogeneous since unlike experiment 1 all participants have prior familiarity, since they all study together.
 
-Figure \ref{plot:familiarity-clustering_maps} first row shows pre-clustered social matrices, where the familiarity each participant on the y axis with participants on the x axis is indicated by color. We applied K-means\footnote{K-means: \href{http://scikit-learn.org/stable/modules/clustering.html\#k-means}{scikit-learn.org/stable/modules/clustering.html\#k-means}}.} and mean-shift\footnote{Mean-shift: \href{http://scikit-learn.org/stable/modules/clustering.html\#mean-shift}{scikit-learn.org/stable/modules/clustering.html\#mean-shift}.} clustering algorithms as implemented by the software package Scikit-learn (\cite{scikit-learn}) on these matrices to find out that in this group we did not find clustered social structures. This is indicated by cross cluster similarity outside the main diagonal of the clustered matrices as depicted in the last two rows of figure \ref{plot:familiarity-clustering_maps}.
+Figure \ref{plot:familiarity-clustering_maps} first row shows pre-clustered social matrices, where the familiarity each participant on the y axis with participants on the x axis is indicated by color.
+We applied K-means\footnote{K-means: \href{http://scikit-learn.org/stable/modules/clustering.html\#k-means}{scikit-learn.org/stable/modules/clustering.html\#k-means}}.} and mean-shift\footnote{Mean-shift: \href{http://scikit-learn.org/stable/modules/clustering.html\#mean-shift}{scikit-learn.org/stable/modules/clustering.html\#mean-shift}.} clustering algorithms as implemented by the software package Scikit-learn (\cite{scikit-learn}) on these matrices to find out that in this group we did not find clustered social structures.
+This is indicated by cross cluster similarity outside the main diagonal of the clustered matrices as depicted in the last two rows of figure \ref{plot:familiarity-clustering_maps}.
 
 \subsubsection{Video analysis: Movement}
 
@@ -534,9 +582,15 @@ Figure \ref{plot:familiarity-clustering_maps} first row shows pre-clustered soci
     \caption{Mean speed of participants as movement assessment}\label{plot:analyze-movement}
 \end{figure}
 
-Experiment 1 showed that video tracking could be used effectively to gain insights about the social interaction. Based on these encouraging results we used extensively video tracking in experiment 2.
+Experiment 1 showed that video tracking could be used effectively to gain insights about the social interaction.
+Based on these encouraging results we used extensively video tracking in experiment 2.
 
-We analyzed the mean speed of each participant during each session. We hypothesis that the interactive system will facilitate movement among the users. However, we found an opposite trend, where in fact, during the second session the participants of the interactive group tend to move significantly less compared with the control group. This trend persist and even increase in the last session of the experiment. These evidences are indicated by a significant interaction of group by session in a repeated measure 2 way ANOVA test (group: F(1, 21)=3.311 p=0.083; session: F(2, 42)=0.579 p=0.455; interaction: F(2, 42)=7.318 p=0.013). Note however, that in the first session, there was no significant difference between the groups ((interactive: 0.269 (0.048); control: 0.258 (0.035); two-sided unpaired t-test, t(21) = -0.18, p = 0.22).
+We analyzed the mean speed of each participant during each session.
+We hypothesis that the interactive system will facilitate movement among the users.
+However, we found an opposite trend, where in fact, during the second session the participants of the interactive group tend to move significantly less compared with the control group.
+This trend persist and even increase in the last session of the experiment.
+These evidences are indicated by a significant interaction of group by session in a repeated measure 2 way ANOVA test (group: F(1, 21)=3.311 p=0.083; session: F(2, 42)=0.579 p=0.455; interaction: F(2, 42)=7.318 p=0.013).
+Note however, that in the first session, there was no significant difference between the groups ((interactive: 0.269 (0.048); control: 0.258 (0.035); two-sided unpaired t-test, t(21) = -0.18, p = 0.22).
 
 \subsubsection{Video analysis: Interaction with system components}
 
@@ -552,7 +606,9 @@ We analyzed the mean speed of each participant during each session. We hypothesi
     \caption{A correlated movement of two participants holding one of the beacons. As we can clearly see this participants move coordinated through a time epoche of 9 seconds.}\label{plot:annotations-correlated_movement_example}
 \end{figure}
 
-Animated renditions of the participants movement can be viewed in my site\footnote{Animated movement of participants: \href{http://tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}{tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}.}. Figure \ref{plot:annotations-clustering_example} show a screenshot of one point in time extracted from session 2, for each group. These results show that participants of the interactive group tend to cluster around the interactive components of the system in small groups.
+Animated renditions of the participants movement can be viewed in my site\footnote{Animated movement of participants: \href{http://tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}{tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}.}.
+Figure \ref{plot:annotations-clustering_example} show a screenshot of one point in time extracted from session 2, for each group.
+These results show that participants of the interactive group tend to cluster around the interactive components of the system in small groups.
 
 Additional phenomena found in the in video animations is correlate movement of participant as can be seen in the list of consequence screenshots in figure \ref{plot:annotations-correlated_movement_example}.
 
@@ -562,7 +618,12 @@ Additional phenomena found in the in video animations is correlate movement of p
     \caption{Expectancy for the number of participants in a 1 meter radius around a beacon}\label{plot:analyze-expectancy_of_participants_close_to_a_beacon}
 \end{figure}
 
-These observations are also evident in our statistical analysis. We’ve count the mean number of participants near (less than 1 meters) each beacon over the frames of the video a beacon. Beacons that had no participants around them were excluded from the calculation. As expected from the fact that groups did not differ in the initial procedure in the first  session, there was no significant difference between the group in this session as indicated by a two-sided unpaired t-test (interactive: 1.78 (0.071); control: 1.64 (0.20); t(10) = -0.57, p = 0.15). However the interactive group showed a larger tendency to crowd around the beacons as indicated by a significant group effect in a repeated measure 2 way ANOVA test (F(1, 9)=9.974 p=0.012). This is consistent with the explicit results of the system satisfaction that show that participants were more satisfied and therefore probably more engaged with the system.
+These observations are also evident in our statistical analysis.
+We’ve count the mean number of participants near (less than 1 meters) each beacon over the frames of the video a beacon.
+Beacons that had no participants around them were excluded from the calculation.
+As expected from the fact that groups did not differ in the initial procedure in the first  session, there was no significant difference between the group in this session as indicated by a two-sided unpaired t-test (interactive: 1.78 (0.071); control: 1.64 (0.20); t(10) = -0.57, p = 0.15).
+However the interactive group showed a larger tendency to crowd around the beacons as indicated by a significant group effect in a repeated measure 2 way ANOVA test (F(1, 9)=9.974 p=0.012).
+This is consistent with the explicit results of the system satisfaction that show that participants were more satisfied and therefore probably more engaged with the system.
 
 \subsubsection{Video analysis: Clustering}
 
@@ -572,18 +633,23 @@ These observations are also evident in our statistical analysis. We’ve count t
     \caption{Clustering scores. Algorithm score is the mean distance of participants from their momentary cluster centroid. Social score is the mean of the social familiarity of participants (as reported by him/her in the familiarity survey) with any other participant in the same cluster.}\label{plot:analyze-clustering_scores}
 \end{figure}
 
-I have used the mean-shift algorithm, as implemented by the software package Scikit-learn (\cite{scikit-learn}), to cluster participants into groups based on their positioning in space. For each frame in the video the algorithm created varied number of participants clusters. These clusters have been used to get the following per participant scores:
+I have used the mean-shift algorithm, as implemented by the software package Scikit-learn (\cite{scikit-learn}), to cluster participants into groups based on their positioning in space.
+For each frame in the video the algorithm created varied number of participants clusters.
+These clusters have been used to get the following per participant scores:
 
 \begin{description}
-    \item[Algorithm score:] That is the distance of the participant from his cluster centroid. Hence lower scores indicates higher in-cluster interaction.
+    \item[Algorithm score:] That is the distance of the participant from his cluster centroid.
+        Hence lower scores indicates higher in-cluster interaction.
     \item[Social score:] That is the mean of the social familiarity of the participant (as reported by him/her in the familiarity survey) with any other participant in the same cluster.
 \end{description}
 
 The final algorithm / social score for each participant is his / her average score over the frame of the whole session.
 
-As shown in figure \ref{plot:analyze-clustering_scores} left plot, there was a significant difference between the second session of the interactive and the control group in the algorithm score as indicated by a significant group and interaction of group by session effects in a repeated measure 2 way ANOVA test (group: F(1, 21)=6.987 p=0.015; interaction: F(2, 42)=8.202 p=0.001). Note however, that in the first session, there was no significant difference between the groups (interactive: 0.940 (0.044); control: 0.866 (0.053); two-sided unpaired t-test, t(21) = -1.017, p=0.080).
+As shown in figure \ref{plot:analyze-clustering_scores} left plot, there was a significant difference between the second session of the interactive and the control group in the algorithm score as indicated by a significant group and interaction of group by session effects in a repeated measure 2 way ANOVA test (group: F(1, 21)=6.987 p=0.015; interaction: F(2, 42)=8.202 p=0.001).
+Note however, that in the first session, there was no significant difference between the groups (interactive: 0.940 (0.044); control: 0.866 (0.053); two-sided unpaired t-test, t(21) = -1.017, p=0.080).
 
-These results indicating that using the interactive system participants tend to cluster in more dense clusters, confirming the observed clustering from the video animations. This effect persist over the last block, but with less significance.
+These results indicating that using the interactive system participants tend to cluster in more dense clusters, confirming the observed clustering from the video animations.
+This effect persist over the last block, but with less significance.
 
 Similarly to the results from the interactive surveys, figure \ref{plot:analyze-clustering_scores} right plot shows a non-significant group by session effect over the clusters social scores; whereas in the interactive group participants tend to cluster with others that are socially close to them, the participants of the control group tend to cluster with participants that are far from them socially on the social map (repeated measure 2 way ANOVA; interaction: F(2, 42)=2.032 p=0.144).
 
