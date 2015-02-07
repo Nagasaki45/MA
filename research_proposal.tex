@@ -30,7 +30,7 @@
 \listoftodos
 \tableofcontents
 
-\todo[inline]{General TODO: replace "we" with "I"}
+\todo[inline]{General TODO: replace ``we'' with ``I''}
 
 \section{Introduction}
 
@@ -111,7 +111,7 @@ Sound installations are specific type of installations located in the three-dime
 In some interactive sound installations the main interaction is between the viewer and the installation itself (\cite{web:visnjic}; \cite{web:cardiff01}) whereas in others, the main objective is to facilitate social interaction between participants (\cite{eng03}; \cite{web:kirn12}; \cite{web:murray-browne13}).
 
 % social DJing: DistributedDJ, the BLOB and playmysong
-A number of recent projects suggest the framework of distributing the role of a DJ between  participants so that they can choose the music by themselves, thereby generating a playlist dynamically according to their musical tastes (\cite{web:shaw}).
+A number of recent projects suggest the framework of distributing the role of a DJ between participants so that they can choose the music by themselves, thereby generating a playlist dynamically according to their musical tastes (\cite{web:shaw}).
 Most of these project are implemented as mobile applications, and some of them even integrate social elements\footnote{Playmysong: \href{http://www.playmysong.com/}{www.playmysong.com/}; The BLOB \href{http://vimeo.com/7338120}{vimeo.com/7338120}.}.
 
 \subsection{Technology dependent social networking}
@@ -121,7 +121,7 @@ My proposal operates within the context of a silent disco party, and is inspired
 
 Silent disco is the phenomenon of partying where the music is heard through headphones instead of loudspeakers.
 This new phenomena changes the possibilities of an ordinary party.
-One example is to have two DJs spin  completely different sets side by side at the same party, allowing each participant, who has two-channel wireless headphones, to decide which DJ to listen to\footnote{Headphone Disco: \href{http://headphonedisco.com/show.php}{headphonedisco.com/show.php}.}.
+One example is to have two DJs spin completely different sets side by side at the same party, allowing each participant, who has two-channel wireless headphones, to decide which DJ to listen to\footnote{Headphone Disco: \href{http://headphonedisco.com/show.php}{headphonedisco.com/show.php}.}.
 Another option is to have no DJ at all, letting each participant to choose what music to hear individually, through his or her mobile device and headphones.
 
 Flash mobs are the public gathering of people organized through social media to jointly perform a short act.
@@ -425,31 +425,23 @@ An ethics certificate describing a highlighted procedure of the experiment was s
 
 \subsubsection{Measurements}
 
-\todo[inline]{Rewrite. Need to decide which parts to keep and report as "failures" and which parts to ignore in indvance}
-
 The research questions was fragmented into the following operational definitions and measurements\footnote{Complete version of each of the surveys can be found in the appendix.}:
 \begin{enumerate}
-	\item \label{measure:partitioning} Participants reported their familiarity with other participants using a survey based on the experimental ordinal number.
-	\item \label{measure:disperse} Using the above partitioning to groups of friends we can define the \definition{momentary center} of each group as the average positioning of its participants on the two-dimensional plain of the dance floor (measured by video tracking as explained in section \ref{aparatus}).
-	In addition, we can define the \definition{momentary disperse} of each group as
-
-	\begin{equation*}
-		\sum_{i=1}^n \frac{\sqrt{(x_i - \mu_x)^2 + (y_i - \mu_y)^2}}{n}
-	\end{equation*}
-
-	where $(x_i, y_i)$ are the positioning of the group members on the dance floor and $(\mu_x, \mu_y)$ is their \definition{momentary center}.
-	Using the above definitions interaction between the members of one group with other participants is evaluated by the disperse of the groups, when high disperse values indicate higher interactivity.
-	\item \label{measure:groups} Using the above definitions, we can define \definition{momentary group disperse} as the dispersal of momentary centers themselves on the dance floor.
-	In this regard, low momentary group dispersal values indicate higher interactivity.
-	\item \label{measure:audio} The audio volume inside the experiment room was used as an objective measure of the social state of the group (e.g\ indicating the ``speaking'' level between participants).
+	\item \label{measure:survey:familiarity} Participants reported their familiarity with other participants using a survey based on the experimental ordinal number.
+	\item I have intened to use the above familiarity data to cluster the participants into social groups.
+            Using this clustering and the participants positioning information (measured by video tracking as explained in section \ref{aparatus}) I was able to define the centroid of each cluster on the dance floor, disperse of participants within each cluster and the disperse between the clusters centroids themselves for each frame of the video.
+            As you will shortly see in section \ref{results:social_structure}, this kind of clustering over the participants social relationships was impossible to achive.
+        \item \label{measure:movement} Following positive results from experiment 1 movement assessment I have measured the average movement speed of the participants, hypothizing that greater participants movement on the dance floor may offer more frequent opportunities to social interaction.
+        \item \label{measure:clustering} For each frame of the video, I have dynamically clustered the participants into groups based on their positioning.
+            Then, I have assigned scores to the clusters based on social and positional data in order to gain better understanding of the gathering patterns of the participants.
+            Detailed explenation of the techniques used for clustering can be found in section \ref{results:clustering}. 
 	\item \label{measure:survey:social} Participants filled out a social interaction survey.
 	The survey was used to asses interaction between participants by estimating social cohesiveness within in-group and openness to out-group interactions of each participant.
 \end{enumerate}
-In addition to measurements intended to assess the main research question, the following operational definitions and measurements was used in order to assess interaction with and satisfaction from the system.
+In addition to measurements intended to assess the main research questions, the following operational definitions and measurements was used to assess interaction with and satisfaction from the system.
 \begin{enumerate}[resume]
-	\item \label{measure:system} We can define \definition{momentary participant-system interaction} as the momentary distance of each participant from the closest Bluetooth beacon.
-	Using the above definition high level of interaction of participant with the system are indicated by low values of momentary participant-system interaction.
-	\item \label{measure:survey:usability} Participants filled out a  system satisfaction survey, based on the System Usability Scale (\cite{brooke96}).
+	\item \label{measure:system} I have measured and calculated the expected number of participants around a Bluetooth beacon to assess participants' interaction with the system's components, where more participants around a beacon indicating greater interaction.
+	\item \label{measure:survey:usability} Participants filled out a system satisfaction survey, based on the System Usability Scale (\cite{brooke96}).
 \end{enumerate}
 Lastly, the following measurement was used in order to eliminate possible differences between research groups and to allow future research based on the retrieved data.
 \begin{enumerate}[resume]
@@ -458,15 +450,12 @@ Lastly, the following measurement was used in order to eliminate possible differ
 
 \subsubsection{Apparatus}\label{aparatus}
 
-\todo[inline]{Again, rewrite, based on last subsection}
-
-In order to measure momentary dispersal and group dispersal as defined in measurements \ref{measure:disperse} and \ref{measure:groups} I captured the experiment with a video camera from above the dance floor.
-Extracting the positioning of the participants was done semi-manually, after the experiment,  by tracking one participants at a time using the computer's mouse.
+Lots of the measurements above require spatial participants positioning information.
+In order to derive this kind of positioning data I have captured the experiment with a video camera from above the dance floor during the entire course of the experiment.
+Extracting the positioning of the participants was done semi-manually, after the experiment, by tracking one participants at a time using the computer's mouse.
 The results was then processed using computational programming to conclude insights from the data.
 
-Positioning data that was required to compute momentary participant-system interaction, as described in measurement \ref{measure:system}, was derived similarly, by manually tracking each of the system components in the video.
-
-Audio volume (measurement \ref{measure:audio}) was captured by a microphone and analyzed afterwards.
+The Bluetooth beacons positioning data required for measurement \ref{measure:system} was derived similarly, by manually tracking each of the system components in the video.
 
 \subsubsection{Procedure}
 
@@ -480,10 +469,9 @@ Each group participated in the experiment in different week, but on the same day
 	\caption{Experiment design}\label{fig:experiment}
 \end{figure}
 
-First, participants filled a musical background survey (measurement \ref{measure:survey:musical}) and a participants familiarity survey (measurement \ref{measure:partitioning}), followed by three \definition{experiment blocks}, followed by a system usability survey (measurement \ref{measure:survey:usability}).
+First, participants filled a musical background survey (measurement \ref{measure:survey:musical}) and a participants familiarity survey (measurement \ref{measure:survey:familiarity}), followed by three \definition{experiment blocks}, followed by a system usability survey (measurement \ref{measure:survey:usability}).
 After filling out the system usability survey the participants experience another experiment block\footnote{The last block was added in order to allow the control group to experience the interactive component of the system, eliminating possible frustration and feeling of discrimination between the groups.}.
 Before each experiment block and after the last one each participant filled the social interaction survey (measurement \ref{measure:survey:social}).
-Meanwhile, during the entire course of the experiment, measurements \ref{measure:disperse}, \ref{measure:groups}, \ref{measure:audio} and \ref{measure:system} was collected\todo{Again, rewrite after better measurements subsection}.
 
 In each experiment block the participants listened to music in their headphones, using their Android device and pre-installed application, and interacted with other participants and system components in the `silent disco' party.
 The type of an experiment block could by as following:
@@ -502,6 +490,8 @@ Second, comparison between interactive and control blocks effects could also ass
 Lastly, effects on the social interaction beyond the scope of the interactive blocks can be assessed as a within-group evaluation between the first and the third blocks of group $A$, using group $B$ as a reference.
 
 \subsection{Results}
+
+\todo[inline]{Link back to measurements section}
 
 \subsubsection{System satisfaction surveys}
 
@@ -544,7 +534,7 @@ Surprisingly, the results of the this survey showed a different trend.
 The left side of figure \ref{plot:interaction_surveys-question_2} shows the mean response (on a scale of 1 to 5) to the statement ``In the last experiment block I interacted with close friends only''.
 There was no significant main effects and group by session interactions as indicated by 2-way repeated measure ANOVA (group: F(1, 21)=0.094 p=0.762; session: F(2, 42)=0.835 p=0.441; interaction: F(2, 42)=0.548 p=0.582).
 
-Similar results were obtained for the second question in survey, which was ``In the last experiment block I interacted with participants with them I have no social connection''  (group: F(1, 21)=2.062 p=0.166; session: F(2, 42)=1.730 p=0.190; interaction: F(2, 42)=1.730 p=0.190).
+Similar results were obtained for the second question in survey, which was ``In the last experiment block I interacted with participants with them I have no social connection'' (group: F(1, 21)=2.062 p=0.166; session: F(2, 42)=1.730 p=0.190; interaction: F(2, 42)=1.730 p=0.190).
 Note however a small trend which indicates higher tendency to interact outside the native group in the control group, as indicated by a session main effect and significant interaction of group by session in a repeated measure 2 way ANOVA test between session one and two only (session: F(1, 21)=4.495 p=0.046; interaction: F(1, 21)=4.495 p=0.046).
 Even though that the overall results did not reach significance this indicates an opposite trend to the results in experiment 1.
 In experiment 1 subject reported that they used to interact more with subject that they are less familiar with, though in this experiment we had no way to dissociate between using the system interactively and non-interactively.
@@ -552,7 +542,7 @@ In experiment 1 subject reported that they used to interact more with subject th
 To conclude, subject did not appear to explicitly interact more with subject that are outside their native group, and we can even identify an opposite trend.
 As we will shortly see this observation is further supported by the implicit measures.
 
-\subsubsection{Social structure}
+\subsubsection{Social structure}\label{results:social_structure}
 
 \begin{figure}[!htb]
     \centering
@@ -621,7 +611,7 @@ As expected from the fact that groups did not differ in the initial procedure in
 However the interactive group showed a larger tendency to crowd around the beacons as indicated by a significant group effect in a repeated measure 2 way ANOVA test (F(1, 9)=9.974 p=0.012).
 This is consistent with the explicit results of the system satisfaction that show that participants were more satisfied and therefore probably more engaged with the system.
 
-\subsubsection{Video analysis: Clustering}
+\subsubsection{Video analysis: Clustering}\label{results:clustering}
 
 \begin{figure}[!htb]
     \centering
