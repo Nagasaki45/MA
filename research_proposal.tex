@@ -30,8 +30,6 @@
 \listoftodos
 \tableofcontents
 
-\todo[inline]{General TODO: replace ``we'' with ``I''}
-
 \section{Introduction}
 
 Over the past sixty years the development of new technologies has fundamentally transformed music creation and consumption (\cite{hargreaves99}).
@@ -349,7 +347,7 @@ Both groups started the experiment together, and on the same dancing floor.
 In the interactive blocks, the application generated music as described in section \ref{systemdescription}, whereas in the control blocks the participants heard recorded non-interactive music created in advance using the musical material of the interactive system\footnote{The control block music composed by Noam Elron (\href{http://www.noamelron.com}{www.noamelron.com}).}.
 
 Interaction with the system's components was assessed by counting the number of Bluetooth device discoveries made by each participant's phone during both the interactive and the control blocks.
-In order to eliminate edge effects, we analyzed only the two middle blocks of the experiment.
+In order to eliminate edge effects, I analyzed only the two middle blocks of the experiment.
 
 \subsection{Results}
 
@@ -369,7 +367,7 @@ In order to eliminate edge effects, we analyzed only the two middle blocks of th
 In the post-party survey, participants self-reported significantly higher levels of movement (paired t-test, $t(15)=3.9$, $p<0.01$) using the system, compared with their behavior at other parties as reported in the pre-party survey.
 Figure \ref{fig:location} shows that there was a significant difference (unpaired t-test, $t(33)=6.2$, $p<0.01$) in the mean response to these questions (at a scale of 1-3).
 
-In order to objectively assess if participants moved more in space, we measured the counting of Bluetooth discoveries made by the applications' BBRIP system.
+In order to objectively assess if participants moved more in space, I measured the counting of Bluetooth discoveries made by the applications' BBRIP system.
 The results show slightly higher counts (paired t-test, $t(16)=1.7$, $p=0.06$, n.s) during the interactive blocks of the party compared with the control blocks.
 This suggests that the interactive components of the system facilitated greater participant movement in space, thereby offering more frequent opportunities for social interactions.
 Indeed, in the post-party survey participants reported that they danced significantly less with people that they knew in advance, compared with their usual behavior (paired t-test, $t(14)=-2.5$, $p=0.01$).
@@ -379,7 +377,7 @@ Overall, participants showed a slightly stronger tendency (paired t-test, $t(16)
 The preliminary results already demonstrate the potential for audio-only augmented reality to significantly enrich the experience of music consumption and its attendant social interaction.
 These results also show that the research targets in question can be validated in a controlled experiment using both direct reports of subject and indirect objective measurements.
 
-\subsubsection{Video analysis}
+\subsubsection{Video analysis}\label{exp1:results:video}
 
 \begin{figure}[!htb]
     \centering
@@ -390,9 +388,9 @@ These results also show that the research targets in question can be validated i
 The whole experiment was captured with video from above the dance floor.
 Later, this video was used to track the positioning of the participants and to generate positioning tables.
 
-Analyzing this data, we didn't find significant difference between the position and movement patterns in the interactive and control blocks.
+Analyzing this data, I didn't find significant difference between the position and movement patterns in the interactive and control blocks.
 However position was indicative to the social relations between participants.
-We asked participants for their social relationships to other participants and compared the resulted map with a map of positioning correlation between every two participants, over the entire course of the experiment\footnote{This data was measured along the Y axis only, which was much more indicative then the X axis due to the fact that the length of the dance floor (the Y axis) was 10 meters when the width of it was only 2.5 meters.}.
+I asked participants for their social relationships to other participants and compared the resulted map with a map of positioning correlation between every two participants, over the entire course of the experiment\footnote{This data was measured along the Y axis only, which was much more indicative then the X axis due to the fact that the length of the dance floor (the Y axis) was 10 meters when the width of it was only 2.5 meters.}.
 I defined the matrix similarity metric as the component-by-component squared distance and used bootstrapping resampling (\cite{good2006permutation}) to check how similar are those maps.
 As expected, I found that the matrices are unusually similar (p \textless{} 0.001).
 
@@ -491,8 +489,6 @@ Lastly, effects on the social interaction beyond the scope of the interactive bl
 
 \subsection{Results}
 
-\todo[inline]{Link back to measurements section}
-
 \subsubsection{System satisfaction surveys}
 
 \begin{figure}[!htb]
@@ -507,11 +503,11 @@ Lastly, effects on the social interaction beyond the scope of the interactive bl
     \caption{System satisfaction questionnaire results. Bars indicates the mean response of single questions (questions are listed to the right).}\label{plot:usability-per_question_statistics}
 \end{figure}
 
-We used a system satisfaction survey at the end of the experimental session for each of the groups in order to evaluate the engagement of the participants with the system.
+I used a system satisfaction survey at the end of the experimental session for each of the groups in order to evaluate the engagement of the participants with the system.
 The survey was based on the standard system usability scale (SUS) survey (\cite{brooke96}) with minor modifications.
 The SUS survey contain 10 question, 5 of them positive (a larger number indicates larger satisfaction) and 5 of them negative (a larger number indicates smaller satisfaction).
-We used a score which combines positive and negative questions as suggested by Brook (\cite*{brooke96}).
-We found that overall system satisfaction score is larger in the interactive group (interactive: 67.3 (3); control: 45.2 (6.9); unpaired t-test, t(21) = 2.81, p \textless{} 0.01).
+I used a score which combines positive and negative questions as suggested by Brook (\cite*{brooke96}).
+Figure \ref{plots/usability-sus_scores.pdf} shows that the overall system satisfaction score is larger in the interactive group (interactive: 67.3 (3); control: 45.2 (6.9); unpaired t-test, t(21) = 2.81, p \textless{} 0.01).
 
 This effect was not limited to a single question.
 In fact, four of the ten questions showed significantly higher satisfaction response in the interactive group as indicated by a separated one-tailed t-test (p \textless{} 0.05). All questions but two showed some tendency (p \textless{} 0.1), and the remaining two questions (extended learning in question 10 and technician aid in question 4) are expected to be less relevant to this system.
@@ -535,8 +531,8 @@ The left side of figure \ref{plot:interaction_surveys-question_2} shows the mean
 There was no significant main effects and group by session interactions as indicated by 2-way repeated measure ANOVA (group: F(1, 21)=0.094 p=0.762; session: F(2, 42)=0.835 p=0.441; interaction: F(2, 42)=0.548 p=0.582).
 
 Similar results were obtained for the second question in survey, which was ``In the last experiment block I interacted with participants with them I have no social connection'' (group: F(1, 21)=2.062 p=0.166; session: F(2, 42)=1.730 p=0.190; interaction: F(2, 42)=1.730 p=0.190).
-Note however a small trend which indicates higher tendency to interact outside the native group in the control group, as indicated by a session main effect and significant interaction of group by session in a repeated measure 2 way ANOVA test between session one and two only (session: F(1, 21)=4.495 p=0.046; interaction: F(1, 21)=4.495 p=0.046).
-Even though that the overall results did not reach significance this indicates an opposite trend to the results in experiment 1.
+Note however a small trend which indicates higher tendency to interact outside the native group in the control group, as indicated by a session main effect and significant interaction of group by session in a repeated measure 2-way ANOVA test between session one and two only (session: F(1, 21)=4.495 p=0.046; interaction: F(1, 21)=4.495 p=0.046).
+Even though that the overall results did not reach significance this indicates an opposite trend to the results of experiment 1.
 In experiment 1 subject reported that they used to interact more with subject that they are less familiar with, though in this experiment we had no way to dissociate between using the system interactively and non-interactively.
 
 To conclude, subject did not appear to explicitly interact more with subject that are outside their native group, and we can even identify an opposite trend.
@@ -551,13 +547,13 @@ As we will shortly see this observation is further supported by the implicit mea
 \end{figure}
 
 In experiment 1, participants were recruited using the internet and therefore had varied prior familiarity with each other.
-This created a strong grouping into social clusters that was also apparent in their positioning in space as indicated by our video tracking analysis (see figure \ref{plot:pilot-familiarity_correlation_maps}).
-Based on this encouraging results we specifically asked subject to fill a social familiarity survey at the beginning of the experiment.
+This created a strong grouping into social clusters that was also apparent in their positioning in space as indicated by our video tracking analysis in section \ref{exp1:results:video}.
+Based on this encouraging results I specifically asked subject to fill a social familiarity survey at the beginning of the experiment.
 Each subject had to rank its class pears on a scale of 1 to 5 according to social familiarity (see methods).
 Note that the second experiment group is much more homogeneous since unlike experiment 1 all participants have prior familiarity, since they all study together.
 
 Figure \ref{plot:familiarity-clustering_maps} first row shows pre-clustered social matrices, where the familiarity each participant on the y axis with participants on the x axis is indicated by color.
-We applied K-means\footnote{K-means: \href{http://scikit-learn.org/stable/modules/clustering.html\#k-means}{scikit-learn.org/stable/modules/clustering.html\#k-means}}.} and mean-shift\footnote{Mean-shift: \href{http://scikit-learn.org/stable/modules/clustering.html\#mean-shift}{scikit-learn.org/stable/modules/clustering.html\#mean-shift}.} clustering algorithms as implemented by the software package Scikit-learn (\cite{scikit-learn}) on these matrices to find out that in this group we did not find clustered social structures.
+I applied K-means\footnote{K-means: \href{http://scikit-learn.org/stable/modules/clustering.html\#k-means}{scikit-learn.org/stable/modules/clustering.html\#k-means}}.} and mean-shift\footnote{Mean-shift: \href{http://scikit-learn.org/stable/modules/clustering.html\#mean-shift}{scikit-learn.org/stable/modules/clustering.html\#mean-shift}.} clustering algorithms as implemented by the software package Scikit-learn (\cite{scikit-learn}) on these matrices to find out that clustered social structure cannot be achieved for the participants of this experiment.
 This is indicated by cross cluster similarity outside the main diagonal of the clustered matrices as depicted in the last two rows of figure \ref{plot:familiarity-clustering_maps}.
 
 \subsubsection{Video analysis: Movement}
@@ -568,17 +564,17 @@ This is indicated by cross cluster similarity outside the main diagonal of the c
     \caption{Mean speed of participants as movement assessment}\label{plot:analyze-movement}
 \end{figure}
 
-Experiment 1 showed that video tracking could be used effectively to gain insights about the social interaction.
-Based on these encouraging results we used extensively video tracking in experiment 2.
+Experiment 1 showed that video tracking could be used effectively to gain insights about social interactions.
+Based on these encouraging results I used extensively video tracking in experiment 2.
 
-We analyzed the mean speed of each participant during each session.
-We hypothesis that the interactive system will facilitate movement among the users.
-However, we found an opposite trend, where in fact, during the second session the participants of the interactive group tend to move significantly less compared with the control group.
+I analyzed the mean speed of each participant during each session.
+I hypothesis that the interactive system will facilitate movement among the users.
+However, I found an opposite trend, where in fact, during the second session the participants of the interactive group tend to move significantly less compared with the control group.
 This trend persist and even increase in the last session of the experiment.
 These evidences are indicated by a significant interaction of group by session in a repeated measure 2 way ANOVA test (group: F(1, 21)=3.311 p=0.083; session: F(2, 42)=0.579 p=0.455; interaction: F(2, 42)=7.318 p=0.013).
 Note however, that in the first session, there was no significant difference between the groups ((interactive: 0.269 (0.048); control: 0.258 (0.035); two-sided unpaired t-test, t(21) = -0.18, p = 0.22).
 
-\subsubsection{Video analysis: Interaction with system components}
+\subsubsection{Video analysis: Interaction with system components}\label{results:system}
 
 \begin{figure}[!htb]
     \centering
@@ -592,9 +588,9 @@ Note however, that in the first session, there was no significant difference bet
     \caption{A correlated movement of two participants holding one of the beacons. As we can clearly see this participants move coordinated through a time epoche of 9 seconds.}\label{plot:annotations-correlated_movement_example}
 \end{figure}
 
-Animated renditions of the participants movement can be viewed in my site\footnote{Animated movement of participants: \href{http://tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}{tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}.}.
+Animated renditions of the participants movement can be found in my site\footnote{Animated movement of participants: \href{http://tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}{tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}.}.
 Figure \ref{plot:annotations-clustering_example} show a screenshot of one point in time extracted from session 2, for each group.
-These results show that participants of the interactive group tend to cluster around the interactive components of the system in small groups.
+These animations show that participants of the interactive group tend to cluster around the interactive components of the system in small groups.
 
 Additional phenomena found in the in video animations is correlate movement of participant as can be seen in the list of consequence screenshots in figure \ref{plot:annotations-correlated_movement_example}.
 
@@ -604,10 +600,10 @@ Additional phenomena found in the in video animations is correlate movement of p
     \caption{Expectancy for the number of participants in a 1 meter radius around a beacon}\label{plot:analyze-expectancy_of_participants_close_to_a_beacon}
 \end{figure}
 
-These observations are also evident in our statistical analysis.
-We’ve count the mean number of participants near (less than 1 meters) each beacon over the frames of the video a beacon.
+These observations are also evident in my statistical analysis.
+I have count the mean number of participants near (less than 1 meters) each beacon over the frames of the video a beacon.
 Beacons that had no participants around them were excluded from the calculation.
-As expected from the fact that groups did not differ in the initial procedure in the first  session, there was no significant difference between the group in this session as indicated by a two-sided unpaired t-test (interactive: 1.78 (0.071); control: 1.64 (0.20); t(10) = -0.57, p = 0.15).
+As expected from the fact that groups did not differ in the initial procedure in the first session, there was no significant difference between the group in this session as indicated by a two-sided unpaired t-test (interactive: 1.78 (0.071); control: 1.64 (0.20); t(10) = -0.57, p = 0.15).
 However the interactive group showed a larger tendency to crowd around the beacons as indicated by a significant group effect in a repeated measure 2 way ANOVA test (F(1, 9)=9.974 p=0.012).
 This is consistent with the explicit results of the system satisfaction that show that participants were more satisfied and therefore probably more engaged with the system.
 
@@ -634,7 +630,7 @@ The final algorithm / social score for each participant is his / her average sco
 As shown in figure \ref{plot:analyze-clustering_scores} left plot, there was a significant difference between the second session of the interactive and the control group in the algorithm score as indicated by a significant group and interaction of group by session effects in a repeated measure 2 way ANOVA test (group: F(1, 21)=6.987 p=0.015; interaction: F(2, 42)=8.202 p=0.001).
 Note however, that in the first session, there was no significant difference between the groups (interactive: 0.940 (0.044); control: 0.866 (0.053); two-sided unpaired t-test, t(21) = -1.017, p=0.080).
 
-These results indicating that using the interactive system participants tend to cluster in more dense clusters, confirming the observed clustering from the video animations.
+These results indicating that using the interactive system participants tend to cluster in more dense clusters, confirming the observed clustering from the video animations in section \ref{results:system}.
 This effect persist over the last block, but with less significance.
 
 Similarly to the results from the interactive surveys, figure \ref{plot:analyze-clustering_scores} right plot shows a non-significant group by session effect over the clusters social scores; whereas in the interactive group participants tend to cluster with others that are socially close to them, the participants of the control group tend to cluster with participants that are far from them socially on the social map (repeated measure 2 way ANOVA; interaction: F(2, 42)=2.032 p=0.144).
