@@ -38,6 +38,8 @@ In recent years there have been many attempts to provide IMS not only to profess
 
 This research, in which I propose an audio-only augmented reality system for social interaction, aligns with this trend by exploring new possibilities for interactive music consumption.
 
+\todo[inline]{The paragraph explain technical details instead of motivation}
+
 I designed and built an Android application that measures the relative position of the device from freely movable Bluetooth beacons.
 Based on this information, an algorithm dynamically changes the music that the users hear in their headphones.
 
@@ -66,7 +68,7 @@ Perhaps the first example of this kind of interactive system was Gordon Mumma's 
 During the nineteen-seventies, musicians and researchers started to use newly developed programming languages designed for musical applications, such as GROOVE or the MUSIC-N series (\cite{mathews70}; \cite{mathews69}).
 As pioneering technologies for digital sound synthesis, these programming languages gained wide acceptance in the music research community.
 
-In parallel, during the nineteen-eighties a group of musical instruments manufacturers agreed on a universal standard for digitally sending and receiving musical information, establishing the MIDI protocol (\cite{web:quinn}).
+In 1983, a group of musical instruments manufacturers agreed on a universal standard for digitally sending and receiving musical information, establishing the MIDI protocol (\cite{web:quinn}).
 This standardization, combined with the emergence of personal computers, facilitated the creation of modern programing languages for musical applications.
 As opposed to early programming languages as GROOVE or the MUSIC-N series, most of the personal-computer-based languages still exist today and have kept progressing.
 A prominent example is Max/MSP, which was first developed by Miller Puckette in 1986 (\cite[p. 16]{winkler01})\footnote{Max 6, the recent version of Max/MSP: \href{http://cycling74.com/products/max/}{cycling74.com/products/max/}.}.
@@ -95,7 +97,8 @@ A notable example are the works by Chris Milk and Aaron Koblin, in which the vid
 A similar approach can also be found in interactive video clips created by the startup Interlude\footnote{Interlude: \href{http://interlude.fm/}{interlude.fm/}.}, Beck's recent project ``Hello again''\footnote{Beck's ``Hello again'': \href{http://www.hello-again.com/beck360/}{www.hello-again.com/beck360/}.} and various additional sources.
 
 % mobile applications: Smule and RjDj
-A major factor that contributed to developments in the field of mobile applications for music creation is the continuous increase in computational capacity of these devices.
+Mobile phones, which were merly a communication tool until recently, are gaining more computational capability and comprehensive features each year.
+These improvements change the way users interact with mobile devices and continiously contribute to the development of new IMS for non-professional musicians.
 For example, AutoRap turns speech into rap by slicing the syllables and mapping them according to different beat styles\footnote{Smule's AutoRap: \href{https://play.google.com/store/apps/details?id=com.smule.autorap}{https://play.google.com/store/apps/details?id=com.smule.autorap}.}.
 Other examples are applications by Brian Eno and Peter Chilvers, which enable users to compose music using only visual elements on the device's screen\footnote{Generative music: \href{http://www.generativemusic.com/}{www.generativemusic.com/}.}.
 Finally, RjDj uses the phones' sensors to create ambient sonification based on the users' interactions with their daily environment (\cite{web:rjdj})\label{rjdj}.
@@ -125,9 +128,9 @@ Another option is to have no DJ at all, letting each participant to choose what 
 Flash mobs are the public gathering of people organized through social media to jointly perform a short act.
 The unique aspects of this relatively new phenomena have led researchers to suggest that the emergence of flash mobs is a significant event in the history of mobile communication (\cite{nicholson05}) and that it inherently reflects an artistic intent (\cite{brejzek10}).
 
-\todo[inline]{Rewrite. It's unclear what the bottom line is and what is the relation of this info to the study}
-
 \subsection{Social effects of music}
+
+\todo[inline]{Rewrite. It's unclear what the bottom line is and what is the relation of this info to the study}
 
 In this research I will focus on social aspects of music, consistent with the approach that music development is tightly linked with the evolution of the social components of human society (\cite{cross2001music}).
 
@@ -167,22 +170,23 @@ Indeed, recent studies show that joint music making and dancing increase group c
 The system I propose requires the ability to locate the positioning of the users within an indoor environment.
 As we will shortly see, this is a non-trivial requirement.
 
-Today, the usage of outdoor positioning systems is unquestioned and achieved mainly by the General Positioning System (GPS) which is available in almost any modern phone.
+Today, the usage of outdoor positioning systems is unquestioned and achieved mainly by the General Positioning System (GPS) which is available in almost any modern mobile device.
 On the other hand, indoor positioning systems (IPS) has not yet been standardized, and therefore it is unavailable to the average user (\cite{web:turetsky}).
 
 Recent research states that WiFi is a favored technology among IPS for mobile devices.
 WiFi-based systems can also enhance accuracy by applying inertial navigation using a device's additional sensors, such as its accelerometer, gyroscope, compass etc.\ (\cite{web:harrop}).
 Note however that those solutions depend on the deployment of WiFi infrastructure in every indoor environment where positioning information in desired.
 
-A relatively new technology in the world of IPS, the Bluetooth low energy (LE)\footnote{Bluetooth LE: \href{http://www.bluetooth.com/Pages/low-energy-tech-info.aspx}{www.bluetooth.com/Pages/low-energy-tech-info.aspx}}, has already gained success with the adaption of the technology by Apple with their iBeacon IPS (\cite{web:danova}).
-Estimote\footnote{Estimote: \href{http://estimote.com/}{estimote.com/}.}, one of the biggest iBeacon manufacturers, has recently reported that more then 10,000 developers are using their products (\cite{web:thompson}).
-
-Apple are not the only company to adopt Bluetooth LE as an IPS.
-StickNFind use the technology similarly\footnote{StickNFind: \href{https://www.sticknfind.com}{www.sticknfind.com}.}; Android has introduced built-in support for Bluetooth LE\footnote{Android Bluetooth LE: \href{http://developer.android.com/guide/topics/connectivity/bluetooth-le.html}{developer.android.com/guide/topics/connectivity/bluetooth-le.html}.} and there is even an Arduino shield (standard board extension) for it\footnote{Arduino Bluetooth LE shield: \href{http://redbearlab.com/bleshield/}{redbearlab.com/bleshield/}.}.
+A relatively new technology in the world of IPS is the Bluetooth low energy (LE)\footnote{Bluetooth LE: \href{http://www.bluetooth.com/Pages/low-energy-tech-info.aspx}{www.bluetooth.com/Pages/low-energy-tech-info.aspx}}.
+Using the technology, supported devices can roughly approximate the distance of mobile tokens in a low-range radius.
+Bluetooth LE has already gained success with the adaption of the technology by Apple with their iBeacon IPS (\cite{web:danova});
+Estimote\footnote{Estimote: \href{http://estimote.com/}{estimote.com/}.}, one of the biggest iBeacon manufacturers, has recently reported that more then 10,000 developers are using their products (\cite{web:thompson});
+StickNFind use the technology similarly\footnote{StickNFind: \href{https://www.sticknfind.com}{www.sticknfind.com}.};
+Android has introduced built-in support for Bluetooth LE\footnote{Android Bluetooth LE: \href{http://developer.android.com/guide/topics/connectivity/bluetooth-le.html}{developer.android.com/guide/topics/connectivity/bluetooth-le.html}.} and there is even an Arduino shield (standard board extension) for it\footnote{Arduino Bluetooth LE shield: \href{http://redbearlab.com/bleshield/}{redbearlab.com/bleshield/}.}.
 
 \subsection{Augmented reality}
 
-According to Azuma ``AR enhances a users' perception of and interaction with the real world''.
+According to Azuma ``AR enhances a user's perception of and interaction with the real world''.
 This concept usually relates to the visual modality: ``AR systems integrate 3-D virtual objects into a 3-D real environment in real time'' (\cite{azuma97}).
 
 Today's augmented reality systems include wearable devices that can superimpose a computer-generated image on a users' view of the real world (e.g\ Google glass\footnote{Google glass: \href{http://www.google.com/glass/start/}{www.google.com/glass/start/}.} and Meta\footnote{Meta: \href{https://www.spaceglasses.com/}{www.spaceglasses.com/}.}) and applications for mobile devices for several purposes, ranging from driving aids (iOnRoad\footnote{iOnRoad: \href{http://www.ionroad.com/}{www.ionroad.com/}.}) to marketing (\cite{ikea}).
