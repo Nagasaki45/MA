@@ -335,8 +335,6 @@ The following sections present the first experiment that has been conducted, pre
 
 \subsection{Methods}
 
-\todo[inlien]{Rename ``blocks'' to ``sessions'' anywhere}
-
 \begin{figure}[!htb]
 	\centering
 	\def\svgwidth{0.95\columnwidth}
@@ -346,14 +344,14 @@ The following sections present the first experiment that has been conducted, pre
 
 Eighteen volunteers were invited to participate in an interactive silent disco party.
 Each participant installed the Android application on his or her phone and filled pre/post party surveys that included questions regarding their musical background and preferences as well as system evaluation feedback.
-The party consisted of four alternating interactive/control blocks of duration 5:40 minutes each (see figure \ref{fig:pilot}).
-The participants were randomly assigned to two groups: $A$ and $B$, comprising the interactive and control blocks respectively\footnote{Group $A$ (interactive first) consisted of 8 participants (4 females and 4 males) with mean age of 36.7 (s.d=12.3); group $B$ (control first) consisted of 10 participants (3 females and 7 males) with mean age of 29.6 (s.d=10.2). Participants had a diverse musical background with 4.7 mean years of musical training (s.d=5.2).}.
-They were informed that the experiment consists of interactive and control segments, however, they were not informed about the exact schedule and timing of the blocks or the group assignments.
+The party consisted of four alternating interactive/control sessions of duration 5:40 minutes each (see figure \ref{fig:pilot}).
+The participants were randomly assigned to two groups: $A$ and $B$, comprising the interactive and control sessions respectively\footnote{Group $A$ (interactive first) consisted of 8 participants (4 females and 4 males) with mean age of 36.7 (s.d=12.3); group $B$ (control first) consisted of 10 participants (3 females and 7 males) with mean age of 29.6 (s.d=10.2). Participants had a diverse musical background with 4.7 mean years of musical training (s.d=5.2).}.
+They were informed that the experiment consists of interactive and control segments, however, they were not informed about the exact schedule and timing of the sessions or the group assignments.
 Both groups started the experiment together, and on the same dancing floor.
-In the interactive blocks, the application generated music as described in section \ref{systemdescription}, whereas in the control blocks the participants heard recorded non-interactive music created in advance using the musical material of the interactive system\footnote{The control block music composed by Noam Elron (\href{http://www.noamelron.com}{www.noamelron.com}).}.
+In the interactive sessions, the application generated music as described in section \ref{systemdescription}, whereas in the control sessions the participants heard recorded non-interactive music created in advance using the musical material of the interactive system\footnote{The control session music composed by Noam Elron (\href{http://www.noamelron.com}{www.noamelron.com}).}.
 
-Interaction with the system's components was assessed by counting the number of Bluetooth device discoveries made by each participant's phone during both the interactive and the control blocks.
-In order to eliminate edge effects, I analyzed only the two middle blocks of the experiment.
+Interaction with the system's components was assessed by counting the number of Bluetooth device discoveries made by each participant's phone during both the interactive and the control sessions.
+In order to eliminate edge effects, I analyzed only the two middle sessions of the experiment.
 
 \subsection{Results}
 
@@ -374,7 +372,7 @@ In the post-party survey, participants self-reported significantly higher levels
 Figure \ref{fig:location} shows that there was a significant difference (unpaired t-test, $t(33)=6.2$, $p<0.01$) in the mean response to these questions (at a scale of 1-3).
 
 In order to objectively assess if participants moved more in space, I measured the counting of Bluetooth discoveries made by the applications' BBRIP system.
-The results show slightly higher counts (paired t-test, $t(16)=1.7$, $p=0.06$, n.s) during the interactive blocks of the party compared with the control blocks.
+The results show slightly higher counts (paired t-test, $t(16)=1.7$, $p=0.06$, n.s) during the interactive sessions of the party compared with the control sessions.
 This suggests that the interactive components of the system facilitated greater participant movement in space, thereby offering more frequent opportunities for social interactions.
 Indeed, in the post-party survey participants reported that they danced significantly less with people that they knew in advance, compared with their usual behavior (paired t-test, $t(14)=-2.5$, $p=0.01$).
 Figure \ref{fig:known} shows that there was also a significant difference in the mean response to these questions in the pre/post surveys.
@@ -394,7 +392,7 @@ These results also show that the research targets in question can be validated i
 The whole experiment was captured with video from above the dance floor.
 Later, this video was used to track the positioning of the participants and to generate positioning tables.
 
-Analyzing this data, I didn't find significant difference between the position and movement patterns in the interactive and control blocks.
+Analyzing this data, I didn't find significant difference between the position and movement patterns in the interactive and control sessions.
 However position was indicative to the social relations between participants.
 I asked participants for their social relationships to other participants and compared the resulted map with a map of positioning correlation between every two participants, over the entire course of the experiment\footnote{This data was measured along the Y axis only, which was much more indicative then the X axis due to the fact that the length of the dance floor (the Y axis) was 10 meters when the width of it was only 2.5 meters.}.
 I defined the matrix similarity metric as the component-by-component squared distance and used bootstrapping resampling (\cite{good2006permutation}) to check how similar are those maps.
@@ -475,25 +473,25 @@ Each group participated in the experiment in different week, but on the same day
 	\caption{Experiment design}\label{fig:experiment}
 \end{figure}
 
-First, participants filled a musical background survey (measurement \ref{measure:survey:musical}) and a participants familiarity survey (measurement \ref{measure:survey:familiarity}), followed by three \definition{experiment blocks}, followed by a system usability survey (measurement \ref{measure:survey:usability}).
-After filling out the system usability survey the participants experience another experiment block\footnote{The last block was added in order to allow the control group to experience the interactive component of the system, eliminating possible frustration and feeling of discrimination between the groups.}.
-Before each experiment block and after the last one each participant filled the social interaction survey (measurement \ref{measure:survey:social}).
+First, participants filled a musical background survey (measurement \ref{measure:survey:musical}) and a participants familiarity survey (measurement \ref{measure:survey:familiarity}), followed by three \definition{experiment sessions}, followed by a system usability survey (measurement \ref{measure:survey:usability}).
+After filling out the system usability survey the participants experience another experiment session\footnote{The last session was added in order to allow the control group to experience the interactive component of the system, eliminating possible frustration and feeling of discrimination between the groups.}.
+Before each experiment session and after the last one each participant filled the social interaction survey (measurement \ref{measure:survey:social}).
 
-In each experiment block the participants listened to music in their headphones, using their Android device and pre-installed application, and interacted with other participants and system components in the `silent disco' party.
-The type of an experiment block could by as following:
+In each experiment session the participants listened to music in their headphones, using their Android device and pre-installed application, and interacted with other participants and system components in the `silent disco' party.
+The type of an experiment session could by as following:
 
 \begin{description}
 	\item[Interactive:] In which the music generated by the Android application behaves as described in section \ref{systemdescription}.
 	\item[Control:] In which the music generated by the Android application is pre-composed and based on the same musical materials as of the interactive system.
 \end{description}
 
-Participants of group $A$ heard the experiment blocks: Control $\rightarrow$ Control $\rightarrow$ Control $\rightarrow$ Interactive.
-Whereas participants of group $B$ heard the experiment blocks: Control $\rightarrow$ Interactive $\rightarrow$ Control $\rightarrow$ Interactive, as shown in figure \ref{fig:experiment}
+Participants of group $A$ heard the experiment sessions: Control $\rightarrow$ Control $\rightarrow$ Control $\rightarrow$ Interactive.
+Whereas participants of group $B$ heard the experiment sessions: Control $\rightarrow$ Interactive $\rightarrow$ Control $\rightarrow$ Interactive, as shown in figure \ref{fig:experiment}
 
 The procedure described above presents several advantages in assessing the research questions compared to experiment 1 design and variants of A / B designs.
-First, the comparison between the effects of interactive and control blocks can be done as a between-group evaluation in relation to the second experiment block of each group.
-Second, comparison between interactive and control blocks effects could also assessed as a withing-group evaluation between the first and the second, as well as the second and third blocks of group $A$, using group $B$ as a reference.
-Lastly, effects on the social interaction beyond the scope of the interactive blocks can be assessed as a within-group evaluation between the first and the third blocks of group $A$, using group $B$ as a reference.
+First, the comparison between the effects of interactive and control sessions can be done as a between-group evaluation in relation to the second experiment session of each group.
+Second, comparison between interactive and control sessions effects could also assessed as a withing-group evaluation between the first and the second, as well as the second and third sessions of group $A$, using group $B$ as a reference.
+Lastly, effects on the social interaction beyond the scope of the interactive sessions can be assessed as a within-group evaluation between the first and the third sessions of group $A$, using group $B$ as a reference.
 
 \subsection{Results}
 
@@ -527,7 +525,7 @@ These results consistently show that subject that used the interactive component
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=\textwidth]{plots/interaction_surveys-question_2.pdf}
-    \caption{Mean participants response to social interaction statements; statement 1: ``In the last experiment block I interacted with close friends only''; statement 2: ``In the last experiment block I interacted with participants with them I have no social connection''}\label{plot:interaction_surveys-question_2}
+    \caption{Mean participants response to social interaction statements; statement 1: ``In the last experiment session I interacted with close friends only''; statement 2: ``In the last experiment session I interacted with participants with them I have no social connection''}\label{plot:interaction_surveys-question_2}
 \end{figure}
 
 One of my main hypotheses was that the system will increase social interaction outside the native groups.
@@ -535,10 +533,10 @@ Namely, subjects that usually interact less with each other will tend to interac
 To assess this hypothesis I have used social interaction survey between each of the experiment sessions.
 
 Surprisingly, the results of the this survey showed a different trend.
-The left side of figure \ref{plot:interaction_surveys-question_2} shows the mean response (on a scale of 1 to 5) to the statement ``In the last experiment block I interacted with close friends only''.
+The left side of figure \ref{plot:interaction_surveys-question_2} shows the mean response (on a scale of 1 to 5) to the statement ``In the last experiment session I interacted with close friends only''.
 There was no significant main effects and group by session interactions as indicated by 2-way repeated measure ANOVA (group: F(1, 21)=0.094 p=0.762; session: F(2, 42)=0.835 p=0.441; interaction: F(2, 42)=0.548 p=0.582).
 
-Similar results were obtained for the second question in survey, which was ``In the last experiment block I interacted with participants with them I have no social connection'' (group: F(1, 21)=2.062 p=0.166; session: F(2, 42)=1.730 p=0.190; interaction: F(2, 42)=1.730 p=0.190).
+Similar results were obtained for the second question in survey, which was ``In the last experiment session I interacted with participants with them I have no social connection'' (group: F(1, 21)=2.062 p=0.166; session: F(2, 42)=1.730 p=0.190; interaction: F(2, 42)=1.730 p=0.190).
 Note however a small trend which indicates higher tendency to interact outside the native group in the control group, as indicated by a session main effect and significant interaction of group by session in a repeated measure 2-way ANOVA test between session one and two only (session: F(1, 21)=4.495 p=0.046; interaction: F(1, 21)=4.495 p=0.046).
 Even though that the overall results did not reach significance this indicates an opposite trend to the results of experiment 1.
 In experiment 1 subject reported that they used to interact more with subject that they are less familiar with, though in this experiment we had no way to dissociate between using the system interactively and non-interactively.
@@ -639,7 +637,7 @@ As shown in figure \ref{plot:analyze-clustering_scores} left plot, there was a s
 Note however, that in the first session, there was no significant difference between the groups (interactive: 0.940 (0.044); control: 0.866 (0.053); two-sided unpaired t-test, t(21) = -1.017, p=0.080).
 
 These results indicating that using the interactive system participants tend to cluster in more dense clusters, confirming the observed clustering from the video animations in section \ref{results:system}.
-This effect persist over the last block, but with less significance.
+This effect persist over the last session, but with less significance.
 
 Similarly to the results from the interactive surveys, figure \ref{plot:analyze-clustering_scores} right plot shows a non-significant group by session effect over the clusters social scores; whereas in the interactive group participants tend to cluster with others that are socially close to them, the participants of the control group tend to cluster with participants that are far from them socially on the social map (repeated measure 2 way ANOVA; interaction: F(2, 42)=2.032 p=0.144).
 
@@ -830,9 +828,9 @@ Please continue this form if you answered YES to question \ref{appendix:music:be
 \begin{tabularx}{\textwidth}{p{2in} | Y Y Y Y Y }
 	& Strongly disagree & & & & Strongly agree \\
 	\hline
-	In the last experiment block I interacted with people I knew before the experiment & 1 & 2 & 3 & 4 & 5 \\
+	In the last experiment session I interacted with people I knew before the experiment & 1 & 2 & 3 & 4 & 5 \\
 	\hline
-	In the last experiment block I interacted with people I did not know before the experiment & 1 & 2 & 3 & 4 & 5 \\
+	In the last experiment session I interacted with people I did not know before the experiment & 1 & 2 & 3 & 4 & 5 \\
 \end{tabularx}
 
 \section[System satisfaction survey]{System satisfaction survey\\
