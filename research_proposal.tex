@@ -310,16 +310,24 @@ In other words, RSSI values gives great indication if a participant stands close
 
 The development of the Android application moved through different development stages.
 
-First, I developed an application that didn't use ``libpd'' at all (see section \ref{methods:libpd}).
-In this early stage the only effect of approaching or leaving a beacon was a change in the volume.
+In the first phase of the development the audio files that was used for playback were built into the application code-base, making the application tightly bound to a specific set of sounds and interaction opportunities.
+In this early stage the application didn't use ``libpd'' at all (see section \ref{methods:libpd}).
+Therefore, the only effect of approaching or leaving a beacon was a change in volume.
 In addition, the limited sophistication of the built-in audio library made fading in and out from the sound zones very inflexible.
 
-After finding the weakness of using the built-in audio library of the Android application programming interface, I decided to implement the system using ``libpd''.
-Although this implementation worked, it made a very tight coupling between the system development in the Android environment and the audio processing development in Pd.
-Overall, this development phase was sufficient, but in order to allow other musicians and developers to use the system I started to look for a more open architecture, that maintains a loosely coupled connection between the Android application and the Pd patch that drives the audio.
+After finding the weakness of the built-in audio library of the Android application programming interface, I decided to implement the system using ``libpd''.
+The shift toward ``libpd'' open the possibility to use more advance audio manipulations, instead of only volume changes, including, for example, filtering and granular synthesis of the audio sources.
+Although the framework change presented an improvement, there was still very tight coupling between the system development in the Android environment and the audio processing development in Pd.
+This tight coupling is expressed by the fact that the audio sources was still embedded in the application code-base, as well as the Pd patch, meaning that other musicians and researchers still not able to load different musical materials and different Pd patches to change the behaviour of the system for their artistic nor academic desire.
+
+Overall, this development phase was sufficient for answering the research question.
+Nevertheless, I have started to search for a better, more open, architecture.
+An architecture that maintains a loosely coupled connection between the Android application, the musical sources, and the Pd patch that drives the audio, and which will therefore allow others to use the system easily.
 
 The last phase in the system development was to implement the BBRIP system into the open source Android application ``ScenePlayer''\footnote{ScenePlayer: \href{http://play.google.com/store/apps/details?id=org.puredata.android.scenes}{play.google.com/store/apps/details?id=org.puredata.android.scenes}.}, an Android port for the RjDj application mentioned in section \ref{rjdj}, and release it again as ``ScenePlayer Plus''\footnote{ScenePlayer Plus: \href{http://play.google.com/store/apps/details?id=com.nagasaki45.sceneplayerplus}{play.google.com/store/apps/details?id=com.nagasaki45.sceneplayerplus}.}.
-The application exposes the Bluetooth RSSI values to the Pd patch as another sensor of the mobile device (e.g.\ accelerometer, compass and touchscreen).
+`Scenes' in ScenePlayer are bundles of audio files and one or more Pd patches that describe, programatically, how input from the mobile device sensors should affect the audible output\todo{RjDj scene reference is needed}.
+This design allows musicians to create Pd patches that can be uploaded to the mobile device, along with extra audio materials, to create sophisticated interaction easily.
+In ScenePlayerPlus, the BBRIP system is used to expose the received Bluetooth RSSI values to the Pd patch as another sensor of the mobile device (e.g.\ accelerometer, compass and touchscreen)\footnote{\todo{Add a link to my scene}}.
 
 \section{Experiment I}
 
