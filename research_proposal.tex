@@ -325,9 +325,9 @@ Nevertheless, I have started to search for a better, more open, architecture.
 An architecture that maintains a loosely coupled connection between the Android application, the musical sources, and the Pd patch that drives the audio, and which will therefore allow others to use the system easily.
 
 The last phase in the system development was to implement the BBRIP system into the open source Android application ``ScenePlayer''\footnote{ScenePlayer: \href{http://play.google.com/store/apps/details?id=org.puredata.android.scenes}{play.google.com/store/apps/details?id=org.puredata.android.scenes}.}, an Android port for the RjDj application mentioned in section \ref{rjdj}, and release it again as ``ScenePlayer Plus''\footnote{ScenePlayer Plus: \href{http://play.google.com/store/apps/details?id=com.nagasaki45.sceneplayerplus}{play.google.com/store/apps/details?id=com.nagasaki45.sceneplayerplus}.}.
-`Scenes' in ScenePlayer are bundles of audio files and one or more Pd patches that describe, programatically, how input from the mobile device sensors should affect the audible output\todo{RjDj scene reference is needed}.
+`Scenes' in ScenePlayer are bundles of audio files and one or more Pd patches that describe, programatically, how input from the mobile device sensors should affect the audible output (\cite[p. 29]{brinkmann12}).
 This design allows musicians to create Pd patches that can be uploaded to the mobile device, along with extra audio materials, to create sophisticated interaction easily.
-In ScenePlayerPlus, the BBRIP system is used to expose the received Bluetooth RSSI values to the Pd patch as another sensor of the mobile device (e.g.\ accelerometer, compass and touchscreen)\footnote{\todo{Add a link to my scene}}.
+In ScenePlayerPlus, the BBRIP system is used to expose the received Bluetooth RSSI values to the Pd patch as another sensor of the mobile device (e.g.\ accelerometer, compass and touchscreen)\footnote{The scene that was used for the this research can be found at my site: \href{http://tomgurion.blogspot.com/2013/06/arparty-first-sceneplayer-plus.html}{tomgurion.blogspot.com/2013/06/arparty-first-sceneplayer-plus.html}.}.
 
 \section{Experiment I}
 
