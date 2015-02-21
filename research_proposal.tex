@@ -60,13 +60,13 @@ The following sections will review those domains with emphasis on the projects, 
 According to the Oxford Dictionary, to ``interact'' is to ``act in such a way as to have an effect on each other''.
 In the field of IMS, actions and effects may be achieved by using a broad spectrum of novel techniques, ranging from interactive sound installations to collaborations with robotic performers (\cite{drummond09}).
 
-Traditionally, IMS merges developments in several different threads (such as music-oriented programming languages as the MUSIC-N series and Max/MSP (\cite{mathews69}; \cite[p. 16]{winkler01}), standardization of technologies like MIDI (\cite{web:quinn}) and virtual studio technology (VST)\footnote{Steinberg technologies: \href{http://www.steinberg.net/en/company/technologies.html}{www.steinberg.net/en/company/technologies.html}.} and the recent emergence of the ``makers culture'' (\cite{kuznetsov2010rise})), to facilitate new ways of music creation.
+Traditionally, IMS merges developments in several different threads (such as music-oriented programming languages as the MUSIC-N series and Max/MSP (\cite{mathews69}; \cite[p. 16]{winkler01}), standardization of technologies like MIDI (\cite{web:quinn}) and virtual studio technology (VST)\footnote{Steinberg technologies: \href{http://www.steinberg.net/en/company/technologies.html}{www.steinberg.net/en/company/technologies.html}.} and the recent emergence of the ``makers culture'' (\cite{kuznetsov2010rise})), to facilitate new ways of music creation\todo{Add a disclaimer that the current section is not exhaustive, just a short historical overview}.
 
 Since early exploration in the field of IMS in the nineteen-sixties, different researchers and composers created systems that were designed to interact with performer in a live situation.
 Perhaps the first example of this kind of interactive system was Gordon Mumma's Hornpipe, a specially designed electronic system that alters the audio input from the performer, creating an interactive loop between the player and the sound emitted by the electronics circuit (\cite[p. 12]{winkler01}).
 
 During the nineteen-seventies, musicians and researchers started to use newly developed programming languages designed for musical applications, such as GROOVE or the MUSIC-N series (\cite{mathews70}; \cite{mathews69}).
-As pioneering technologies for digital sound synthesis, these programming languages gained wide acceptance in the music research community.
+As pioneering technologies for digital sound synthesis, these programming languages gained wide acceptance in the music research community\todo{Not enough, elaborate more. Explain interactivity}.
 
 In 1983, a group of musical instruments manufacturers agreed on a universal standard for digitally sending and receiving musical information, establishing the MIDI protocol (\cite{web:quinn}).
 This standardization, combined with the emergence of personal computers, facilitated the creation of modern programing languages for musical applications.
@@ -74,7 +74,7 @@ As opposed to early programming languages as GROOVE or the MUSIC-N series, most 
 A prominent example is Max/MSP, which was first developed by Miller Puckette in 1986 (\cite[p. 16]{winkler01})\footnote{Max 6, the recent version of Max/MSP: \href{http://cycling74.com/products/max/}{cycling74.com/products/max/}.}.
 Moreover, new music-oriented programing languages continue to be developed today, presenting features like ``on-the-fly'' programming\footnote{ChucK: \href{http://chuck.cs.princeton.edu/}{chuck.cs.princeton.edu/}.}, web capabilities\footnote{The Web audio API: \href{http://www.w3.org/TR/webaudio/}{www.w3.org/TR/webaudio/}.} or modular, multi-touch environment for live performance\footnote{Usine Hollyhock: \href{http://www.sensomusic.org/usine/}{www.sensomusic.org/usine/}.}.
 
-Similar technological shifts also facilitated the usage of digital audio workstations (DAW) as a common alternative to analog recording equipment in studios (\cite{leider:04}).
+Similar technological shifts also facilitated the usage of digital audio workstations (DAW)\todo{There is no reason to define DAW} as a common alternative to analog recording equipment in studios (\cite{leider:04}).
 With the arrival of VST as the common standard for signal processing plug-ins for DAW, computers became an even more essential tool for music production.
 These developments were concurrent to the emergence of live performance-oriented DAW as Ableton Live\footnote{Ableton Live: \href{http://www.ableton.com/en/live/}{www.ableton.com/live/}.} and software based DJ setups at the late nineteen-nineties.
 
@@ -84,6 +84,8 @@ By translating physical properties into sound, the Arduino platform opened the d
 
 More generally, one can regard Arduino as an important part of the new ``makers'' movements, a technology-based extension of the ``do it yourself'' culture.
 By creating what used to be purchased, and by sharing this knowledge back with the community, the makers have become a major driving force in the development of IMS (\cite{web:kirn12}).
+
+\todo[inline]{Explain a bit more about the ``makers''. Name some explicit influences on IMS. ``Today, the makers movement can be seen as...''}
 
 \subsection{Interactive music systems for non-professional musicians}
 
@@ -99,7 +101,7 @@ A similar approach can also be found in interactive video clips created by the s
 % mobile applications: Smule and RjDj
 Mobile phones, which were merly a communication tool until recently, are gaining more computational capability and comprehensive features each year.
 These improvements change the way users interact with mobile devices and continiously contribute to the development of new IMS for non-professional musicians.
-For example, AutoRap turns speech into rap by slicing the syllables and mapping them according to different beat styles\footnote{Smule's AutoRap: \href{https://play.google.com/store/apps/details?id=com.smule.autorap}{https://play.google.com/store/apps/details?id=com.smule.autorap}.}.
+\todo{A sentence that will lead the reader toward mobile apps is needed}For example, AutoRap turns speech into rap by slicing the syllables and mapping them according to different beat styles\footnote{Smule's AutoRap: \href{https://play.google.com/store/apps/details?id=com.smule.autorap}{https://play.google.com/store/apps/details?id=com.smule.autorap}.}.
 Other examples are applications by Brian Eno and Peter Chilvers, which enable users to compose music using only visual elements on the device's screen\footnote{Generative music: \href{http://www.generativemusic.com/}{www.generativemusic.com/}.}.
 Finally, RjDj uses the phones' sensors to create ambient sonification based on the users' interactions with their daily environment (\cite{web:rjdj})\label{rjdj}.
 
@@ -112,7 +114,7 @@ Sound installations are specific type of installations located in the three-dime
 In some interactive sound installations the main interaction is between the viewer and the installation itself (\cite{web:visnjic}; \cite{web:cardiff01}) whereas in others, the main objective is to facilitate social interaction between participants (\cite{eng03}; \cite{web:kirn12}; \cite{web:murray-browne13}).
 
 % social DJing: DistributedDJ, the BLOB and playmysong
-A number of recent projects suggest the framework of distributing the role of a DJ between participants so that they can choose the music by themselves, thereby generating a playlist dynamically according to their musical tastes (\cite{web:shaw}).
+A number of recent projects suggest the framework of distributing the role of a DJ between participants so that they can choose the music by themselves, thereby generating a playlist dynamically according to their musical tastes (\cite{web:shaw})\todo{Add reference to Dubnov project}.
 Most of these project are implemented as mobile applications, and some of them even integrate social elements\footnote{Playmysong: \href{http://www.playmysong.com/}{www.playmysong.com/}; The BLOB \href{http://vimeo.com/7338120}{vimeo.com/7338120}.}.
 
 \subsection{Technology dependent social networking}
@@ -186,12 +188,14 @@ Android has introduced built-in support for Bluetooth LE\footnote{Android Blueto
 
 \subsection{Augmented reality}
 
-According to Azuma ``AR enhances a user's perception of and interaction with the real world''.
+According to Azuma ``augmented reality (AR) enhances a user's perception of and interaction with the real world''.
 This concept usually relates to the visual modality: ``AR systems integrate 3-D virtual objects into a 3-D real environment in real time'' (\cite{azuma97}).
 
 Today's augmented reality systems include wearable devices that can superimpose a computer-generated image on a users' view of the real world (e.g\ Google glass\footnote{Google glass: \href{http://www.google.com/glass/start/}{www.google.com/glass/start/}.} and Meta\footnote{Meta: \href{https://www.spaceglasses.com/}{www.spaceglasses.com/}.}) and applications for mobile devices for several purposes, ranging from driving aids (iOnRoad\footnote{iOnRoad: \href{http://www.ionroad.com/}{www.ionroad.com/}.}) to marketing (\cite{ikea}).
 
 My work extends the definition of an AR system from the visual to the auditory modality opening the door for a more comprehensive experience of virtual environments.
+
+\todo[inline]{Explain why the system in AR, by means of motivation}
 
 \section{Research targets}
 
