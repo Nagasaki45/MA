@@ -52,13 +52,15 @@ Lastly, I propose a more comprehensive experiment to reveal further insights abo
 
 \section{Literature review}
 
-The current work is based on interdisciplinary research in several different domains.
+The current work presents the development and evaluation of a system that align with recent trends in the field of IMS and intended for joint consumption of music, interactively.
+It is based on interdisciplinary research in several different domains which I will hereby review with emphasis on the projects, technologies, and studies that serve as the ground for my work.
 
-\todo[inline]{parts: Musical background (2 * IMS), Motivation (tech dependant social trends and AR), IPS, and starting point for the assessment. Reorder accordingly}
+In sections \ref{literature:ims} and \ref{literature:non_pro_ims} I will present the origins of IMS and recent trends relevant to my study.
+Sections \ref{literature:social_tech} and \ref{literature:ar} present the motivation for the system development.
+Some specific technological background for the system development, dealing with indoor positioning capabilities of mobile devices, is presented in section \ref{literature:ips}.
+Finally, review of the social effects of music and motivation for the evaluation of my system is presented in section \ref{literature:social_effects}.
 
-The following sections will review those domains with emphasis on the projects, technologies, and research that serve as the ground for both the development and evaluation of my system.
-
-\subsection{The origins of interactive music systems}
+\subsection{The origins of interactive music systems} \label{literature:ims}
 
 According to the Oxford Dictionary, to ``interact'' is to ``act in such a way as to have an effect on each other''.
 In the field of IMS, actions and effects may be achieved by using a broad spectrum of novel techniques, ranging from interactive sound installations to collaborations with robotic performers (\cite{drummond09}).
@@ -100,7 +102,7 @@ By creating what used to be purchased, and sometimes open-sourced it (sharing th
 Today, the makers movement can be seen as an unofficial host for several IMS projects by independent ``makers'', that present their works in different maker fairs around the world.
 The large amount if dedicated web pages for musical projects in several websites that relate directly to the field can show how bound the integration of musician with the makers community is\footnote{Examples: \href{http://blog.arduino.cc/category/music/}{blog.arduino.cc/category/music/}; \href{http://makerfaire.com/category/music/}{makerfaire.com/category/music/}}.
 
-\subsection{Interactive music systems for non-professional musicians}
+\subsection{Interactive music systems for non-professional musicians} \label{literature:non_pro_ims}
 
 Today, IMS meets the non-professional musician in various scenarios, including interactive video clips, mobile and album applications, interactive sound installations, and social DJing.
 While these examples are typical, they are only a small portion of the novel ways in which non-professionals can now participate in interactive music creation and consumption of audiovisual content as well as musically enhanced social interactions.
@@ -131,7 +133,7 @@ In some interactive sound installations the main interaction is between the view
 A number of recent projects suggest the framework of distributing the role of a DJ between participants so that they can choose the music by themselves, thereby generating a playlist dynamically according to their musical tastes (\cite{web:shaw}), or distributing the DJ controllers between several participants, allowing each to control a different aspect of the music (\cite{web:shapira}).
 Most of these project are implemented as mobile applications, and some of them even integrate social elements\footnote{Playmysong: \href{http://www.playmysong.com/}{www.playmysong.com/}; The BLOB \href{http://vimeo.com/7338120}{vimeo.com/7338120}.}.
 
-\subsection{Technology dependent social networking}
+\subsection{Technology dependent social networking} \label{literature:social_tech}
 
 Silent disco and flash mobs, the conceptual roots of this project, are examples of modern types of social behavior that rely on the fast growth of social media.
 My proposal operates within the context of a silent disco party, and is inspired by flash mobs in its usage of new technologies to facilitate creative and artistic social interactions.
@@ -144,7 +146,7 @@ Another option is to have no DJ at all, letting each participant to choose what 
 Flash mobs are the public gathering of people organized through social media to jointly perform a short act.
 The unique aspects of this relatively new phenomena have led researchers to suggest that the emergence of flash mobs is a significant event in the history of mobile communication (\cite{nicholson05}) and that it inherently reflects an artistic intent (\cite{brejzek10}).
 
-\subsection{Social effects of music}
+\subsection{Social effects of music} \label{literature:social_effects}
 
 % Explain what does it means social effect of music.
 Music is known for being an important channel of communication.
@@ -180,7 +182,7 @@ Hagen and Bryant extend Browns' ideas by suggesting that music and dance origina
 % use Kirschner & Tomasello 2010 and Knoblich et al. 2011
 Recent studies show that joint music making and dancing are indeed increasing group cohesion, pro-social commitment among the individuals of the group, and the intent to share the same collective goals (\cite{Kirschner2010}; \cite{Knoblich2011}).
 
-\subsection{Indoor positioning systems}
+\subsection{Indoor positioning systems} \label{literature:ips}
 
 The system I propose requires the ability to locate the positioning of the users within an indoor environment.
 As we will shortly see, this is a non-trivial requirement.
@@ -199,7 +201,7 @@ Estimote\footnote{Estimote: \href{http://estimote.com/}{estimote.com/}.}, one of
 StickNFind use the technology similarly\footnote{StickNFind: \href{https://www.sticknfind.com}{www.sticknfind.com}.};
 Android has introduced built-in support for Bluetooth LE\footnote{Android Bluetooth LE: \href{http://developer.android.com/guide/topics/connectivity/bluetooth-le.html}{developer.android.com/guide/topics/connectivity/bluetooth-le.html}.} and there is even an Arduino shield (standard board extension) for it\footnote{Arduino Bluetooth LE shield: \href{http://redbearlab.com/bleshield/}{redbearlab.com/bleshield/}.}.
 
-\subsection{Augmented reality}
+\subsection{Augmented reality} \label{literature:ar}
 
 According to Azuma ``augmented reality (AR) enhances a user's perception of and interaction with the real world''.
 This concept usually relates to the visual modality: ``AR systems integrate 3-D virtual objects into a 3-D real environment in real time'' (\cite{azuma97}).
