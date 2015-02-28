@@ -146,6 +146,37 @@ Another option is to have no DJ at all, letting each participant to choose what 
 Flash mobs are the public gathering of people organized through social media to jointly perform a short act.
 The unique aspects of this relatively new phenomena have led researchers to suggest that the emergence of flash mobs is a significant event in the history of mobile communication (\cite{nicholson05}) and that it inherently reflects an artistic intent (\cite{brejzek10}).
 
+\subsection{Augmented reality} \label{literature:ar}
+
+According to Azuma ``augmented reality (AR) enhances a user's perception of and interaction with the real world''.
+This concept usually relates to the visual modality: ``AR systems integrate 3-D virtual objects into a 3-D real environment in real time'' (\cite{azuma97}).
+
+Today's augmented reality systems include wearable devices that can superimpose a computer-generated image on a users' view of the real world (e.g\ Google glass\footnote{Google glass: \href{http://www.google.com/glass/start/}{www.google.com/glass/start/}.} and Meta\footnote{Meta: \href{https://www.spaceglasses.com/}{www.spaceglasses.com/}.}) and applications for mobile devices for several purposes, ranging from driving aids (iOnRoad\footnote{iOnRoad: \href{http://www.ionroad.com/}{www.ionroad.com/}.}) to marketing (\cite{ikea}).
+
+My work extends the definition of an AR system from the visual to the auditory modality, by sharing a similar motivation, which will apply differently.
+In this study I refer to AR as a way to enhance the experience of the user using external elements that integrate into his / her physical environment using technological aids.
+Using the above motivation, and applied to this study, the ``enhancers'' are the musical materials the users hear through their headphones whereas the ``augmented experience'' refers to the enhanced social interactions.
+More generally, this attitude toward AR may open the door for a more comprehensive experience of virtual environments.
+
+\subsection{Indoor positioning systems} \label{literature:ips}
+
+The system I propose requires the ability to locate the positioning of the users within an indoor environment.
+As we will shortly see, this is a non-trivial requirement.
+
+Today, the usage of outdoor positioning systems is unquestioned and achieved mainly by the General Positioning System (GPS) which is available in almost any modern mobile device.
+On the other hand, indoor positioning systems (IPS) has not yet been standardized, and therefore it is unavailable to the average user (\cite{web:turetsky}).
+
+Recent research states that WiFi is a favored technology among IPS for mobile devices.
+WiFi-based systems can also enhance accuracy by applying inertial navigation using a device's additional sensors, such as its accelerometer, gyroscope, compass etc.\ (\cite{web:harrop}).
+Note however that those solutions depend on the deployment of WiFi infrastructure in every indoor environment where positioning information in desired.
+
+A relatively new technology in the world of IPS is the Bluetooth low energy (LE)\footnote{Bluetooth LE: \href{http://www.bluetooth.com/Pages/low-energy-tech-info.aspx}{www.bluetooth.com/Pages/low-energy-tech-info.aspx}}.
+Using the technology, supported devices can roughly approximate the distance of mobile tokens in a low-range radius.
+Bluetooth LE has already gained success with the adaption of the technology by Apple with their iBeacon IPS (\cite{web:danova});
+Estimote\footnote{Estimote: \href{http://estimote.com/}{estimote.com/}.}, one of the biggest iBeacon manufacturers, has recently reported that more then 10,000 developers are using their products (\cite{web:thompson});
+StickNFind use the technology similarly\footnote{StickNFind: \href{https://www.sticknfind.com}{www.sticknfind.com}.};
+Android has introduced built-in support for Bluetooth LE\footnote{Android Bluetooth LE: \href{http://developer.android.com/guide/topics/connectivity/bluetooth-le.html}{developer.android.com/guide/topics/connectivity/bluetooth-le.html}.} and there is even an Arduino shield (standard board extension) for it\footnote{Arduino Bluetooth LE shield: \href{http://redbearlab.com/bleshield/}{redbearlab.com/bleshield/}.}.
+
 \subsection{Social effects of music} \label{literature:social_effects}
 
 % Explain what does it means social effect of music.
@@ -181,37 +212,6 @@ Hagen and Bryant extend Browns' ideas by suggesting that music and dance origina
 % joint action
 % use Kirschner & Tomasello 2010 and Knoblich et al. 2011
 Recent studies show that joint music making and dancing are indeed increasing group cohesion, pro-social commitment among the individuals of the group, and the intent to share the same collective goals (\cite{Kirschner2010}; \cite{Knoblich2011}).
-
-\subsection{Indoor positioning systems} \label{literature:ips}
-
-The system I propose requires the ability to locate the positioning of the users within an indoor environment.
-As we will shortly see, this is a non-trivial requirement.
-
-Today, the usage of outdoor positioning systems is unquestioned and achieved mainly by the General Positioning System (GPS) which is available in almost any modern mobile device.
-On the other hand, indoor positioning systems (IPS) has not yet been standardized, and therefore it is unavailable to the average user (\cite{web:turetsky}).
-
-Recent research states that WiFi is a favored technology among IPS for mobile devices.
-WiFi-based systems can also enhance accuracy by applying inertial navigation using a device's additional sensors, such as its accelerometer, gyroscope, compass etc.\ (\cite{web:harrop}).
-Note however that those solutions depend on the deployment of WiFi infrastructure in every indoor environment where positioning information in desired.
-
-A relatively new technology in the world of IPS is the Bluetooth low energy (LE)\footnote{Bluetooth LE: \href{http://www.bluetooth.com/Pages/low-energy-tech-info.aspx}{www.bluetooth.com/Pages/low-energy-tech-info.aspx}}.
-Using the technology, supported devices can roughly approximate the distance of mobile tokens in a low-range radius.
-Bluetooth LE has already gained success with the adaption of the technology by Apple with their iBeacon IPS (\cite{web:danova});
-Estimote\footnote{Estimote: \href{http://estimote.com/}{estimote.com/}.}, one of the biggest iBeacon manufacturers, has recently reported that more then 10,000 developers are using their products (\cite{web:thompson});
-StickNFind use the technology similarly\footnote{StickNFind: \href{https://www.sticknfind.com}{www.sticknfind.com}.};
-Android has introduced built-in support for Bluetooth LE\footnote{Android Bluetooth LE: \href{http://developer.android.com/guide/topics/connectivity/bluetooth-le.html}{developer.android.com/guide/topics/connectivity/bluetooth-le.html}.} and there is even an Arduino shield (standard board extension) for it\footnote{Arduino Bluetooth LE shield: \href{http://redbearlab.com/bleshield/}{redbearlab.com/bleshield/}.}.
-
-\subsection{Augmented reality} \label{literature:ar}
-
-According to Azuma ``augmented reality (AR) enhances a user's perception of and interaction with the real world''.
-This concept usually relates to the visual modality: ``AR systems integrate 3-D virtual objects into a 3-D real environment in real time'' (\cite{azuma97}).
-
-Today's augmented reality systems include wearable devices that can superimpose a computer-generated image on a users' view of the real world (e.g\ Google glass\footnote{Google glass: \href{http://www.google.com/glass/start/}{www.google.com/glass/start/}.} and Meta\footnote{Meta: \href{https://www.spaceglasses.com/}{www.spaceglasses.com/}.}) and applications for mobile devices for several purposes, ranging from driving aids (iOnRoad\footnote{iOnRoad: \href{http://www.ionroad.com/}{www.ionroad.com/}.}) to marketing (\cite{ikea}).
-
-My work extends the definition of an AR system from the visual to the auditory modality, by sharing a similar motivation, which will apply differently.
-In this study I refer to AR as a way to enhance the experience of the user using external elements that integrate into his / her physical environment using technological aids.
-Using the above motivation, and applied to this study, the ``enhancers'' are the musical materials the users hear through their headphones whereas the ``augmented experience'' refers to the enhanced social interactions.
-More generally, this attitude toward AR may open the door for a more comprehensive experience of virtual environments.
 
 \section{Research targets}
 
