@@ -478,7 +478,7 @@ Second, by using a control group that will not experience the interactive part o
 
 \subsubsection{Participants}
 
-An homogenius class of twenty-three 11th grade pupils participated in the experiment.
+An homogeneous class of twenty-three 11th grade pupils participated in the experiment.
 The high-school was supportive and open the possibility to run the experiment with the pupils, using its facilities.
 An ethics certificate describing a highlighted procedure of the experiment was signed by a parent for each of the pupils who was under 18 age old.
 
@@ -487,13 +487,13 @@ An ethics certificate describing a highlighted procedure of the experiment was s
 The research questions was fragmented into the following operational definitions and measurements\footnote{Complete version of each of the surveys can be found in the appendix.}:
 \begin{enumerate}
 	\item \label{measure:survey:familiarity} Participants reported their familiarity with other participants using a survey based on the experimental ordinal number.
-	\item I have intened to use the above familiarity data to cluster the participants into social groups.
+	\item I have intended to use the above familiarity data to cluster the participants into social groups.
             Using this clustering and the participants positioning information (measured by video tracking as explained in section \ref{aparatus}) I was able to define the centroid of each cluster on the dance floor, disperse of participants within each cluster and the disperse between the clusters centroids themselves for each frame of the video.
-            As you will shortly see in section \ref{results:social_structure}, this kind of clustering over the participants social relationships was impossible to achive.
-        \item \label{measure:movement} Following positive results from experiment 1 movement assessment I have measured the average movement speed of the participants, hypothizing that greater participants movement on the dance floor may offer more frequent opportunities to social interaction.
+            As you will shortly see in section \ref{results:social_structure}, I was not able to find distinct social groups based on the familiarity surveys above.
+        \item \label{measure:movement} Following positive results from experiment 1 movement assessment I have measured the average movement speed of the participants, hypothesizing that greater participants movement on the dance floor may offer more frequent opportunities to social interaction.
         \item \label{measure:clustering} For each frame of the video, I have dynamically clustered the participants into groups based on their positioning.
             Then, I have assigned scores to the clusters based on social and positional data in order to gain better understanding of the gathering patterns of the participants.
-            Detailed explenation of the techniques used for clustering can be found in section \ref{results:clustering}. 
+            Detailed explanation of the techniques used for clustering can be found in section \ref{results:clustering}. 
 	\item \label{measure:survey:social} Participants filled out a social interaction survey.
 	The survey was used to asses interaction between participants by estimating social cohesiveness within in-group and openness to out-group interactions of each participant.
 \end{enumerate}
@@ -519,7 +519,7 @@ The Bluetooth beacons positioning data required for measurement \ref{measure:sys
 \subsubsection{Procedure}
 
 Participants was randomly assigned to two groups, group $A$ and group $B$\@\footnote{Group $A$ consisted of 11 participants (5 females and 6 males) with mean age of 18.7 (s.d=5.41); group $B$ consisted of 12 participants (3 females and 7 males) with mean age of 17.2 (s.d=0.42). Participants had a diverse musical background with 4.17 mean years of musical training (s.d=2.53).}.
-Each group participated in the experiment in different week, but on the same day of the week and same hour.
+Each group participated in the experiment in different week, but on the same day of the week and same hour. Group $A$ participated first and two weeks later group $B$ was participated in the experiment.
 
 \begin{figure}[!htb]
 	\centering
@@ -529,7 +529,7 @@ Each group participated in the experiment in different week, but on the same day
 \end{figure}
 
 First, participants filled a musical background survey (measurement \ref{measure:survey:musical}) and a participants familiarity survey (measurement \ref{measure:survey:familiarity}), followed by three \definition{experiment sessions}, followed by a system usability survey (measurement \ref{measure:survey:usability}).
-After filling out the system usability survey the participants experience another experiment session\footnote{The last session was added in order to allow the control group to experience the interactive component of the system, eliminating possible frustration and feeling of discrimination between the groups.}.
+After filling out the system usability survey the participants experienced another experiment session.
 Before each experiment session and after the last one each participant filled the social interaction survey (measurement \ref{measure:survey:social}).
 
 In each experiment session the participants listened to music in their headphones, using their Android device and pre-installed application, and interacted with other participants and system components in the `silent disco' party.
@@ -547,6 +547,10 @@ The procedure described above presents several advantages in assessing the resea
 First, the comparison between the effects of interactive and control sessions can be done as a between-group evaluation in relation to the second experiment session of each group.
 Second, comparison between interactive and control sessions effects could also assessed as a withing-group evaluation between the first and the second, as well as the second and third sessions of group $A$, using group $B$ as a reference.
 Lastly, effects on the social interaction beyond the scope of the interactive sessions can be assessed as a within-group evaluation between the first and the third sessions of group $A$, using group $B$ as a reference.
+
+As one can see, all of the data required for analysis was already collected in the first three experiment sessions.
+However, the last session was added to the experiment to prevent frustration and sense of discrimination between the groups.
+Therefor, and despite the fact that the last session was not contributed to the collected data, it was very significant in preventing group $A$ participants from bias group $B$ results, as they all socially close\footnote{Group $A$ participants were asked not to discuss about the experiment with group $B$ participants.}.
 
 \subsection{Results}
 
@@ -614,8 +618,8 @@ Each subject had to rank its class pears on a scale of 1 to 5 according to socia
 Note that the second experiment group is much more homogeneous since unlike experiment 1 all participants have prior familiarity, since they all study together.
 
 Figure \ref{plot:familiarity-clustering_maps} first row shows pre-clustered social matrices, where the familiarity each participant on the y axis with participants on the x axis is indicated by color.
-I applied K-means\footnote{K-means: \href{http://scikit-learn.org/stable/modules/clustering.html\#k-means}{scikit-learn.org/stable/modules/clustering.html\#k-means}}.} and mean-shift\footnote{Mean-shift: \href{http://scikit-learn.org/stable/modules/clustering.html\#mean-shift}{scikit-learn.org/stable/modules/clustering.html\#mean-shift}.} clustering algorithms as implemented by the software package Scikit-learn (\cite{scikit-learn}) on these matrices to find out that clustered social structure cannot be achieved for the participants of this experiment.
-This is indicated by cross cluster similarity outside the main diagonal of the clustered matrices as depicted in the last two rows of figure \ref{plot:familiarity-clustering_maps}.
+I applied K-means\footnote{K-means: \href{http://scikit-learn.org/stable/modules/clustering.html\#k-means}{scikit-learn.org/stable/modules/clustering.html\#k-means}.} and mean-shift\footnote{Mean-shift: \href{http://scikit-learn.org/stable/modules/clustering.html\#mean-shift}{scikit-learn.org/stable/modules/clustering.html\#mean-shift}.} clustering algorithms as implemented by the software package Scikit-learn (\cite{scikit-learn}) on these matrices but did not find significant clustering of the participants into distinct social groups.
+This is also indicated by cross cluster similarity outside the main diagonal of the clustered matrices as depicted in the last two rows of figure \ref{plot:familiarity-clustering_maps}.
 
 \subsubsection{Video analysis: Movement}
 
