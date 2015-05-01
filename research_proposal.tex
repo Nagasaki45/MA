@@ -367,9 +367,11 @@ In order to evaluate the social effects of the system's usage I decided to condu
 For the sake of evaluating the system in its most natural designation, the context of the experiments was selected to be a silent disco party.
 The experiments' main goal is to answer the research question: \emph{does the system enhance social interaction between participants in an interactive silent disco party?}
 
-In addition, two additional hypotheses are that participating in a party using the system (a) strengthens the social relationships between participants even beyond the scope of the party and (b) changes the ratio between in-group cohesion and ones openness to out-group social interactions toward the second.
+In addition, two additional hypotheses are that participating in a party using the system (a) strengthens the social relationships between participants even beyond the scope of the party and (b) alter in-group cohesion and ones openness to out-group social interactions.
 
 Assessing the social interaction between participants was done using two main methods: by self-reported information that the participants entered in surveys before, during, and after each experiment, and with objective measurements such as participants positioning tracking and their interaction with system components.
+Another target of this study is to evaluate the correlation between the results of the these different methods.
+Positive results in this aspect will greatly enhance the credibility of my findings and more generally, may confirm the implied hypothesis that social behavior can be assessed using the participants' self-reported information and objective measurements alike.
 
 The following sections present the first experiment that has been conducted, presenting detailed explanation of the experimental design and its results.
 
@@ -424,13 +426,23 @@ They also show that the research targets in question can be validated in a contr
 \subsubsection{Video analysis}\label{exp1:results:video}
 
 \begin{figure}[!htb]
+	\includegraphics[width=\linewidth]{tracking}
+        \caption{Pd patch for manual video tracking or participants on the dance floor}\label{fig:tracking}
+\end{figure}
+
+\begin{figure}[!htb]
     \centering
     \includegraphics[width=0.8\textwidth]{plots/pilot-familiarity_correlation_maps.pdf}
     \caption{Maps of social familiarity (on the left) and correlated movement on the dance floor (on the right)}\label{plot:pilot-familiarity_correlation_maps}
 \end{figure}
 
 The whole experiment was captured with video from above the dance floor.
-Later, this video was used to track the positioning of the participants and to generate positioning tables.
+Later, this video was used to track the positioning of the participants and to generate positioning tables ($x$ and $y$ coordinations on the dance floor per timestamp).
+
+Figure \ref{fig:tracking} present the Pd patch I wrote to manually track the participants' movement on the dance floor.
+Using this patch, I have tracked the positioning of each participant at a time with the computer mouse.
+The location of the mouse pointer within the video window was recorded once for every 25 video frames (\textasciitilde{}1 per second)\footnote{In the second experiment positioning was captured twice per second.}.
+Later, I used three points on the dance floor which have been measured for their real (although relative) positioning in advance, to transform the mouse tracking measurements into two dimensional locations on the dance floor.
 
 Analyzing this data, I didn't find significant difference between the position and movement patterns in the interactive and control sessions.
 However position was indicative to the social relations between participants.
