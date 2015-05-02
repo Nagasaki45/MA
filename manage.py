@@ -17,7 +17,7 @@ def call_git_clean():
 
 
 def call_pdflatex():
-    cmd_string = 'pdflatex --interaction=nonstopmode research_proposal.tex'
+    cmd_string = 'pdflatex --interaction=nonstopmode thesis.tex'
     process = subprocess.Popen(cmd_string.split(), stdout=subprocess.PIPE,
                                stderr=subprocess.PIPE)
     try:
@@ -28,7 +28,7 @@ def call_pdflatex():
 
 
 def call_biber():
-    call('biber research_proposal.bcf')
+    call('biber thesis.bcf')
 
 
 def get_my_short_commit_hash():
@@ -44,8 +44,8 @@ def build_pdf():
     call_pdflatex()
     # Rename the file to contain the commit hash
     commit = get_my_short_commit_hash()
-    new_name = 'research_proposal_{}.pdf'.format(commit)
-    os.rename('research_proposal.pdf', new_name)
+    new_name = 'thesis_{}.pdf'.format(commit)
+    os.rename('thesis.pdf', new_name)
     print('PDF building finished succesfully!')
 
 
