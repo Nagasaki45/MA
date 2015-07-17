@@ -40,9 +40,9 @@ This research, in which I propose an audio-only augmented reality system for soc
 
 The system is mainly motivated by silent disco, flash mobs and augmented reality, and aims to create an interactive space, in which users can move, interact, and affect thereby the music they and their companions hear in their headphones.
 Throughout the research the system is presented by a silent disco use case.
-Nevertheless, the system in characterised by an open architecture to allow different use cases and further exploration of the system's interactive behavior.
+Nevertheless, the system in characterized by an open architecture to allow different use cases and further exploration of the system's interactive behavior.
 
-I have assessed the social effects of the system usage in two experiments, in the context of silent disco party, hypothesising that it enhance social interaction between its users.
+I have assessed the social effects of the system usage in two experiments, in the context of silent disco party, hypothesizing that it enhance social interaction between its users.
 The results of the first experiment shows that indeed, the system facilitates higher social interaction between the users of the system.
 Furthermore, the second experiment fine-tune the insights of the first experiment by presenting complex set of movement and gathering patterns.
 These results are integrated to describe a model for the enhanced social interaction, thereby displaying the potential of using audio-only augmented reality in future interactive experiences.
@@ -200,7 +200,7 @@ Indeed, experimental studies supported assumption that music affects self-identi
 
 % Music's synchronization characteristics emphasize group level effects (Brown).
 From another point of view, researchers suggest that music originally evolved as a device to support group functions (\cite{Brown2000}).
-This hypothesis is supported by a wide range of universal characteristics of music, such as isometric rhythm and discrete pitches, all emphasising coordination and synchronization in the group level.
+This hypothesis is supported by a wide range of universal characteristics of music, such as isometric rhythm and discrete pitches, all emphasizing coordination and synchronization in the group level.
 According to Brown ``music acts as an emotive enhancer of cultural objects other than itself'' (p. 236).
 Meaning that, in a given society, musical materials are always associated with external cultural ideas, that can be perceived by the groups' members.
 Prominent examples are rituals, demonstrating that the music functions on the group level (as opposed to on the individual level) by enhancing some non-musical concept ---  religion, for example.
@@ -210,14 +210,14 @@ Furthermore, Brown claims that music's group functionality can be described with
 Brown's research operate in the field of evolutionary studies, whereby the fitness benefits of a trait are always of high interest.
 With that idea in mind, he argues that ``Music's fitness advantages come about from its ability to promote group-wide cooperation, coordination, cohesion and catharsis, and this operate to increase both group welfare and group warfare'' (p. 257).
 
-Hagen and Bryant extend Browns' ideas by suggesting that music and dance originally evolved as a signaling system for the existence, as well as the quality, of a coalition between individuals, noting that humans are the only primate to create cooperative alliances between groups in the absence of consanguineal ties (\cite*{Hagen2003}).
+Hagen and Bryant extend Browns' ideas by suggesting that music and dance originally evolved as a signaling system for the existence, as well as the quality, of a coalition between individuals, noting that humans are the only primate to create cooperative alliances between groups in the absence of consanguineous ties (\cite*{Hagen2003}).
 
 % joint action
 % use Kirschner & Tomasello 2010 and Knoblich et al. 2011
 Recent studies show that joint music making and dancing can indeed increase group cohesion, pro-social commitment among the individuals of the group, and the intent to share the same collective goals (\cite{Kirschner2010}; \cite{Knoblich2011}).
 
 % Linking to my study
-In this research I will evaluate the social effects of a system for interactive music consumption, by assuming priors and hypothesising effects based on the studies above.
+In this research I will evaluate the social effects of a system for interactive music consumption, by assuming priors and hypothesizing effects based on the studies above.
 Throughout this text I will use the notions ``in-group cohesion'' and ``openness to out-group interactions'' extensively, resembling to Brown's description of within-group cooperation and the negation of between-group competitiveness.
 Whereas most of the studies above (Brown's included) demonstrate how music increase in-group cohesion and \emph{decrease} openness to out-group interactions, my proposed system aims to promote interaction outside the native social groups.
 
@@ -243,7 +243,7 @@ In addition to the two main targets presented above, the following secondary tar
 \begin{enumerate}[resume]
     \item I will aim to develop the system with open architecture in mind in order to enable other musicians and researchers to use my system for their own purposes.
           The openness of the system architecture will be expressed throughout several different aspects, from platform and hardware decisions such as Android and Bluetooth, which are both widely common, to the design of the application itself, which will separate concerns between musical materials, audio engine and the logic that tide them together.
-    \item I will try to show correlation between different types of measurements analysed during the evaluation of my system.
+    \item I will try to show correlation between different types of measurements analyzed during the evaluation of my system.
           More explicitly, I will compare the results gathered using surveys to those of objective measurements as Bluetooth readings and video tracking.
           Correlated results may both enhance the credibility of my findings significantly and show that social behavior can be assessed by subjective and the objective measurements alike.
 \end{enumerate}
@@ -341,7 +341,7 @@ Each Bluetooth enabled device calculate RSSI values during Bluetooth discovery, 
 
 As shown in figure \ref{fig:bbrip}, the BBRIP system continuously searches for Bluetooth devices.
 When a new device is found, the RSSI value is extracted and sent forward for processing.
-From the first discovery in the Bluetooth discovery cycle, the system keeps checking if the time since the last discovery exceedes a pre-defined timeout.
+From the first discovery in the Bluetooth discovery cycle, the system keeps checking if the time since the last discovery exceeds a pre-defined timeout.
 If so, it terminates the discovery.
 This termination is important, because naturally a device can only be discovered once in each Bluetooth discovery cycle, and long periods of time without new discoveries indicates that all of the nearby devices have already been found.
 Lastly, when the system sees that there is no Bluetooth discovery running (because of termination or simply the end of the discovery cycle), it starts a new one immediately.
@@ -361,7 +361,7 @@ In addition, the limited sophistication of the built-in audio library made fadin
 After finding the weakness of the built-in audio library of the Android application programming interface, I decided to implement the system using ``libpd''.
 The shift toward ``libpd'' open the possibility to use more advance audio manipulations, instead of only volume changes, including, for example, filtering and granular synthesis of the audio sources.
 Although the framework change presented an improvement, there was still very tight coupling between the system development in the Android environment and the audio processing development in Pd.
-This tight coupling is expressed by the fact that the audio sources was still embedded in the application code-base, as well as the Pd patch, meaning that other musicians and researchers was still unable to load different musical materials and different Pd patches to change the behaviour of the system for their artistic nor academic desire.
+This tight coupling is expressed by the fact that the audio sources was still embedded in the application code-base, as well as the Pd patch, meaning that other musicians and researchers was still unable to load different musical materials and different Pd patches to change the behavior of the system for their artistic nor academic desire.
 
 Overall, this development phase was sufficient for answering the main research questions.
 Nevertheless, I have started to search for a better, more open, architecture.
@@ -429,7 +429,7 @@ The results show slightly higher counts (paired t-test, $t(16)=1.7$, $p=0.06$, n
 This suggests that the interactive components of the system facilitated greater participant movement in space, thereby offering more frequent opportunities for social interactions.
 Indeed, in the post-party survey participants reported that they danced significantly less with people that they knew in advance, compared with their usual behavior (paired t-test, $t(14)=-2.5$, $p=0.01$).
 Figure \ref{fig:known} shows that there was also a significant difference in the mean response to these questions in the pre/post surveys.
-Overall, participants showed a slightly stronger tendency (paired t-test, $t(16)=1.46$ ,$p=0.08$, n.s) to participate in an interactive party in the post-party survey, compared with their answer to identical question in the pre survey.
+Overall, participants showed a slightly stronger tendency (paired t-test, $t(16)=1.46$ ,$p=0.08$, n.s) to participate in an interactive party in the post-party survey, compared with their answer to identical question in the pre-survey.
 
 \subsubsection{Video analysis}\label{exp1:results:video}
 
@@ -648,7 +648,7 @@ This is also indicated by cross cluster similarity outside the main diagonal of 
 Experiment 1 showed that video tracking could be used effectively to gain insights about social interactions.
 Based on these encouraging results I used extensively video tracking in experiment 2.
 
-I analyzed the mean speed of each participant during each session, hypothesising that the interactive system will facilitate movement among the users.
+I analyzed the mean speed of each participant during each session, hypothesizing that the interactive system will facilitate movement among the users.
 However, I found an opposite trend, where in fact, during the second session the participants of the interactive group tend to move significantly less compared with the control group.
 This trend persist and even increase in the last session of the experiment.
 These evidences are indicated by a significant interaction of group by session in a repeated measure 2 way ANOVA test (group: F(1, 21)=3.311 p=0.083; session: F(2, 42)=0.579 p=0.455; interaction: F(2, 42)=7.318 p=0.013).
@@ -734,10 +734,10 @@ The experiments I have conducted were designed to answer the research question: 
 Two additional targets aimed to assess the social effects of the system beyond the scope of the experiment and the changes occurred to the in-group cohesion as opposed to openness to out-group interactions.
 
 Experiment 1 targeted the main research question with positive results.
-Participants self reported higher levels of movement on the dance floor compared to their usual behaviour, a result that was further supported by objective measurements.
+Participants self reported higher levels of movement on the dance floor compared to their usual behavior, a result that was further supported by objective measurements.
 As a consequence, more social interactions opportunities may occur, backing the main hypothesis.
 Higher levels of movement can also increase the opportunities to interact with less known participants, thereby proposing higher level of interaction with out-group participants.
-The hypothesis that the system usage increases ones opennes to out-group interactions was further supported by the fact that participants self reported that they have danced significantly less with people they knew in advance compared to their usual behaviour.
+The hypothesis that the system usage increases ones openness to out-group interactions was further supported by the fact that participants self reported that they have danced significantly less with people they knew in advance compared to their usual behavior.
 
 Note, however, that the supportive evidence to the shift from in-group cohesiveness toward higher levels of interaction with out-group members was achieved only implicitly, using the participants' movement patterns analysis and their answers to the survey question about their social interactions with known people compared to their usual behavior.
 Achieving explicit results to support the above, as well as long-term effects of the system, was the main motivation for experiment 2.
@@ -761,14 +761,14 @@ However, the terms \definition{in-group} and \definition{out-group} will still b
 
 By using video tracking I have found very different movement patterns compared to the first experiment results.
 Instead of higher levels of movement, as predicted, the participants of the interactive group moved much less than those of the control group.
-This observation, combined with insights from other measurements, may shed a light over the social behaviour of the interactive group in the experiment as will present shortly.
+This observation, combined with insights from other measurements, may shed a light over the social behavior of the interactive group in the experiment as will present shortly.
 
 Despite the relatively low levels of movement in the interactive group, a quality observation of the movement patterns shows an interesting phenomenon: frequently occurrences of correlated movement of participants while holding Bluetooth beacons.
 This kind of correlated movement was not as common in the control group.
 
 Another quality observation shows dense clusters of participants around Bluetooth beacons in the interactive group.
 This observation was also backed by two independent objective measurements: the expectancy of participants around a beacon and the clustering algorithm score (see sections \ref{results:system} and \ref{results:clustering} respectively).
-These dense clustering presents a significant difference in behaviour between the interactive and the control group.
+These dense clustering presents a significant difference in behavior between the interactive and the control group.
 
 Reviewing the results till now may suggest a different model for the social effects of the system usage then the one I have predicted in advance.
 Instead of enhancing the interactions between participants directly, as might concluded from the analysis of experiment 1, using the system participants form dense clusters around the system's components.
