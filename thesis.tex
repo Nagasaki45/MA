@@ -36,16 +36,16 @@ Over the past sixty years the development of new technologies has fundamentally 
 One result of these changes is the emergence of interactive music systems (IMS), which facilitate new ways of music creation by blurring the traditional distinction between instrument design, composition and performance (\cite{drummond09}).
 In recent years there have been many attempts to provide IMS not only to professional musicians, but also directly to the average user (\cite{stimulant13}).
 
-This research, in which I propose an audio-only augmented reality system for social interaction, aligns with this trend by exploring new possibilities for interactive music consumption, by a group of users, jointly.
-
+This research aligns with this trend by exploring new possibilities for interactive music consumption, by a group of users, jointly.
+I developed an audio-only augmented reality system that facilitates social interactions.
 The system is mainly motivated by silent disco, flash mobs and augmented reality, and aims to create an interactive space, in which users can move, interact, and affect thereby the music they and their companions hear in their headphones.
-Throughout the research the system is presented by a silent disco use case.
-Nevertheless, the system in characterized by an open architecture to allow different use cases and further exploration of the system's interactive behavior.
+Throughout the research, the system is presented by a silent disco use case.
+Nevertheless, the system in characterized by a modular architecture to allowing also different use cases and further exploration of the system's interactive behavior.
 
-I have assessed the social effects of the system usage in two experiments, in the context of silent disco party, hypothesizing that it enhance social interaction between its users.
+I have assessed the social effects of the system usage in two experiments, in the context of silent disco party, hypothesizing that the system enhances social interaction between its users.
 The results of the first experiment shows that indeed, the system facilitates higher social interaction between the users of the system.
 Furthermore, the second experiment fine-tune the insights of the first experiment by presenting complex set of movement and gathering patterns.
-These results are integrated to describe a model for the enhanced social interaction, thereby displaying the potential of using audio-only augmented reality in future interactive experiences.
+These results are integrated to form a novel model for the enhanced social interaction, thereby displaying the potential of using audio-only augmented reality in future interactive experiences.
 
 \section{Literature review}
 
@@ -59,12 +59,12 @@ Finally, section \ref{literature:social_effects} shortly reviews the social effe
 
 \subsection{The origins of interactive music systems} \label{literature:ims}
 
-According to the Oxford Dictionary, to ``interact'' is to ``act in such a way as to have an effect on each other''.
+According to the Oxford Dictionary, to \emph{interact} is to ``act in such a way as to have an effect on each other''.
 In the field of IMS, actions and effects may be achieved by using a broad spectrum of novel techniques, ranging from interactive sound installations to collaborations with robotic performers (\cite{drummond09}).
 
 Traditionally, IMS merges developments in several different threads to facilitate new ways of music creation.
 Music-oriented programming languages as the MUSIC-N series and Max/MSP (\cite{mathews69}; \cite[p. 16]{winkler01}), standardization of technologies like MIDI (\cite{web:quinn}), the role of the personal computer in music production (\cite{leider:04}), and the recent emergence of the ``makers culture'' (\cite{kuznetsov2010rise}) are just a small sample of these threads.
-Hence, considering the broad nature of the field, the current section will only briefly describe some of its historical highlights and doesn't meant to serve as an exhaustive overview.
+I will shortly review the most relevant aspects of these trends.
 
 Since early exploration in the field of IMS in the nineteen-sixties, different researchers and composers created systems that were designed to interact with performer in a live situation.
 Perhaps the first example of this kind of interactive system is Gordon Mumma's Hornpipe, a specially designed electronic system that alters the audio input from the performer, creating an interactive loop between the player and the sound emitted by the electronics circuit (\cite[p. 12]{winkler01}).
@@ -72,7 +72,7 @@ Perhaps the first example of this kind of interactive system is Gordon Mumma's H
 During the nineteen-seventies, musicians and researchers started to use newly developed programming languages that was designed specifically for musical applications, such as GROOVE or the MUSIC-N series (\cite{mathews70}; \cite{mathews69}).
 As pioneering technologies for digital sound synthesis, these programming languages gained wide acceptance in the music research community, serving as the roots for the new genre and field of research of computer music.
 
-Charles Dodge's ``Earth's Magnetic Fields'' is one of the earliest computer music compositions, and thereby may serve as a good example to the new and unique possibilities it offers.
+Charles Dodge's ``Earth's Magnetic Fields'' is one of the earliest computer music compositions, and thereby may serves as a good example of the new and unique possibilities it offers.
 In this piece, magnetic field readings were collected over the course of a year.
 Later, Dodge mapped the readings to a four octave span, applying interpolation between readings that manipulates the tempo and dynamics of the music (\cite{scriptsgrooves14}).
 This attitude, in which the composer describes a set of rules and apply them on input data to generate musical materials automatically was impossible before, where the main technique to compose electronic music was by cutting and pasting magnetic tapes manually.
@@ -81,10 +81,10 @@ In 1983, a group of musical instruments manufacturers agreed on a universal stan
 This standardization, combined with the emergence of personal computers, facilitated the creation of modern programing languages for musical applications.
 As opposed to early programming languages as GROOVE or the MUSIC-N series, most of the personal-computer-based languages still exist today and have kept progressing.
 A prominent example is Max/MSP, which was first developed by Miller Puckette in 1986 (\cite[p. 16]{winkler01})\footnote{Max 6, the recent version of Max/MSP: \href{http://cycling74.com/products/max/}{cycling74.com/products/max/}.}.
-Moreover, new music-oriented programing languages continue to be developed today, presenting features like ``on-the-fly'' programming\footnote{ChucK: \href{http://chuck.cs.princeton.edu/}{chuck.cs.princeton.edu/}.}, web capabilities\footnote{The Web audio API: \href{http://www.w3.org/TR/webaudio/}{www.w3.org/TR/webaudio/}.} or modular, multi-touch environment for live performance\footnote{Usine Hollyhock: \href{http://www.sensomusic.org/usine/}{www.sensomusic.org/usine/}.}.
+Moreover, new music-oriented programing languages continue to be developed today, presenting features like ``on-the-fly'' programming (the ability to change the features of the program during run-time)\footnote{ChucK: \href{http://chuck.cs.princeton.edu/}{chuck.cs.princeton.edu/}.}, web capabilities\footnote{The Web audio API: \href{http://www.w3.org/TR/webaudio/}{www.w3.org/TR/webaudio/}.} or modular environment for live performance (that also make use of a mobile multi-touch interface)\footnote{Usine Hollyhock: \href{http://www.sensomusic.org/}{www.sensomusic.org/}.}.
 
 Similar technological shifts also facilitated the usage of personal computers as a central component in the modern recording studio, thereby establishing its role as a common alternative to analog recording equipment (\cite{leider:04}).
-With the arrival of VST as the common standard for digital signal processing plug-ins, computers became an even more essential tool for music production.
+With the arrival of Virtual Studio Technology (VST) as the common standard for digital signal processing plug-ins, computers became an even more essential tool for music production.
 These developments were concurrent to the emergence of live performance-oriented software as Ableton Live\footnote{Ableton Live: \href{http://www.ableton.com/en/live/}{www.ableton.com/live/}.} and software based DJ setups at the late nineteen-nineties.
 
 Another key event in the history of IMS is the appearance of the Arduino platform in 2006.
@@ -92,23 +92,24 @@ Arduino is an easy-to-use hardware and software package intended for interactive
 By translating physical properties into sound, the Arduino platform opened the door for musicians to use more than just audio and MIDI to communicate with music creation software in interactive environments.
 
 More generally, one can regard Arduino as an important part of the new ``makers'' movements, a technology-based extension of the ``do it yourself'' culture.
+``Makers'' are usually highly trained programmers that uses open source software and basic electronics for creating mashes of electronics and real world objects.
 By creating what used to be purchased, and sometimes open-sourced it (sharing this knowledge back with the community), the makers have become a major driving force in the development of IMS (\cite{web:kirn12}).
 
-Today, the makers movement can be seen as an unofficial host for several IMS projects by independent ``makers'', that present their works in different maker fairs around the world.
-The large amount of dedicated web pages for musical projects in several websites that relate directly to the field can show how bound is the integration of musician with the makers community\footnote{Examples: \href{http://blog.arduino.cc/category/music/}{blog.arduino.cc/category/music/}; \href{http://makerfaire.com/category/music/}{makerfaire.com/category/music/}}.
+Today, the makers movement can be seen as an unofficial host for several IMS projects by independent makers, that present their works in different fairs around the world.
+The large amount of dedicated web pages for musical projects in makers' websites demonstrates the strong link between music and the makers community\footnote{Examples: \href{http://blog.arduino.cc/category/music/}{blog.arduino.cc/category/music/}; \href{http://makerfaire.com/category/music/}{makerfaire.com/category/music/}}.
 
 \subsection{Interactive music systems for non-professional musicians} \label{literature:non_pro_ims}
 
 These days, IMS meets the non-professional musician in various scenarios, including interactive video clips, mobile and album applications, interactive sound installations, and social DJing.
-While these examples are typical, they are only a small portion of the novel ways in which non-professionals can now participate in interactive music creation and consumption of audiovisual content as well as musically enhanced social interactions.
+These typical examples are only a small portion of the novel ways in which non-professionals can now participate in interactive music creation and consumption of audiovisual content as well as musically enhanced social interactions.
 
 % interactive video clips: Interlude, Chris Milk and Aaron Koblin
-Interactive video clips share some of the roles traditionally kept for the director with the viewers.
+Interactive video clips allows users to interact with videos in ways that traditionally were limited only to the director of a video clip.
 As a relatively new phenomena, video clips like these have become increasingly prominent within popular culture.
 A notable example are the works by Chris Milk and Aaron Koblin, in which the video clip runs on a dedicated webpage and responds to the users by tracking their mouse, keyboard strokes, or other inputs\footnote{Milk and Koblin's projects: \href{http://www.thewildernessdowntown.com/}{www.thewildernessdowntown.com/}; \href{http://www.ro.me/}{www.ro.me/}.}.
 In Milk's project ``ROME - 3 dreams of black'', the user is presented with three dimension world, in which the video clip is occurring.
 During the clip the user can choose a direction to stare at using the mouse, which also affects the visual image around the pointed area.
-At the end, he / she is invited to create new three dimensional objects, using an editor in the browser, that will be added to the virtual world of the clip for future visitors.
+At the end, the user is invited to create new three dimensional objects, using an editor in the browser, which will be added to the virtual world of the clip for future visitors.
 
 A similar approach can also be found in interactive video clips created by the startup Interlude\footnote{Interlude: \href{http://interlude.fm/}{interlude.fm/}.}, Beck's recent project ``Hello again''\footnote{Beck's ``Hello again'': \href{http://www.hello-again.com/beck360/}{www.hello-again.com/beck360/}.} and more.
 In contrast to ``ROME'', where the interaction with the video clip manipulate the visual output only, in the other projects mentioned above the manipulation is done on both the auditory and the visual domain.
@@ -119,7 +120,7 @@ These improvements change the way users interact with mobile devices and continu
 It is unsurprising though that the number of musical mobile applications that integrate interactive components are rising constantly.
 For example, AutoRap turns speech into rap by slicing the syllables and mapping them according to different beat styles\footnote{Smule's AutoRap: \href{https://play.google.com/store/apps/details?id=com.smule.autorap}{https://play.google.com/store/apps/details?id=com.smule.autorap}.}.
 Other examples are applications by Brian Eno and Peter Chilvers, which enable users to compose music using only visual elements on the device's screen\footnote{Generative music: \href{http://www.generativemusic.com/}{www.generativemusic.com/}.}.
-Finally, RjDj uses the phones' sensors to create ambient sonification based on the users' interactions with their daily environment (\cite{web:rjdj})\label{rjdj}.
+Another relevant mobile project is RjDj, which uses the phones' sensors to create ambient sonification based on the users' interactions with their daily environment (\cite{web:rjdj})\label{rjdj}.
 
 % album applications
 Album applications are another new trend in which artists are releasing their music as interactive applications for mobile devices.
@@ -129,7 +130,7 @@ In additional to this interactive mode, named ``play'' mode in the application j
 Score mode, for example, resemble some kind of karaoke, and animation mode, presents an animated video-clip of the song.
 
 % interactive sound installations: objects with sound, project ADA
-Sound installations are specific type of installations located in the three-dimensional space that communicate with their audience through sound.
+Another concept that influence this work is the concept of sound installations that are specific type of installations located in the three-dimensional space that communicate with their audience through sound.
 In some interactive sound installations the main interaction is between the viewer and the installation itself (\cite{web:visnjic}; \cite{web:cardiff01}) whereas in others, the main objective is to facilitate social interaction between participants (\cite{eng03}; \cite{web:kirn12}; \cite{web:murray-browne13}).
 
 % social DJing: DistributedDJ, the BLOB and playmysong
@@ -138,7 +139,8 @@ Most of these project are implemented as mobile or web applications, and some of
 
 \subsection{Technology dependent social networking} \label{literature:social_tech}
 
-Silent disco and flash mobs, the conceptual roots of this project, are examples of modern types of social behavior that rely on the fast growth of social media and newly available technologies.
+Silent disco and flash mobs are two contemporary social trends that serves as the conceptual roots of this project.
+They both are exemplifications of modern types of social behavior that rely on the fast growth of social media and newly available technologies.
 My proposal operates within the context of a silent disco party, and is inspired by flash mobs in its usage of new technologies to facilitate creative and artistic social interactions.
 
 Silent disco is the phenomenon of partying where the music is heard through headphones instead of loudspeakers.
@@ -186,17 +188,16 @@ Android has introduced built-in support for Bluetooth LE\footnote{Android Blueto
 Music is known for being an important channel of communication.
 It is therefore unsurprising that the function of music in everyday life have been extensively studied.
 Questions about music functionality can arouse in various disciplines, ranging from psychological to anthropological studies.
-The following is a narrowed down review of the most essential parts of this field to my study.
-Namely, I will try to concentrate on studies that describe music as a social function, exploring the ways music can reshape social structure or affect ones sense of belonging to a group.
+Here, I will try to concentrate on studies that describe music as a social function, exploring the ways music can reshape social structure or affect ones sense of belonging to a group.
 
 % Self-identity (Hargreaves and North; Cook) and personality dimensions (Rentfrow and Gosling). Demonstrate.
 Hargreaves and North suggest that the psychological functions of music may be best understood as social effects on the individual (\cite*{hargreaves99}).
 They describe a framework in which those effects are classified by means of self-identity (e.g. teenagers that join musical subcultures as a means of defining themselves), inter-personal relationships (e.g. client-therapist relationship in music therapy context) and mood (e.g. influences on costumers behavior in shops and stores).
-Nicholas Cook use the youth generation of the ninety-sixties as an example of a social phenomena motivated by a prominent musical cause (\cite*[p. 5]{cook00}).
+Nicholas Cook use the young generation of the ninety-sixties as an example of a social phenomena motivated by a prominent musical cause (\cite*[p. 5]{cook00}).
 Using Hargreaves and North methodology one can say that music is a significant component in the self-identity of the members of the youth generation.
 A summary of this attitude can be put by Cook's words: ``People think through music, decide who they are through it, express themselves through it'' (\cite*{cook00}).
 
-Indeed, experimental studies have supported the assumption that music affects self-identity and inter-personal relationships by showing a high correlation between musical preferences and a wide array of personality dimensions (e.g.\ conscientiousness and openness) as well as self-views (e.g.\ political orientation) (\cite{rentfrow03}).
+Indeed, experimental studies have supported the assumption that music affects self-identity and inter-personal relationships by showing a high correlation between musical preferences and a wide array of personality dimensions (e.g.\ conscientiousness and openness) as well as self-views such as political orientation (\cite{rentfrow03}).
 
 % Music's synchronization characteristics emphasize group level effects (Brown).
 From another point of view, researchers suggest that music originally evolved as a device to support group functions (\cite{Brown2000}).
@@ -234,7 +235,7 @@ In this research I will focus mainly on two distinct but complementary targets.
 
     \item I will evaluate the social effects of the system usage within the context of a silent disco party, focusing thereby on the main research question: \emph{does the system enhance social interaction between participants in an interactive silent disco party?}
 
-          In the experiments below this research question will break down into more specific and testable measures, assessing whether participating in a party using the system (a) strengthens the social relationships between participants even beyond the scope of the experiment and (b) alter in-group cohesion and ones openness to out-group social interactions.
+          In the experiments below this research question will break down into more specific and testable measures, assessing whether participating in a party using the system (a) strengthens the social relationships between participants even beyond the scope of the experiment and (b) alter in-group cohesion and the individual's openness to out-group social interactions.
           Motivation for these will be clarified by the results of experiment 1.
 \end{enumerate}
 
@@ -242,10 +243,13 @@ In addition to the two main targets presented above, the following secondary tar
 
 \begin{enumerate}[resume]
     \item I will aim to develop the system with open architecture in mind in order to enable other musicians and researchers to use my system for their own purposes.
-          The openness of the system architecture will be expressed throughout several different aspects, from platform and hardware decisions such as Android and Bluetooth, which are both widely common, to the design of the application itself, which will separate concerns between musical materials, audio engine and the logic that tide them together.
+          The flexibility of the system architecture will be expressed throughout several different aspects.
+          For example, I used platform and hardware such as Android and Bluetooth, which are both widely common.
+          In addition, the application itself separates between musical materials, audio engine and the logic that tide them together in a way that enables flexibility and modularity.
     \item I will try to show correlation between different types of measurements analyzed during the evaluation of my system.
-          More explicitly, I will compare the results gathered using surveys to those of objective measurements as Bluetooth readings and video tracking.
-          Correlated results may both enhance the credibility of my findings significantly and show that social behavior can be assessed by subjective and the objective measurements alike.
+          More explicitly, I will compare the results gathered using surveys to those of objective and implicit measurements such as Bluetooth readings and video tracking.
+          Correlated results may enhance the credibility of my findings and show that social behavior can be assessed by subjective and the objective measurements alike.
+          More generally, this would contribute to the important methodological issue of validating the usage of objective measures in the evaluation of computer systems.
 \end{enumerate}
 
 \section{System development}
@@ -255,13 +259,13 @@ In this section I explain the rationale for the choices of system development in
 \subsection{Mobile and Android}
 
 Today's mobile phone has transformed from being a communication tool into a key `social object' within everyday life, and as such it has significant importance in shaping contemporary society (\cite{srivastava05}).
-As the applications of this research are targeted at the general audience, the entire research is implemented for mobile.
+As the applications of this research are targeted at the general audience, the entire research is implemented in the mobile sphere.
 
 The system was developed for the Android operating system\footnote{Android OS: \href{http://www.android.com/}{www.android.com/}.}.
 Choosing Android as the platform for my research has two main advantages:
 \begin{itemize}
 	\item The Android system is a growing mobile system which dominates most of the market share today (\cite{web:idc}).
-	\item By developing an application for Android, I could access underlying Bluetooth properties such as received signal strength indicator (RSSI), which is essential for my implementation of the system as laid out in the following section.
+	\item By developing an application for Android, I could access underlying Bluetooth properties such as received signal strength indicator (RSSI), which is essential for the implementation of the system as laid out in the following section.
 \end{itemize}
 
 \subsection{Indoor positioning system}\label{methods:ips}
@@ -361,13 +365,13 @@ In addition, the limited sophistication of the built-in audio library made fadin
 After finding the weakness of the built-in audio library of the Android application programming interface, I decided to implement the system using ``libpd''.
 The shift toward ``libpd'' open the possibility to use more advance audio manipulations, instead of only volume changes, including, for example, filtering and granular synthesis of the audio sources.
 Although the framework change presented an improvement, there was still very tight coupling between the system development in the Android environment and the audio processing development in Pd.
-This tight coupling is expressed by the fact that the audio sources was still embedded in the application code-base, as well as the Pd patch, meaning that other musicians and researchers was still unable to load different musical materials and different Pd patches to change the behavior of the system for their artistic nor academic desire.
+This tight coupling is expressed by the fact that the audio sources was still embedded in the application code-base, as well as the Pd patch, meaning that other musicians and researchers was still unable to load different musical materials and different Pd patches to change the behavior of the system for their artistic nor academic desire\footnote{First libpd based implementation source code: \href{https://github.com/Nagasaki45/ARpArty}{github.com/Nagasaki45/ARpArty}.}.
 
 Overall, this development phase was sufficient for answering the main research questions.
 Nevertheless, I have started to search for a better, more open, architecture.
 An architecture that maintains a loosely coupled connection between the Android application, the musical sources, and the Pd patch that drives the audio, and which will allow others to use the system easily.
 
-The last phase in the system development was to implement the BBRIP system into the open source Android application ``ScenePlayer''\footnote{ScenePlayer: \href{http://play.google.com/store/apps/details?id=org.puredata.android.scenes}{play.google.com/store/apps/details?id=org.puredata.android.scenes}.}, an Android port for the RjDj application mentioned in section \ref{rjdj}, and release it again as ``ScenePlayer Plus''\footnote{ScenePlayer Plus: \href{https://github.com/Nagasaki45/ScenePlayer-Plus}{github.com/Nagasaki45/ScenePlayer-Plus}.}.
+The last phase in the system development was to implement the BBRIP system into the open source Android application ``ScenePlayer''\footnote{ScenePlayer: \href{http://play.google.com/store/apps/details?id=org.puredata.android.scenes}{play.google.com/store/apps/details?id=org.puredata.android.scenes}.}, an Android port for the RjDj application mentioned in section \ref{rjdj}, and release it again as ``ScenePlayer Plus''\footnote{ScenePlayer Plus source code: \href{https://github.com/Nagasaki45/ScenePlayer-Plus}{github.com/Nagasaki45/ScenePlayer-Plus}.}.
 `Scenes' in ScenePlayer are bundles of audio files and one or more Pd patches that describe, programatically, how input from the mobile device sensors should affect the audible output (\cite[p. 29]{brinkmann12}).
 This design allows musicians to create Pd patches that can be uploaded to the mobile device, along with extra audio materials, to create sophisticated interaction easily.
 In ScenePlayer Plus, the BBRIP system is used to expose the received Bluetooth RSSI values to the Pd patch as another sensor of the mobile device (e.g.\ accelerometer, compass and touchscreen)\footnote{The scene that was used for the this research can be found at my site: \href{http://tomgurion.blogspot.com/2013/06/arparty-first-sceneplayer-plus.html}{tomgurion.blogspot.com/2013/06/arparty-first-sceneplayer-plus.html}.}.
@@ -376,13 +380,15 @@ In ScenePlayer Plus, the BBRIP system is used to expose the received Bluetooth R
 
 In order to evaluate the social effects of the system's usage I decided to conduct controlled experiments.
 For the sake of evaluating the system in its most natural designation, the context of the experiments was selected to be a silent disco party.
-The experiments' main goal is to answer the research question: \emph{does the system enhance social interaction between participants in an interactive silent disco party?}
+The experiments' main goal is to answer the detailed research question: \emph{does the system enhance social interaction between participants in an interactive silent disco party?}
+This is interesting because I wanted to use this specific system in order to explore the possibilities of using IMS in novel scenarios in the social sphere.
 
-In addition, two additional hypotheses are that participating in a party using the system (a) strengthens the social relationships between participants even beyond the scope of the party and (b) alter in-group cohesion and ones openness to out-group social interactions.
+In addition, two additional hypotheses are that participating in a party using the system (a) strengthens the social relationships between participants even beyond the scope of the party and (b) alter in-group cohesion and the individual's openness to out-group social interactions.
 
-Assessing the social interaction between participants was done using two main methods: by self-reported information that the participants entered in surveys before, during, and after each experiment, and with objective measurements such as participants positioning tracking and their interaction with system components.
+Assessing the social interaction between participants was done using two main methods: by self-reported surveys that the participants took before, during, and after each experiment, and with objective measurements such as participants positioning tracking and their interaction with system components.
 Another target of this study is to evaluate the correlation between the results of these different methods.
-Positive results in this aspect will greatly enhance the credibility of my findings and more generally, may confirm the implied hypothesis that social behavior can be assessed using the participants' self-reported information and objective measurements alike.
+Positive results in this aspect will enhance the credibility of my findings.
+In addition, positive correlation like this may confirm the general methodological hypothesis that social behavior can be assessed using objective measurements.
 
 The following sections present the first experiment that has been conducted, presenting detailed explanation of the experimental design and its results.
 
@@ -444,26 +450,26 @@ Overall, participants showed a slightly stronger tendency (paired t-test, $t(16)
     \caption{Maps of social familiarity (on the left) and correlated movement on the dance floor (on the right)}\label{plot:pilot-familiarity_correlation_maps}
 \end{figure}
 
-The whole experiment was captured with video from above the dance floor.
+The whole experiment was captured with video from a high viewing angle above the dance floor.
 Later, this video was used to track the positioning of the participants and to generate positioning tables ($x$ and $y$ coordinates on the dance floor per timestamp).
 
-Figure \ref{fig:tracking} present the Pd patch I wrote to manually track the participants' movement on the dance floor.
+Figure \ref{fig:tracking} present the Pd patch I wrote to track the participants' movement on the dance floor using a semi-automatic procedure.
 Using this patch, I have tracked the positioning of each participant at a time with the computer mouse.
-The location of the mouse pointer within the video window was recorded once for every 25 video frames (\textasciitilde{}1 per second)\footnote{In the second experiment positioning was captured twice per second.}.
-Later, I used three points on the dance floor which have been measured for their real (although relative) coordinates in advance, to project the mouse tracking measurements from the video frame onto two dimensional coordinates on the dance floor.
+The location of the mouse pointer within the video window was recorded once for every 25 video frames (\textasciitilde{}1 per second).
+Later, I used three points on the dance floor which have been measured for their physical real coordinates in advance, to project the mouse tracking measurements from the video frame onto the two dimensional position of the participants on the dance floor.
 
 Analyzing this data, I didn't find significant difference between the position and movement patterns in the interactive and control sessions.
 However position was indicative to the social relations between participants.
-I asked participants for their social relationships to other participants and compared the resulted map with a map of positioning correlation between every two participants, over the entire course of the experiment\footnote{This data was measured along the Y axis alone, which was much more indicative then the X axis due to the fact that the length of the dance floor (the Y axis) was 10 meters while the width of it was only 2.5 meters.}.
+I asked participants for their social relationships to other participants and compared the resulted map with a map of positioning correlation between every two participants, over the entire course of the experiment\footnote{This data was measured along the Y axis alone, which was more indicative then the X axis due to the specific shape of the dance floor: The length of the dance floor (the Y axis) was 10 meters while the width of it was only 2.5 meters.}.
 I defined the matrix similarity metric as the component-by-component squared distance and used bootstrapping resampling (\cite{good2006permutation}) to check how similar are those maps.
-As expected, I found that the matrices are unusually similar (p \textless{} 0.001).
+As expected, I found that the matrices are significant more similar than chance (p \textless{} 0.001).
 
 To conclude, the result above demonstrate how close social relationship between participants can also be found in video analysis data.
 This encouraging results drove much of the methods to analyze the social behavior in experiment 2.
 
 \subsection{Discussion}
 
-The results already support the hypothesis that the system usage enhances the social interaction between participants.
+The results support the hypothesis that the system usage enhances the social interaction between participants.
 They demonstrate the potential for audio-only augmented reality to significantly enrich the experience of music consumption and its attendant social interaction.
 Furthermore, they also show that the research targets in question can be validated in a controlled experiment using both direct reports of subject and indirect objective measurements, and that video tracking analysis can be used to conclude social relationships.
 
@@ -474,13 +480,15 @@ However, the results does not shed a light on the following points:
 	\item It does not show that the social effects of the system extends beyond the scope of the system usage.
 \end{itemize}
 
-A second experiment will therefor focus on clearing up these points.
+I designed therefore a second experiment that focus on elucidating these points.
 
 First, in the following experiment I will assume that participants in a party are pre-partitioned into groups of friends.
-This assumption is supported by the results of the video analysis, which shows that participants that are socially close tend to be together on the dance floor.
+This assumption is motivated by the results of the video analysis, which shows that participants that are socially close tend to be together on the dance floor.
+Therefore, we might expect a correlation between objective measures such as video tracking results and social relations.
 In addition, the same results also show a well defined social clusters.
+Namely, that video tracking positions corresponds to pre-exisiting social groups.
 Combining the above assumption and the ability to define social clusters based on social relationships between participants I will define \definition{in-group} and \definition{out-group} as group of members in a social cluster a participant belong to, and the rest of the participants respectively.
-Thereby, in the following experiment a major effort will be made to gain better understanding of the behavior of those groups as a whole and the behavior of each participant as a member of a group.
+Thereby, in the following experiment a major effort will be made to gain better understanding of the behavior of those groups as a whole and the behavior of each participant as a member of its native group.
 
 Second, in the following experiment I will suggest a design in which the control group will not experience the interactive part of the system at all.
 Thereby, the social behavior of the control group participants may be compared to the experiment group before and after the experiment to gain insights about the long term social effects of the system.
@@ -495,7 +503,7 @@ It aims to clarify some of the research targets that was not yet answered suffic
 \subsubsection{Participants}
 
 An homogeneous class of twenty-three 11th grade pupils participated in the experiment.
-The high-school was supportive and open the possibility to run the experiment with the pupils, using its facilities\footnote{An ethics certificate describing a highlighted procedure of the experiment was signed by a parent for each of the pupils who was under 18 age old.}.
+The high-school was supportive and open the possibility to run the experiment with the pupils, using its facilities\footnote{The experiment passed the internal IRB committee of the Bar-Ilan music department. Specifically, an informed consent form was signed by the student and by the parents of each of the participants that were under 18 years old.}.
 
 \subsubsection{Measurements}
 
@@ -504,7 +512,8 @@ The research questions was fragmented into the following operational definitions
 	\item \label{measure:survey:familiarity} Participants reported their familiarity with other participants using a survey based on the experimental ordinal number.
 	\item I have intended to use the above familiarity data to cluster the participants into social groups.
             Using this clustering and the participants positioning information (measured by video tracking as explained in section \ref{aparatus}) I was able to define the centroid of each cluster on the dance floor, disperse of participants within each cluster and the disperse between the clusters centroids themselves for each frame of the video.
-            As you will shortly see in section \ref{results:social_structure}, I failed to find distinct social groups based on the familiarity surveys above.
+            As I will shortly present in section \ref{results:social_structure}, I failed to find distinct social groups based on the familiarity surveys above.
+            This means that in the context of highly cohesive group of students that knows each other in advance we were unable to replicate the video track results obtained in experiment 1 on a non-cohesive group of subjects in which the level of familiarity varies much more.
         \item \label{measure:movement} Following positive results from experiment 1 movement assessment I have measured the average movement speed of the participants, hypothesizing that greater participants movement on the dance floor may offer more frequent opportunities to social interaction.
         \item \label{measure:clustering} For each frame of the video, I have dynamically clustered the participants into groups based on their positioning.
             Then, I have assigned scores to the clusters based on social and positional data in order to gain better understanding of the gathering patterns of the participants.
@@ -525,15 +534,14 @@ Lastly, the following measurement was used in order to eliminate possible differ
 \subsubsection{Apparatus}\label{aparatus}
 
 Considerable number of the measurements described above require spatial participants positioning information.
-In order to derive this kind of positioning data I have captured the experiment with a video camera from above the dance floor during the entire course of the experiment.
-Extracting the positioning of the participants was done semi-manually, after the experiment, by tracking one participants at a time using the computer's mouse as explained in section \ref{exp1:results:video}.
-The results was then processed using computational programming to conclude insights from the data.
+In order to derive this kind of positioning data I have captured the experiment with a video camera from a high viewing angle above the dance floor during the entire course of the experiment.
+Extracting the positioning of the participants was done semi-automatic, after the experiment, by tracking one participants at a time using the computer's mouse as explained in section \ref{exp1:results:video}.
 
-The Bluetooth beacons positioning data required for measurement \ref{measure:system} was derived similarly, by manually tracking each of the system components in the video.
+The Bluetooth beacons positioning data was derived similarly, by manually tracking each of the system components in the video.
 
 \subsubsection{Procedure}
 
-Participants was randomly assigned to two groups, group $A$ and group $B$\@\footnote{Group $A$ consisted of 11 participants (5 females and 6 males) with mean age of 18.7 (s.d=5.41); group $B$ consisted of 12 participants (3 females and 7 males) with mean age of 17.2 (s.d=0.42). Participants had a diverse musical background with 4.17 mean years of musical training (s.d=2.53).}.
+Participants was randomly assigned to two groups, group $A$ and group $B$\@\footnote{Group $A$ consisted of 11 participants (5 females and 6 males) with mean age of 18.7 (s.d=5.41); group $B$ consisted of 12 participants (3 females and 7 males) with mean age of 17.2 (s.d=0.42). Participants had a diverse musical background with 3.08 and 4.89 mean years of musical training (s.d=1.02 and 3.01) for groups $A$ and $B$ respectively.}.
 Each group participated in the experiment in different week, but on the same day of the week and same hour. Group $A$ participated first and two weeks later group $B$ was participated in the experiment.
 
 \begin{figure}[!htb]
@@ -566,7 +574,7 @@ Lastly, effects on the social interaction beyond the scope of the interactive se
 
 As one can see, all of the data required for analysis was already collected in the first three experiment sessions.
 However, the last session was added to the experiment to prevent frustration and sense of discrimination between the groups.
-Therefor, and despite the fact that the last session was not contributed to the collected data, it was very significant in preventing group $A$ participants from bias group $B$ results, as they all socially close\footnote{Group $A$ participants were asked not to discuss about the experiment with group $B$ participants.}.
+Therefor, and despite the fact that the last session was not contributed to the collected data, it was very significant in preventing group $A$ participants from bias group $B$ results, as they all socially close\footnote{Group $A$ participants were asked not to discuss about the experiment with group $B$ participants, but since the two groups did not perform the test simultaneously there was some opportunity for information to be shared across the groups. I have made best efforts avoiding this by having an interactive session in both groups (this way the experience of both groups is similar) and by specifically asking participants to be confidential about their experiences.}.
 
 \subsection{Results}
 
@@ -668,7 +676,7 @@ Note however, that in the first session, there was no significant difference bet
     \caption{A correlated movement of two participants of the interactive group's second session. As we can clearly see these participants move coordinated through a time epoch of 9 seconds while holding two beacons.}\label{plot:annotations-correlated_movement_example}
 \end{figure}
 
-Animated renditions of the participants movement can be found in my site\footnote{Animated movement of participants: \href{http://tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}{tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}.}.
+Animated renditions of the participants movement can be found in my website\footnote{Animated movement of participants: \href{http://tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}{tomgurion.blogspot.com/2014/10/participants-movement-tracking-videos.html}.}.
 Figure \ref{plot:annotations-clustering_example} show a screenshot of one point in time extracted from session 2, for each group.
 These animations show that participants of the interactive group tend to cluster around the interactive components of the system in small groups.
 
@@ -680,7 +688,7 @@ Additional phenomena found in the video animations is correlate movement of part
     \caption{Expectancy for the number of participants in a 1 meter radius around a beacon}\label{plot:analyze-expectancy_of_participants_close_to_a_beacon}
 \end{figure}
 
-These observations are also evident in my statistical analysis.
+These anecdotal observations are also evident in a rigorous statistical analysis.
 I have count the mean number of participants near (less than 1 meters) each beacon over the frames of the video per beacon.
 In each video frame, beacons that had no participants around them were excluded from the calculation.
 The results for this analysis are summarized in figure \ref{plot:analyze-expectancy_of_participants_close_to_a_beacon}.
@@ -712,17 +720,17 @@ As shown in figure \ref{plot:analyze-clustering_scores} left plot, there was a s
 Note however, that in the first session, there was no significant difference between the groups (interactive: 0.940 (0.044); control: 0.866 (0.053); two-sided unpaired t-test, t(21) = -1.017, p=0.080).
 
 These results indicating that using the interactive system participants tend to cluster in more dense clusters, confirming the observed clustering from the video animations in section \ref{results:system}.
-This effect persist over the last session, but with less significance.
+This effect persist over the last session, but with lesser magnitude.
 
 Similarly to the results from the interactive surveys, figure \ref{plot:analyze-clustering_scores} right plot shows a non-significant group by session effect over the clusters social scores; whereas in the interactive group participants tend to cluster with others that are socially close to them, the participants of the control group tend to cluster with participants that are far from them socially on the social map (repeated measure 2 way ANOVA; interaction: F(2, 42)=2.032 p=0.144).
 
 \subsection{Discussion}
 
-The second experiment shows subtle nuances of how the system affected the social interactions between the participants.
-As opposed to my expectation, participants self reported lower levels of interaction with whom they have no social connection.
+The second experiment shows nuances details of how the social interactions between the participants are affected by the system.
+As opposed to my expectation and the results of experiment 1, participants self reported lower levels of interaction with whom they have no social connection.
 This effect was supported by a non-significant measure of the social qualities of participants' ad-hoc clustering on the dance floor, showing that the system usage encouraged gathering based on social familiarity.
 
-Although not as expected, the movement patterns of participants showed significant decrease in average speed as indicated by the video analysis.
+Similarly, the movement patterns of participants showed significant decrease in average speed as indicated by the video analysis.
 This is as opposed to the results of the first experiment where participants self reported higher levels of movement using the system compared to their usual behavior.
 
 Nevertheless, the satisfaction of the participants from using the interactive components of the system was significant.
