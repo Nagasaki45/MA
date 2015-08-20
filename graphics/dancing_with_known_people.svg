@@ -13,7 +13,7 @@
    height="183.90623"
    id="svg2"
    version="1.1"
-   inkscape:version="0.48.4 r9939"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="dancing_with_known_people.svg">
   <defs
      id="defs4">
@@ -312,11 +312,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.979899"
-     inkscape:cx="44.925886"
-     inkscape:cy="107.66641"
+     inkscape:zoom="1.4"
+     inkscape:cx="144.17842"
+     inkscape:cy="67.38567"
      inkscape:document-units="px"
-     inkscape:current-layer="g2993"
+     inkscape:current-layer="layer1"
      showgrid="false"
      fit-margin-top="10"
      fit-margin-left="10"
@@ -325,9 +325,9 @@
      showguides="false"
      inkscape:snap-to-guides="true"
      inkscape:window-width="1366"
-     inkscape:window-height="744"
+     inkscape:window-height="704"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="27"
      inkscape:window-maximized="1"
      inkscape:guide-bbox="true">
     <inkscape:grid
@@ -533,21 +533,21 @@
       <g
          id="g3115"
          transform="translate(-24,-4.8)"
-         style="fill:#000000">
+         style="fill:#000000;fill-opacity:1">
         <g
            clip-path="url(#clipPath3119)"
            id="g3117"
-           style="fill:#000000">
+           style="fill:#000000;fill-opacity:1">
           <text
              id="text3123"
              transform="matrix(1,0,0,-1,333.1,599.71)"
-             style="fill:#000000">
+             style="fill:#000000;fill-opacity:1">
             <tspan
-               id="tspan3125"
                sodipodi:role="line"
-               style="font-size:8.27999973px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Calibri;-inkscape-font-specification:Calibri"
+               style="font-variant:normal;font-weight:normal;font-size:8.27999973px;font-family:Calibri;-inkscape-font-specification:Calibri;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
                x="0"
-               y="0">Normal behaviour</tspan>
+               y="0"
+               id="tspan4252" />
           </text>
         </g>
       </g>
@@ -592,5 +592,27 @@
            y="-717.18768"
            style="font-size:9.60000038px">*</tspan></text>
     </g>
-  </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4254"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="translate(387.46475,440.45325)"><flowRegion
+         id="flowRegion4256"><rect
+           id="rect4258"
+           width="151.52289"
+           height="40.406101"
+           x="-74.751289"
+           y="44.000107" /></flowRegion><flowPara
+         id="flowPara4260">Otherasda</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4262"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       transform="matrix(0.32136635,0,0,0.30988184,446.75175,588.37102)"><flowRegion
+         id="flowRegion4264"><rect
+           id="rect4266"
+           width="280.67184"
+           height="96.21376"
+           x="-90.408653"
+           y="39.454422" /></flowRegion><flowPara
+         id="flowPara4268">Other party \\ behavior</flowPara></flowRoot>  </g>
 </svg>
