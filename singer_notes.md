@@ -1,7 +1,7 @@
 Esther Singer (English grammatical editor) comments
 ===================================================
 
-1. I still think that the hypotheses mentioned in Experiments 1 and 2 should appear at the end of the introduction in a separate section.
+1. I still think that the hypotheses mentioned in Experiments 1 and 2 should appear at the end of the introduction in a separate section. *Addressed by moving hypotheses from Experiment 1 introduction to the Introduction section*
 
 1. I also think that the hypotheses should have some explicit theoretical grounding and not just somehow refer vaguely to the literature review. *Nori and myself agreed to ignore this*.
 
