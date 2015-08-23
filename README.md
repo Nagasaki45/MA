@@ -6,7 +6,7 @@
 
 - *v1.0*: First research proposal submitted (February 2013). Not part of this repo.
 - *v2.0*: Second research proposal submitted (March 2014).
-- *v3.0*: Thesis. Work in progress...
+- *v3.0*: Thesis first submittion (August 23, 2015).
 
 ### Source compilation
 
