@@ -21,7 +21,7 @@ def call_pdflatex():
     process = subprocess.Popen(cmd_string.split(), stdout=subprocess.PIPE,
                                stderr=subprocess.PIPE)
     try:
-        process.communicate(timeout=5)
+        process.communicate(timeout=10)
     except subprocess.TimeoutExpired as e:
         print('ERROR! Try to run "{}"" manually to debug'.format(cmd_string))
         sys.exit(1)
