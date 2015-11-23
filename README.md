@@ -1,6 +1,6 @@
 *Tom Gurion research proposal, Bar-Ilan University*
 
-# Audio-Only Augmented Reality System for Social Interaction
+# An Audio-Only Augmented Reality System for Social Interaction
 
 ### Some notes about the tags
 
