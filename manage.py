@@ -7,6 +7,8 @@ import shutil
 import argparse
 import sys
 
+ANALYSIS_REPO = '../MA-experiment-analysis'
+
 
 def call(cmd_string):
     subprocess.check_call(cmd_string.split())
@@ -46,7 +48,7 @@ def build_pdf():
     commit = get_my_short_commit_hash()
     new_name = 'thesis_{}.pdf'.format(commit)
     os.rename('thesis.pdf', new_name)
-    print('PDF building finished succesfully!')
+    print('{} building finished succesfully!'.format(new_name))
 
 
 def build_graphics():
@@ -76,7 +78,7 @@ def get_plots_and_update_commit():
 
 
 def get_plots():
-    src = '../exp/analysis/graphics'
+    src = os.path.join(ANALYSIS_REPO, 'graphics')
     dst = 'plots'
     print('Copying plots from "{}" to "{}"...'.format(src, dst))
     if dst in os.listdir('.'):
@@ -88,7 +90,8 @@ def get_plots():
 
 
 def get_analysis_commit():
-    path_to_commit_hash = '../exp/analysis/.git/refs/heads/master'
+    path_to_commit_hash = os.path.join(ANALYSIS_REPO, '.git', 'refs',
+                                       'heads', 'master')
     with open(path_to_commit_hash) as f:
         return f.read().strip()
 

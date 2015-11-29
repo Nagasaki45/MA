@@ -14,7 +14,19 @@ The ``manage.py`` script is your friend for simple compilation of the source.
 
 Options are: clear, graphics, plots, pdf & all.
 
-Each of those can be used to build different areas of the final pdf.
+Each of those can be used to build different stages of the final pdf.
 
 Currently, all of the plots reside in external git repo and copied by demand.
 This repo can be found [here](https://github.com/Nagasaki45/MA-experiment-analysis).
+Clone this repo and fix the path to it in ``manage.py`` as needed.
+
+### Compiling with docker
+
+The following will run ``python manage.py all`` in a docker container:
+
+	docker build -t ma .
+	docker run ma
+
+To copy the pdf file out of the container find the container ID using ``docker ps --all`` and run:
+
+	docker cp <ID>:/thesis/thesis_<SHORT_COMMIT_HASH>.pdf .
