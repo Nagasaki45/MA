@@ -44,6 +44,7 @@ def build_pdf():
     call_pdflatex()
     call_biber()
     call_pdflatex()
+    call_pdflatex()
     # Rename the file to contain the commit hash
     commit = get_my_short_commit_hash()
     new_name = 'thesis_{}.pdf'.format(commit)
