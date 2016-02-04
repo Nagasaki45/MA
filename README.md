@@ -8,6 +8,7 @@
 - *v2.0*: Second research proposal submitted (March 2014).
 - *v3.0*: Thesis first submission (August 23, 2015).
 - *v3.1*: Several minor fixes. 3 printed copies @ the Music Department library (November, 2015).
+- *v3.2*: Last thesis submission after formal typesetting improvements (January, 2016).
 
 ### Source compilation
 
